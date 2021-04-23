@@ -13,7 +13,7 @@ typedef struct mcq
 {
     char text[100];
     float difficulty;
-    char options[20][4];
+    char options[4][20];
     char correct[20];
 } mcq;
 void push(struct stack *ps, char x);

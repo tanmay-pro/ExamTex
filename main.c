@@ -24,7 +24,7 @@ int main()
         x=getchar();
     }
     for(i=0;i<4;i++)
-     printf("%d %s\n",i,arr[i]->text);
+     printf("%d %s\n",i,arr[i]->options[3]);
     
     
 }

@@ -41,7 +41,7 @@ bool isEmpty(struct stack *ps)
 mcq insert_question(stack s1,char pre[],char post[],double post_num,char post_line[])
 {
     mcq question;
-    char post_options[20][4];
+    char post_options[4][20];
     char post_correct[20];
     char x,y,z;
     y = getchar();
@@ -100,8 +100,11 @@ mcq insert_question(stack s1,char pre[],char post[],double post_num,char post_li
         getchar();
         getchar();
         scanf("%[^,]s", post_options[0]);  
+        getchar();
         scanf("%[^,]s", post_options[1]);
+        getchar();
         scanf("%[^,]s", post_options[2]);
+        getchar();
         scanf("%[^}]s", post_options[3]);
         scanf("%c",&z);
         if (z == '}')
