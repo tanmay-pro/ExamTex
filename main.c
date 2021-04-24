@@ -5,5 +5,6 @@ int main()
 {
 	ptrnode qb1;
 	functionToCreateQuestionBank(qb1);
+	
     return 0;
 }

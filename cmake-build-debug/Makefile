@@ -170,6 +170,33 @@ main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/DSA-Miniproject-team27.dir/build.make CMakeFiles/DSA-Miniproject-team27.dir/main.c.s
 .PHONY : main.c.s
 
+question_bank/bank.o: question_bank/bank.c.o
+
+.PHONY : question_bank/bank.o
+
+# target to build an object file
+question_bank/bank.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DSA-Miniproject-team27.dir/build.make CMakeFiles/DSA-Miniproject-team27.dir/question_bank/bank.c.o
+.PHONY : question_bank/bank.c.o
+
+question_bank/bank.i: question_bank/bank.c.i
+
+.PHONY : question_bank/bank.i
+
+# target to preprocess a source file
+question_bank/bank.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DSA-Miniproject-team27.dir/build.make CMakeFiles/DSA-Miniproject-team27.dir/question_bank/bank.c.i
+.PHONY : question_bank/bank.c.i
+
+question_bank/bank.s: question_bank/bank.c.s
+
+.PHONY : question_bank/bank.s
+
+# target to generate assembly for a file
+question_bank/bank.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DSA-Miniproject-team27.dir/build.make CMakeFiles/DSA-Miniproject-team27.dir/question_bank/bank.c.s
+.PHONY : question_bank/bank.c.s
+
 question_bank/create_question_bank.o: question_bank/create_question_bank.c.o
 
 .PHONY : question_bank/create_question_bank.o
@@ -236,6 +263,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... question_bank/bank.o"
+	@echo "... question_bank/bank.i"
+	@echo "... question_bank/bank.s"
 	@echo "... question_bank/create_question_bank.o"
 	@echo "... question_bank/create_question_bank.i"
 	@echo "... question_bank/create_question_bank.s"
