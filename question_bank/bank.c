@@ -1,4 +1,5 @@
-#include "bank.h"
+#include "question.h"
+#include"../function_def.h"
 
 void push(struct stack *ps, char x)
 {

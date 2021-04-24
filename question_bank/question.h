@@ -16,10 +16,3 @@ typedef struct mcq
     char options[4][20];
     char correct[20];
 } mcq;
-void push(struct stack *ps, char x);
-
-void pop(struct stack *ps);
-
-bool isEmpty(struct stack *ps);
-
-mcq insert_question(stack s1,char pre[],char post[],double post_num,char post_line[]);
