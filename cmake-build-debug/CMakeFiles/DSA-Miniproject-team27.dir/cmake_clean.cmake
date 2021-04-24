@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/DSA-Miniproject-team27.dir/main.c.o"
+  "CMakeFiles/DSA-Miniproject-team27.dir/question_bank/create_question_bank.c.o"
   "CMakeFiles/DSA-Miniproject-team27.dir/question_bank/question_bank_tree.c.o"
   "DSA-Miniproject-team27"
   "DSA-Miniproject-team27.pdb"
