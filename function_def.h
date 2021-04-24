@@ -18,4 +18,11 @@ ptrnode make_node(elementType e);
 ptrnode insert_below(ptrnode tree, elementType e);
 ptrnode insert_horizontally(ptrnode tree, elementType e);
 
+void push(struct stack *ps, char x);
+
+void pop(struct stack *ps);
+
+bool isEmpty(struct stack *ps);
+
+mcq insert_question(stack s1,char pre[],char post[],double post_num,char post_line[]);
 #endif
