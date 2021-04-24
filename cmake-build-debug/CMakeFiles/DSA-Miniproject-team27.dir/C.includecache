@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/function_def.h
+stdio.h
+-
+stdlib.h
+-
+assert.h
+-
+stdbool.h
+-
+string.h
+-
+
+/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/question_bank/question_bank_tree.c
+tree_struct.h
+/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/question_bank/tree_struct.h
+../function_def.h
+/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/function_def.h
+
+/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/question_bank/tree_struct.h
+
