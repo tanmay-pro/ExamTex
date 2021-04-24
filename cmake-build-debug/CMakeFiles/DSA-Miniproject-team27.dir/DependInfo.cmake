@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
   "/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/main.c" "/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/main.c.o"
+  "/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/question_bank/create_question_bank.c" "/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/question_bank/create_question_bank.c.o"
   "/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/question_bank/question_bank_tree.c" "/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/question_bank/question_bank_tree.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")

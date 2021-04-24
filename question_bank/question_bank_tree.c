@@ -1,4 +1,5 @@
 #include "tree_struct.h"
+#include "../function_def.h"
 
 ptrnode make_node(elementType e)
 {
@@ -35,3 +36,4 @@ ptrnode insert_horizontally(ptrnode tree, elementType e)
     }
     return tree;
 }
+
