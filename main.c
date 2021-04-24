@@ -35,6 +35,10 @@ int main()
             for_inserting_diff[i] = for_inserting_diff[i]->nextsibling;
         }
     }
+    fo(k, number_of_diff - 1)
+    {
+        qb1 = insert_horizontally(qb1, range_of_diff[k + 1]);
+    }
     fo(i, number_of_types - 1)
     {
         for_inserting_diff[i] = for_inserting_diff[i]->firstchild;
