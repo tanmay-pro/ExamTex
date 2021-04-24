@@ -6,7 +6,8 @@
 #include <assert.h>
 #include <stdbool.h>
 #include <string.h>
-
+#include "question_bank/tree_struct.h"
+#include "question_bank/question.h"
 
 #define ll long long
 #define br printf("\n")
@@ -17,12 +18,9 @@ ptrnode functionToCreateQuestionBank(ptrnode qb1);
 ptrnode make_node(elementType e);
 ptrnode insert_below(ptrnode tree, elementType e);
 ptrnode insert_horizontally(ptrnode tree, elementType e);
-
 void push(struct stack *ps, char x);
-
 void pop(struct stack *ps);
-
 bool isEmpty(struct stack *ps);
-
 mcq insert_question(stack s1,char pre[],char post[],double post_num,char post_line[]);
+
 #endif

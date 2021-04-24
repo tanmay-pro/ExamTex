@@ -85,6 +85,9 @@
 		<Unit filename="/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/main.c">
 			<Option target="DSA-Miniproject-team27"/>
 		</Unit>
+		<Unit filename="/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/question_bank/bank.c">
+			<Option target="DSA-Miniproject-team27"/>
+		</Unit>
 		<Unit filename="/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/question_bank/create_question_bank.c">
 			<Option target="DSA-Miniproject-team27"/>
 		</Unit>

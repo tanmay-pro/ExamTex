@@ -1,8 +1,5 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <stdbool.h>
-
+#ifndef QUESTION_H_
+#define QUESTION_H_
 typedef struct stack
 {
     char top;
@@ -16,3 +13,4 @@ typedef struct mcq
     char options[4][20];
     char correct[20];
 } mcq;
+#endif
