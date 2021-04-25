@@ -37,3 +37,7 @@ ptrnode insert_horizontally(ptrnode tree, elementType e)
     return tree;
 }
 
+ptrnode add_question_to_bank(ptrnode tree, int element)
+{
+
+}
