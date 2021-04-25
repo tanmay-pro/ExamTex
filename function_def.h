@@ -24,7 +24,6 @@ ptrnode add_mcq_question_to_bank(ptrnode tree, mcq* question, int index);
 
 void push(stack *ps, char x);
 void pop(stack *ps);
-bool isEmpty(stack *ps);
 double input_difficulty(stack s1,char *pre);
 char* input_text(stack s1,char *pre,char *post_line,char *buffer);
 mcq* insert_mcq(stack s1);

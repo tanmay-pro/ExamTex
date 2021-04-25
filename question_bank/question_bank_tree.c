@@ -63,5 +63,6 @@ ptrnode add_mcq_question_to_bank(ptrnode tree, mcq* question, int index)
 		tree = tree->firstchild;
 		tree = insert_horizontally(tree, index);
 	}
+	return tree;
 }
 
