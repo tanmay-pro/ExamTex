@@ -8,9 +8,18 @@ typedef struct stack
 
 typedef struct mcq
 {
-    char text[100];
-    float difficulty;
+    char text[1000];
+    double difficulty;
     char options[4][20];
     char correct[20];
 } mcq;
+
+typedef struct fill_up
+{
+    char text[1000];
+    double difficulty;
+    char correct[20];
+} fill_up;
+
 #endif
+
