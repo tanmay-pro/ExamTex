@@ -29,7 +29,16 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1c9fd8e-37b9-45e3-98fa-50053d63e515" name="Default Changelist" comment="" />
+    <list default="true" id="c1c9fd8e-37b9-45e3-98fa-50053d63e515" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/main.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/question_bank/bank.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/question_bank/bank.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/question_bank/question_bank_tree.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/question_bank/question_bank_tree.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/DSA-Miniproject-team27" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/DSA-Miniproject-team27" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/function_def.h" beforeDir="false" afterPath="$PROJECT_DIR$/function_def.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/question_bank/question_bank_tree.c" beforeDir="false" afterPath="$PROJECT_DIR$/question_bank/question_bank_tree.c" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -73,11 +82,6 @@
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C/C++" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="DSA-Miniproject-team27" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="DSA-Miniproject-team27" TARGET_NAME="DSA-Miniproject-team27" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="DSA-Miniproject-team27" RUN_TARGET_NAME="DSA-Miniproject-team27">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -86,6 +90,11 @@
     <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
   </component>
@@ -98,6 +107,7 @@
       <option name="presentableId" value="Default" />
       <updated>1619151164032</updated>
       <workItem from="1619151167443" duration="182000" />
+      <workItem from="1619367733716" duration="1186000" />
     </task>
     <servers />
   </component>
@@ -160,22 +170,22 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="779" y="311" width="424" height="491" key="FileChooserDialogImpl/72.27.1848.1053@72.27.1848.1053" timestamp="1619198692075" />
-    <state width="1802" height="275" key="GridCell.Tab.0.bottom" timestamp="1619285856877">
+    <state width="1802" height="275" key="GridCell.Tab.0.bottom" timestamp="1619368911351">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state width="1802" height="275" key="GridCell.Tab.0.bottom/72.27.1848.1053@72.27.1848.1053" timestamp="1619285856877" />
-    <state width="1802" height="275" key="GridCell.Tab.0.center" timestamp="1619285856877">
+    <state width="1802" height="275" key="GridCell.Tab.0.bottom/72.27.1848.1053@72.27.1848.1053" timestamp="1619368911351" />
+    <state width="1802" height="275" key="GridCell.Tab.0.center" timestamp="1619368911349">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state width="1802" height="275" key="GridCell.Tab.0.center/72.27.1848.1053@72.27.1848.1053" timestamp="1619285856877" />
-    <state width="1802" height="275" key="GridCell.Tab.0.left" timestamp="1619285856877">
+    <state width="1802" height="275" key="GridCell.Tab.0.center/72.27.1848.1053@72.27.1848.1053" timestamp="1619368911349" />
+    <state width="1802" height="275" key="GridCell.Tab.0.left" timestamp="1619368911347">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state width="1802" height="275" key="GridCell.Tab.0.left/72.27.1848.1053@72.27.1848.1053" timestamp="1619285856877" />
-    <state width="1802" height="275" key="GridCell.Tab.0.right" timestamp="1619285856877">
+    <state width="1802" height="275" key="GridCell.Tab.0.left/72.27.1848.1053@72.27.1848.1053" timestamp="1619368911347" />
+    <state width="1802" height="275" key="GridCell.Tab.0.right" timestamp="1619368911350">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state width="1802" height="275" key="GridCell.Tab.0.right/72.27.1848.1053@72.27.1848.1053" timestamp="1619285856877" />
+    <state width="1802" height="275" key="GridCell.Tab.0.right/72.27.1848.1053@72.27.1848.1053" timestamp="1619368911350" />
     <state x="485" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1619273430064">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
