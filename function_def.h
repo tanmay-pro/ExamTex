@@ -6,9 +6,9 @@
 #include <assert.h>
 #include <stdbool.h>
 #include <string.h>
+
 #include"question_bank/question.h"
 #include"question_bank/tree_struct.h"
-
 
 #define ll long long
 #define br printf("\n")
@@ -20,13 +20,13 @@ ptrnode make_node(elementType e);
 ptrnode insert_below(ptrnode tree, elementType e);
 ptrnode insert_horizontally(ptrnode tree, elementType e);
 
+
 void push(stack *ps, char x);
-
 void pop(stack *ps);
-
 bool isEmpty(stack *ps);
 double input_difficulty(stack s1,char *pre);
 char* input_text(stack s1,char *pre,char *post_line,char *buffer);
 mcq* insert_mcq(stack s1);
 void question_bank( );
+
 #endif

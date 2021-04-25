@@ -1,3 +1,4 @@
+#include "question.h"
 #include "../function_def.h"
 
 void push(stack *ps, char x)
@@ -127,6 +128,7 @@ mcq *insert_mcq(stack s1)
     while (y != '{')
         y = getchar();
     push(&s1, y);
+
     scanf("%[^=]s", pre);
     getchar();
     post_correct[0] = getchar();
