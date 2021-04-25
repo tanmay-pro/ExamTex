@@ -20,6 +20,8 @@ ptrnode make_node(elementType e);
 ptrnode insert_below(ptrnode tree, elementType e);
 ptrnode insert_horizontally(ptrnode tree, elementType e);
 ptrnode add_mcq_question_to_bank(ptrnode tree, mcq* question, int index);
+ptrnode delete_mcq_from_question_bank(ptrnode tree, mcq* question, int index);
+
 
 
 void push(stack *ps, char x);
