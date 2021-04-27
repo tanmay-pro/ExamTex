@@ -33,4 +33,7 @@ mcq* insert_mcq(stack s1);
 fill_up *insert_fill_up(stack s1);
 void question_bank( );
 
+//
+void read_question_paper(qb1);
+
 #endif
