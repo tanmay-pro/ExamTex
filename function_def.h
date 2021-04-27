@@ -7,8 +7,9 @@
 #include <stdbool.h>
 #include <string.h>
 
-#include"question_bank/question.h"
-#include"question_bank/tree_struct.h"
+#include"Question_Bank/question.h"
+#include"Question_Bank/tree_struct.h"
+#include"Question_Paper/question_paper.h"
 
 #define ll long long
 #define br printf("\n")
@@ -32,5 +33,9 @@ char* input_text(stack s1,char *pre,char *post_line,char *buffer);
 mcq* insert_mcq(stack s1);
 fill_up *insert_fill_up(stack s1);
 void question_bank( );
+
+void read_question_paper(ptrnode qb1);
+void sampler(ptrnode qb, question Q);
+
 
 #endif

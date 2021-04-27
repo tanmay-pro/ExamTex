@@ -3,7 +3,7 @@
 
 void push(stack *ps, char x)
 {
-    if (ps->top == 100001 - 1)
+    if (ps->top == 100001 - 1) // This can never be equal. Needs to be changed.
     {
         printf("Error: stack overflown");
         getchar();
@@ -199,7 +199,7 @@ void question_bank()
     struct stack s1;
     int i, mcq_index = 0, fill_up_index = 0;
     s1.top = ' ';
-    mcq *mcq_arr[10];
+    mcq *mcq_arr[10]; // not yet Dynamic
     fill_up *fill_up_arr[10];
     while (x != EOF)
     {
