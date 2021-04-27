@@ -3,7 +3,7 @@
 
 ptrnode functionToCreateQuestionBank(ptrnode qb1)
 {
-	int type_of_question[] = {0, 1, 2, 3, 4};
+	int type_of_question[] = {0, 1, 2, 3, 4, 5};
 	int number_of_types = 5;
 	int range_of_diff[] = {0, 1, 2};
 	int number_of_diff = 3;

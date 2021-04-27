@@ -43,53 +43,6 @@ struct questions add_question_type()
     char ch, buffer[100];
     // float difficulty; //Never used in code
     struct questions que;
-// Start Pratham Part here
-//     while (ch == ' ')
-//         ch = getchar();
-//     scanf("%[^{]s", buffer);
-//     // printf("%s",buffer);
-
-//     if (!strcmp(buffer, "sample"))
-//     {
-//         //printf("yes\n");
-//         while (ch != '{')
-//             ch = getchar();
-//         scanf("%[^=]s", buffer);
-//         while (ch != '=')
-//             ch = getchar();
-//         scanf("%[^}]s", buffer);
-//         if (!strcmp(buffer, "mcq")) ///add the different question types
-//             que.type = 0;
-//         if (!strcmp(buffer, "scq"))
-//             que.type = 1;
-//         while (ch != '}')
-//             ch = getchar();
-
-//         //printf("%d\n",que.type);
-
-//         while (ch != '{')
-//             ch = getchar();
-//         scanf("%[^=]s", buffer);
-//         while (ch != '=')
-//             ch = getchar();
-//         scanf("%f", &que.diff);
-//         while (ch != '}')
-//             ch = getchar();
-
-//         //printf("%f\n",que.diff);
-
-//         while (ch != '{')
-//             ch = getchar();
-//         scanf("%[^=]s", buffer);
-//         while (ch != '=')
-//             ch = getchar();
-//         scanf(" %d", &que.no_of_questions);
-//         while (ch != '}')
-//             ch = getchar();
-
-//         //printf("%d\n",que.no_of_questions);
-//     }
-// End Pratham part here
     ///////Checking if command is sample//////////
     ch=getchar();
     while(ch == ' ')

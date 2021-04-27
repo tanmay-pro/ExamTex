@@ -32,10 +32,13 @@ double input_difficulty(stack s1,char *pre);
 char* input_text(stack s1,char *pre,char *post_line,char *buffer);
 mcq* insert_mcq(stack s1);
 fill_up *insert_fill_up(stack s1);
-void question_bank( );
+void question_bank();
 
 void read_question_paper(ptrnode qb1);
 void sampler(ptrnode qb, question Q);
 
+
+mcq *mcq_arr[10]; // not yet Dynamic
+fill_up *fill_up_arr[10];
 
 #endif
