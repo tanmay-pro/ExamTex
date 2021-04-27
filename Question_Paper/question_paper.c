@@ -1,6 +1,5 @@
 #include "../function_def.h"
 #include "question_paper.h"
-#include "../question_bank/tree_struct.h"
 #include <time.h>
 
 //T.B.D=>
@@ -21,7 +20,7 @@ void printer_fillup(FILE *file, fill_up *q)
     fprintf(file, "%s\n", q->text);
 }
 
-int number_of_children(ptrnode tree);
+// int number_of_children(ptrnode tree);
 //T.B.D =>needed to check if the number of questions sought are available (during sampling)
 
 int *generate_randoms(int available, int n)
@@ -42,7 +41,7 @@ int *generate_randoms(int available, int n)
 struct questions add_question_type()
 {
     char ch, buffer[100];
-    float difficulty;
+    // float difficulty; //Never used in code
     struct questions que;
 // Start Pratham Part here
 //     while (ch == ' ')
@@ -166,22 +165,16 @@ void read_question_paper(ptrnode qb)
     struct questions questions_in_paper[5];
     int i = 0;
     ch = getchar();
-
     while (ch != '.') //eof here!!!
-
     {
         while (ch != 92)
             ch = getchar();
         questions_in_paper[i] = add_question_type();
-
         i++;
         ch = getchar();
     }
     for (int j = 0; j < i; j++)
         sampler(qb, questions_in_paper[j]);
-
-    return;
-
     //for(int j=0;j<i;j++)
     //   printf("%d %.2f %d\n",questions_in_paper[j].type,questions_in_paper[j].diff,questions_in_paper[j].no_of_questions);
 
@@ -210,7 +203,9 @@ void sampler(ptrnode qb, question Q)
     }
 
     int num = Q.no_of_questions;
-    int available = number_of_children(qb);
+//    int available = number_of_children(qb);
+// Only Temporary
+int available = 0;
 
     int i = 0;
     if (available >= num)
