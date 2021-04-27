@@ -7,9 +7,9 @@
 #include <stdbool.h>
 #include <string.h>
 
-#include"question_bank/question.h"
-#include"question_bank/tree_struct.h"
-#include"question_paper/question_paper.h"
+#include"Question_Bank/question.h"
+#include"Question_Bank/tree_struct.h"
+#include"Question_Paper/question_paper.h"
 
 #define ll long long
 #define br printf("\n")
