@@ -30,44 +30,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c1c9fd8e-37b9-45e3-98fa-50053d63e515" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Question_Bank/bank.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Question_Bank/create_question_bank.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Question_Bank/question.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Question_Bank/question_bank_tree.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Question_Bank/tree_struct.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Question_Paper/question_paper.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Question_Paper/question_paper.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Sample_Ques_Bank/1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Sample_Ques_Paper/1.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/a.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/C.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/main.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/question_bank/bank.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/question_bank/create_question_bank.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/question_bank/question_bank_tree.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/question_paper/question_paper.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/DSA-Miniproject-team27" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/DSA-Miniproject-team27" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/DSA-Miniproject-team27.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/DSA-Miniproject-team27.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Question_Bank/bank.c" beforeDir="false" afterPath="$PROJECT_DIR$/Question_Bank/bank.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Question_Bank/create_question_bank.c" beforeDir="false" afterPath="$PROJECT_DIR$/Question_Bank/create_question_bank.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Question_Bank/question.h" beforeDir="false" afterPath="$PROJECT_DIR$/Question_Bank/question.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Question_Bank/tree_struct.h" beforeDir="false" afterPath="$PROJECT_DIR$/Question_Bank/tree_struct.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Question_Paper/question_paper.c" beforeDir="false" afterPath="$PROJECT_DIR$/Question_Paper/question_paper.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sample_Ques_Paper/1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Sample_Ques_Paper/1.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/function_def.h" beforeDir="false" afterPath="$PROJECT_DIR$/function_def.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/question_bank.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/question_bank/bank.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/question_bank/create_question_bank.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/question_bank/question.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/question_bank/question_bank_tree.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/question_bank/tree_struct.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/question_paper.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/question_paper/question_paper.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/question_paper/question_paper.h" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,12 +83,12 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+    <configuration name="DSA-Miniproject-team27" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="DSA-Miniproject-team27" TARGET_NAME="DSA-Miniproject-team27" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="DSA-Miniproject-team27" RUN_TARGET_NAME="DSA-Miniproject-team27">
       <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DSA-Miniproject-team27" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="DSA-Miniproject-team27" TARGET_NAME="DSA-Miniproject-team27" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="DSA-Miniproject-team27" RUN_TARGET_NAME="DSA-Miniproject-team27">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -138,7 +109,8 @@
       <updated>1619151164032</updated>
       <workItem from="1619151167443" duration="182000" />
       <workItem from="1619367733716" duration="5190000" />
-      <workItem from="1619510081642" duration="3718000" />
+      <workItem from="1619510081642" duration="4415000" />
+      <workItem from="1619538058273" duration="5102000" />
     </task>
     <servers />
   </component>

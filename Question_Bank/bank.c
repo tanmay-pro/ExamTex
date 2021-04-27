@@ -12,8 +12,8 @@ void push(stack *ps, char x)
     else
     {
         ps->top += 1;
-        char top = ps->top;
-        ps->items[top] = x;
+        int top_val = ps->top;
+        ps->items[top_val] = x;
     }
 }
 
@@ -114,6 +114,7 @@ mcq *insert_mcq(stack s1)
         post_options[i][1] = '\0';
         scanf("%[^,]s", buffer);
         strcat(post_options[i], buffer);
+        getchar();
     }
 
     post_options[3][0] = getchar();
@@ -198,9 +199,8 @@ void question_bank()
     char pre[10], post[10];
     struct stack s1;
     int i, mcq_index = 0, fill_up_index = 0;
-    s1.top = ' ';
-    mcq *mcq_arr[10]; // not yet Dynamic
-    fill_up *fill_up_arr[10];
+    s1.top = -1;
+
     while (x != EOF)
     {
         y = getchar();
@@ -229,29 +229,32 @@ void question_bank()
         }
         x = getchar();
     }
-    for (i = 0; i < 4; i++)
-    {
-        printf("%s\n", mcq_arr[i]->text);
-        printf("%lf\n", mcq_arr[i]->difficulty);
-        printf("%s\n", mcq_arr[i]->options[0]);
-        printf("%s\n", mcq_arr[i]->options[1]);
-        printf("%s\n", mcq_arr[i]->options[2]);
-        printf("%s\n", mcq_arr[i]->options[3]);
-        printf("%s\n", mcq_arr[i]->correct);
-    }
-    for (i = 0; i < 4; i++)
-    {
-        free(mcq_arr[i]);
-    }
-
-    for (i = 0; i < 1; i++)
-    {
-        printf("%s\n", fill_up_arr[i]->text);
-        printf("%lf\n", fill_up_arr[i]->difficulty);
-        printf("%s\n", fill_up_arr[i]->correct);
-    }
-    for (i = 0; i < 1; i++)
-    {
-        free(fill_up_arr[i]);
-    }
+    // Debugging start
+//    for (i = 0; i < 4; i++)
+//    {
+//        printf("%s\n", mcq_arr[i]->text);
+//        printf("%lf\n", mcq_arr[i]->difficulty);
+//        printf("%s\n", mcq_arr[i]->options[0]);
+//        printf("%s\n", mcq_arr[i]->options[1]);
+//        printf("%s\n", mcq_arr[i]->options[2]);
+//        printf("%s\n", mcq_arr[i]->options[3]);
+//        printf("%s\n", mcq_arr[i]->correct);
+//    }
+//
+//    for (i = 0; i < 4; i++)
+//    {
+//        free(mcq_arr[i]);
+//    }
+//
+//    for (i = 0; i < 1; i++)
+//    {
+//        printf("%s\n", fill_up_arr[i]->text);
+//        printf("%lf\n", fill_up_arr[i]->difficulty);
+//        printf("%s\n", fill_up_arr[i]->correct);
+//    }
+//    for (i = 0; i < 1; i++)
+//    {
+//        free(fill_up_arr[i]);
+//    }
+	// Debugging end
 }
