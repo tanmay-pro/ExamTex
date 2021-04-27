@@ -22,7 +22,8 @@ ptrnode insert_horizontally(ptrnode tree, elementType e);
 ptrnode add_mcq_question_to_bank(ptrnode tree, mcq* question, int index);
 ptrnode delete_mcq_from_question_bank(ptrnode tree, mcq* question, int index);
 
-
+struct questions add_question_type();
+void read_question_paper();
 
 void push(stack *ps, char x);
 void pop(stack *ps);
