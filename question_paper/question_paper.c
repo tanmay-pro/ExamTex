@@ -6,12 +6,10 @@ struct questions add_question_type()
     char ch,buffer[100];
     float difficulty;
     struct questions que;
-
     ///////Checking if command is sample//////////
     ch=getchar();
     while(ch == ' ')
         ch=getchar();
-        
     int j=0;
     while( (ch != ' ') && (ch != '{') )
     {
@@ -20,14 +18,11 @@ struct questions add_question_type()
         ch=getchar();
     }       
     buffer[j]='\0';
-        
     while(ch != '{')
         ch=getchar();
     /////////////////////
-
     if(!strcmp(buffer,"sample"))
-    {
-        
+    {   
         ///////Checking the type of question////////////
         while(ch != '{')
             ch=getchar();        
@@ -35,10 +30,8 @@ struct questions add_question_type()
         while(ch != '=')
             ch=getchar();
         ch=getchar();
-
         while(ch == ' ')
             ch=getchar();
-
         int i=0;
         while( (ch != ' ') && (ch != '}') )
         {
@@ -48,21 +41,15 @@ struct questions add_question_type()
         }
         buffer[i]='\0';
         while(ch != '}')
-            ch=getchar();
-        
+            ch=getchar();    
         //!!!!!!!!!!!!!!!!add the different question types here!!!!!!!!!!!!!!!!!
         if(!strcmp(buffer,"mcq"))   
             que.type=44;
         if(!strcmp(buffer,"scq"))
             que.type=55;
-
         while(ch != '}')
             ch=getchar();
         //printf("%d\n",que.type);
-        //////////////////////////////////////////////
-
-
-
         //////////reading the difficulty of the questions///////////////
         while(ch != '{')
             ch=getchar();
@@ -73,12 +60,6 @@ struct questions add_question_type()
         while(ch != '}')
             ch=getchar();
         //printf("%f\n",que.diff);
-        ////////////////////////////////////////
-
-
-
-
-        //////////reading the number of the questions///////////////
         while(ch != '{')
             ch=getchar();
         scanf("%[^=]s",buffer);
@@ -88,10 +69,7 @@ struct questions add_question_type()
         while(ch != '}')
             ch=getchar();   
         //printf("%d\n",que.no_of_questions);
-        ///////////////////////////////////////////
-
-    }  
-
+    }
     return que;
 }
 
@@ -101,9 +79,7 @@ void read_question_paper()
     struct questions questions_in_paper[5];
     int i=0;
     ch=getchar();
-
-
-    while(ch != '.')   /////eof here!!!
+    while(ch != '.')   //eof here!!!
     {
         while(ch != 92)
             ch=getchar();
@@ -112,9 +88,6 @@ void read_question_paper()
         i++;
         ch=getchar();
     }
-
     //for(int j=0;j<i;j++)
     //   printf("%d %.2f %d\n",questions_in_paper[j].type,questions_in_paper[j].diff,questions_in_paper[j].no_of_questions);
-    
-    return;
 }

@@ -21,3 +21,9 @@ CMakeFiles/DSA-Miniproject-team27.dir/question_bank/question_bank_tree.c.o: ../q
 CMakeFiles/DSA-Miniproject-team27.dir/question_bank/question_bank_tree.c.o: ../question_bank/question_bank_tree.c
 CMakeFiles/DSA-Miniproject-team27.dir/question_bank/question_bank_tree.c.o: ../question_bank/tree_struct.h
 
+CMakeFiles/DSA-Miniproject-team27.dir/question_paper/question_paper.c.o: ../function_def.h
+CMakeFiles/DSA-Miniproject-team27.dir/question_paper/question_paper.c.o: ../question_bank/question.h
+CMakeFiles/DSA-Miniproject-team27.dir/question_paper/question_paper.c.o: ../question_bank/tree_struct.h
+CMakeFiles/DSA-Miniproject-team27.dir/question_paper/question_paper.c.o: ../question_paper/question_paper.c
+CMakeFiles/DSA-Miniproject-team27.dir/question_paper/question_paper.c.o: ../question_paper/question_paper.h
+
