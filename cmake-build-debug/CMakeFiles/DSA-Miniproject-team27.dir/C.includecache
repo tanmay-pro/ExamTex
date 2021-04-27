@@ -21,30 +21,10 @@ question_bank/question.h
 /home/tanmaypro/Desktop/git/DSA-Miniproject-team27/question_bank/question.h
 question_bank/tree_struct.h
 /home/tanmaypro/Desktop/git/DSA-Miniproject-team27/question_bank/tree_struct.h
-
-/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/main.c
-function_def.h
-/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/function_def.h
-
-/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/question_bank/bank.c
-question.h
-/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/question_bank/question.h
-../function_def.h
-/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/function_def.h
-
-/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/question_bank/create_question_bank.c
-tree_struct.h
-/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/question_bank/tree_struct.h
-../function_def.h
-/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/function_def.h
+question_paper/question_paper.h
+/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/question_paper/question_paper.h
 
 /home/tanmaypro/Desktop/git/DSA-Miniproject-team27/question_bank/question.h
-
-/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/question_bank/question_bank_tree.c
-tree_struct.h
-/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/question_bank/tree_struct.h
-../function_def.h
-/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/function_def.h
 
 /home/tanmaypro/Desktop/git/DSA-Miniproject-team27/question_bank/tree_struct.h
 
@@ -53,6 +33,8 @@ tree_struct.h
 /home/tanmaypro/Desktop/git/DSA-Miniproject-team27/function_def.h
 question_paper.h
 /home/tanmaypro/Desktop/git/DSA-Miniproject-team27/question_paper/question_paper.h
+time.h
+-
 
 /home/tanmaypro/Desktop/git/DSA-Miniproject-team27/question_paper/question_paper.h
 
