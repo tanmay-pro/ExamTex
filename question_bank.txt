@@ -6,7 +6,7 @@
 \question{type =mcq}{difficulty =0.89}
 {text =what is name?}
 {opt =Functional ,Procedural ,Objects ,Events }
-{ans =Funct }
+{ans =Functional }
 
 \question{type =mcq}{difficulty =0.3}
 {text =where do you live?}
@@ -19,5 +19,5 @@
 {ans =ctio }
 
 \question{type =fill up}{difficulty =1.3}
-{text =president of USA is .....?}
+{text = President of USA is .....?}
 {ans = Biden }
