@@ -1,8 +1,9 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/bank.c.o"
+  "CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/create_question_bank.c.o"
+  "CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/question_bank_tree.c.o"
+  "CMakeFiles/DSA-Miniproject-team27.dir/Question_Paper/question_paper.c.o"
   "CMakeFiles/DSA-Miniproject-team27.dir/main.c.o"
-  "CMakeFiles/DSA-Miniproject-team27.dir/question_bank/bank.c.o"
-  "CMakeFiles/DSA-Miniproject-team27.dir/question_bank/create_question_bank.c.o"
-  "CMakeFiles/DSA-Miniproject-team27.dir/question_bank/question_bank_tree.c.o"
   "DSA-Miniproject-team27"
   "DSA-Miniproject-team27.pdb"
 )

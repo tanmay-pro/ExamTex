@@ -90,62 +90,77 @@ CMakeFiles/DSA-Miniproject-team27.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/DSA-Miniproject-team27.dir/main.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tanmaypro/Desktop/git/DSA-Miniproject-team27/main.c -o CMakeFiles/DSA-Miniproject-team27.dir/main.c.s
 
-CMakeFiles/DSA-Miniproject-team27.dir/question_bank/question_bank_tree.c.o: CMakeFiles/DSA-Miniproject-team27.dir/flags.make
-CMakeFiles/DSA-Miniproject-team27.dir/question_bank/question_bank_tree.c.o: ../question_bank/question_bank_tree.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/DSA-Miniproject-team27.dir/question_bank/question_bank_tree.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/DSA-Miniproject-team27.dir/question_bank/question_bank_tree.c.o   -c /home/tanmaypro/Desktop/git/DSA-Miniproject-team27/question_bank/question_bank_tree.c
+CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/question_bank_tree.c.o: CMakeFiles/DSA-Miniproject-team27.dir/flags.make
+CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/question_bank_tree.c.o: ../Question_Bank/question_bank_tree.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/question_bank_tree.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/question_bank_tree.c.o   -c /home/tanmaypro/Desktop/git/DSA-Miniproject-team27/Question_Bank/question_bank_tree.c
 
-CMakeFiles/DSA-Miniproject-team27.dir/question_bank/question_bank_tree.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/DSA-Miniproject-team27.dir/question_bank/question_bank_tree.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tanmaypro/Desktop/git/DSA-Miniproject-team27/question_bank/question_bank_tree.c > CMakeFiles/DSA-Miniproject-team27.dir/question_bank/question_bank_tree.c.i
+CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/question_bank_tree.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/question_bank_tree.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tanmaypro/Desktop/git/DSA-Miniproject-team27/Question_Bank/question_bank_tree.c > CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/question_bank_tree.c.i
 
-CMakeFiles/DSA-Miniproject-team27.dir/question_bank/question_bank_tree.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/DSA-Miniproject-team27.dir/question_bank/question_bank_tree.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tanmaypro/Desktop/git/DSA-Miniproject-team27/question_bank/question_bank_tree.c -o CMakeFiles/DSA-Miniproject-team27.dir/question_bank/question_bank_tree.c.s
+CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/question_bank_tree.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/question_bank_tree.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tanmaypro/Desktop/git/DSA-Miniproject-team27/Question_Bank/question_bank_tree.c -o CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/question_bank_tree.c.s
 
-CMakeFiles/DSA-Miniproject-team27.dir/question_bank/create_question_bank.c.o: CMakeFiles/DSA-Miniproject-team27.dir/flags.make
-CMakeFiles/DSA-Miniproject-team27.dir/question_bank/create_question_bank.c.o: ../question_bank/create_question_bank.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/DSA-Miniproject-team27.dir/question_bank/create_question_bank.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/DSA-Miniproject-team27.dir/question_bank/create_question_bank.c.o   -c /home/tanmaypro/Desktop/git/DSA-Miniproject-team27/question_bank/create_question_bank.c
+CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/create_question_bank.c.o: CMakeFiles/DSA-Miniproject-team27.dir/flags.make
+CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/create_question_bank.c.o: ../Question_Bank/create_question_bank.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/create_question_bank.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/create_question_bank.c.o   -c /home/tanmaypro/Desktop/git/DSA-Miniproject-team27/Question_Bank/create_question_bank.c
 
-CMakeFiles/DSA-Miniproject-team27.dir/question_bank/create_question_bank.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/DSA-Miniproject-team27.dir/question_bank/create_question_bank.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tanmaypro/Desktop/git/DSA-Miniproject-team27/question_bank/create_question_bank.c > CMakeFiles/DSA-Miniproject-team27.dir/question_bank/create_question_bank.c.i
+CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/create_question_bank.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/create_question_bank.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tanmaypro/Desktop/git/DSA-Miniproject-team27/Question_Bank/create_question_bank.c > CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/create_question_bank.c.i
 
-CMakeFiles/DSA-Miniproject-team27.dir/question_bank/create_question_bank.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/DSA-Miniproject-team27.dir/question_bank/create_question_bank.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tanmaypro/Desktop/git/DSA-Miniproject-team27/question_bank/create_question_bank.c -o CMakeFiles/DSA-Miniproject-team27.dir/question_bank/create_question_bank.c.s
+CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/create_question_bank.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/create_question_bank.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tanmaypro/Desktop/git/DSA-Miniproject-team27/Question_Bank/create_question_bank.c -o CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/create_question_bank.c.s
 
-CMakeFiles/DSA-Miniproject-team27.dir/question_bank/bank.c.o: CMakeFiles/DSA-Miniproject-team27.dir/flags.make
-CMakeFiles/DSA-Miniproject-team27.dir/question_bank/bank.c.o: ../question_bank/bank.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/DSA-Miniproject-team27.dir/question_bank/bank.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/DSA-Miniproject-team27.dir/question_bank/bank.c.o   -c /home/tanmaypro/Desktop/git/DSA-Miniproject-team27/question_bank/bank.c
+CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/bank.c.o: CMakeFiles/DSA-Miniproject-team27.dir/flags.make
+CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/bank.c.o: ../Question_Bank/bank.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/bank.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/bank.c.o   -c /home/tanmaypro/Desktop/git/DSA-Miniproject-team27/Question_Bank/bank.c
 
-CMakeFiles/DSA-Miniproject-team27.dir/question_bank/bank.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/DSA-Miniproject-team27.dir/question_bank/bank.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tanmaypro/Desktop/git/DSA-Miniproject-team27/question_bank/bank.c > CMakeFiles/DSA-Miniproject-team27.dir/question_bank/bank.c.i
+CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/bank.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/bank.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tanmaypro/Desktop/git/DSA-Miniproject-team27/Question_Bank/bank.c > CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/bank.c.i
 
-CMakeFiles/DSA-Miniproject-team27.dir/question_bank/bank.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/DSA-Miniproject-team27.dir/question_bank/bank.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tanmaypro/Desktop/git/DSA-Miniproject-team27/question_bank/bank.c -o CMakeFiles/DSA-Miniproject-team27.dir/question_bank/bank.c.s
+CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/bank.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/bank.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tanmaypro/Desktop/git/DSA-Miniproject-team27/Question_Bank/bank.c -o CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/bank.c.s
+
+CMakeFiles/DSA-Miniproject-team27.dir/Question_Paper/question_paper.c.o: CMakeFiles/DSA-Miniproject-team27.dir/flags.make
+CMakeFiles/DSA-Miniproject-team27.dir/Question_Paper/question_paper.c.o: ../Question_Paper/question_paper.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/DSA-Miniproject-team27.dir/Question_Paper/question_paper.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/DSA-Miniproject-team27.dir/Question_Paper/question_paper.c.o   -c /home/tanmaypro/Desktop/git/DSA-Miniproject-team27/Question_Paper/question_paper.c
+
+CMakeFiles/DSA-Miniproject-team27.dir/Question_Paper/question_paper.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/DSA-Miniproject-team27.dir/Question_Paper/question_paper.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tanmaypro/Desktop/git/DSA-Miniproject-team27/Question_Paper/question_paper.c > CMakeFiles/DSA-Miniproject-team27.dir/Question_Paper/question_paper.c.i
+
+CMakeFiles/DSA-Miniproject-team27.dir/Question_Paper/question_paper.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/DSA-Miniproject-team27.dir/Question_Paper/question_paper.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tanmaypro/Desktop/git/DSA-Miniproject-team27/Question_Paper/question_paper.c -o CMakeFiles/DSA-Miniproject-team27.dir/Question_Paper/question_paper.c.s
 
 # Object files for target DSA-Miniproject-team27
 DSA__Miniproject__team27_OBJECTS = \
 "CMakeFiles/DSA-Miniproject-team27.dir/main.c.o" \
-"CMakeFiles/DSA-Miniproject-team27.dir/question_bank/question_bank_tree.c.o" \
-"CMakeFiles/DSA-Miniproject-team27.dir/question_bank/create_question_bank.c.o" \
-"CMakeFiles/DSA-Miniproject-team27.dir/question_bank/bank.c.o"
+"CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/question_bank_tree.c.o" \
+"CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/create_question_bank.c.o" \
+"CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/bank.c.o" \
+"CMakeFiles/DSA-Miniproject-team27.dir/Question_Paper/question_paper.c.o"
 
 # External object files for target DSA-Miniproject-team27
 DSA__Miniproject__team27_EXTERNAL_OBJECTS =
 
 DSA-Miniproject-team27: CMakeFiles/DSA-Miniproject-team27.dir/main.c.o
-DSA-Miniproject-team27: CMakeFiles/DSA-Miniproject-team27.dir/question_bank/question_bank_tree.c.o
-DSA-Miniproject-team27: CMakeFiles/DSA-Miniproject-team27.dir/question_bank/create_question_bank.c.o
-DSA-Miniproject-team27: CMakeFiles/DSA-Miniproject-team27.dir/question_bank/bank.c.o
+DSA-Miniproject-team27: CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/question_bank_tree.c.o
+DSA-Miniproject-team27: CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/create_question_bank.c.o
+DSA-Miniproject-team27: CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/bank.c.o
+DSA-Miniproject-team27: CMakeFiles/DSA-Miniproject-team27.dir/Question_Paper/question_paper.c.o
 DSA-Miniproject-team27: CMakeFiles/DSA-Miniproject-team27.dir/build.make
 DSA-Miniproject-team27: CMakeFiles/DSA-Miniproject-team27.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable DSA-Miniproject-team27"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable DSA-Miniproject-team27"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/DSA-Miniproject-team27.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

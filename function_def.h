@@ -7,8 +7,9 @@
 #include <stdbool.h>
 #include <string.h>
 
-#include"question_bank/question.h"
-#include"question_bank/tree_struct.h"
+#include"Question_Bank/question.h"
+#include"Question_Bank/tree_struct.h"
+#include"Question_Paper/question_paper.h"
 
 #define ll long long
 #define br printf("\n")
@@ -19,14 +20,22 @@ ptrnode functionToCreateQuestionBank(ptrnode qb1);
 ptrnode make_node(elementType e);
 ptrnode insert_below(ptrnode tree, elementType e);
 ptrnode insert_horizontally(ptrnode tree, elementType e);
+ptrnode add_mcq_question_to_bank(ptrnode tree, mcq* question, int index);
+ptrnode delete_mcq_from_question_bank(ptrnode tree, mcq* question, int index);
 
+struct questions add_question_type();
+void read_question_paper();
 
 void push(stack *ps, char x);
 void pop(stack *ps);
-bool isEmpty(stack *ps);
 double input_difficulty(stack s1,char *pre);
 char* input_text(stack s1,char *pre,char *post_line,char *buffer);
 mcq* insert_mcq(stack s1);
+fill_up *insert_fill_up(stack s1);
 void question_bank( );
+
+void read_question_paper(ptrnode qb1);
+void sampler(ptrnode qb, question Q);
+
 
 #endif

@@ -82,16 +82,22 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/Question_Bank/bank.c">
+			<Option target="DSA-Miniproject-team27"/>
+		</Unit>
+		<Unit filename="/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/Question_Bank/create_question_bank.c">
+			<Option target="DSA-Miniproject-team27"/>
+		</Unit>
+		<Unit filename="/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/Question_Bank/question_bank_tree.c">
+			<Option target="DSA-Miniproject-team27"/>
+		</Unit>
+		<Unit filename="/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/Question_Paper/question_paper.c">
+			<Option target="DSA-Miniproject-team27"/>
+		</Unit>
+		<Unit filename="/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/Question_Paper/question_paper.h">
+			<Option target="DSA-Miniproject-team27"/>
+		</Unit>
 		<Unit filename="/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/main.c">
-			<Option target="DSA-Miniproject-team27"/>
-		</Unit>
-		<Unit filename="/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/question_bank/bank.c">
-			<Option target="DSA-Miniproject-team27"/>
-		</Unit>
-		<Unit filename="/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/question_bank/create_question_bank.c">
-			<Option target="DSA-Miniproject-team27"/>
-		</Unit>
-		<Unit filename="/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/question_bank/question_bank_tree.c">
 			<Option target="DSA-Miniproject-team27"/>
 		</Unit>
 		<Unit filename="/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/CMakeLists.txt">
