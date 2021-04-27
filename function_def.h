@@ -29,4 +29,7 @@ char* input_text(stack s1,char *pre,char *post_line,char *buffer);
 mcq* insert_mcq(stack s1);
 void question_bank( );
 
+//
+void read_question_paper(qb1);
+
 #endif
