@@ -1,8 +1,9 @@
 #ifndef QUESTION_H_
 #define QUESTION_H_
+
 typedef struct stack
 {
-    char top;
+    int top;
     char items[100001];
 } stack;
 
