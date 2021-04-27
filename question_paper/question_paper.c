@@ -3,7 +3,7 @@
 
 struct questions add_question_type()
 {
-    char ch,buffer[100];
+    char ch = ' ',buffer[100];
     float difficulty;
     struct questions que;
     while(ch == ' ')
@@ -78,7 +78,4 @@ void read_question_paper()
 
     //for(int j=0;j<i;j++)
       //  printf("%d %.2f %d\n",questions_in_paper[j].type,questions_in_paper[j].diff,questions_in_paper[j].no_of_questions);
-    
-    return;
-
 }

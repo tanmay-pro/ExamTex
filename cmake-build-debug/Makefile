@@ -251,6 +251,33 @@ question_bank/question_bank_tree.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/DSA-Miniproject-team27.dir/build.make CMakeFiles/DSA-Miniproject-team27.dir/question_bank/question_bank_tree.c.s
 .PHONY : question_bank/question_bank_tree.c.s
 
+question_paper/question_paper.o: question_paper/question_paper.c.o
+
+.PHONY : question_paper/question_paper.o
+
+# target to build an object file
+question_paper/question_paper.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DSA-Miniproject-team27.dir/build.make CMakeFiles/DSA-Miniproject-team27.dir/question_paper/question_paper.c.o
+.PHONY : question_paper/question_paper.c.o
+
+question_paper/question_paper.i: question_paper/question_paper.c.i
+
+.PHONY : question_paper/question_paper.i
+
+# target to preprocess a source file
+question_paper/question_paper.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DSA-Miniproject-team27.dir/build.make CMakeFiles/DSA-Miniproject-team27.dir/question_paper/question_paper.c.i
+.PHONY : question_paper/question_paper.c.i
+
+question_paper/question_paper.s: question_paper/question_paper.c.s
+
+.PHONY : question_paper/question_paper.s
+
+# target to generate assembly for a file
+question_paper/question_paper.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DSA-Miniproject-team27.dir/build.make CMakeFiles/DSA-Miniproject-team27.dir/question_paper/question_paper.c.s
+.PHONY : question_paper/question_paper.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -272,6 +299,9 @@ help:
 	@echo "... question_bank/question_bank_tree.o"
 	@echo "... question_bank/question_bank_tree.i"
 	@echo "... question_bank/question_bank_tree.s"
+	@echo "... question_paper/question_paper.o"
+	@echo "... question_paper/question_paper.i"
+	@echo "... question_paper/question_paper.s"
 .PHONY : help
 
 

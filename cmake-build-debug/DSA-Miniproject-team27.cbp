@@ -94,6 +94,12 @@
 		<Unit filename="/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/question_bank/question_bank_tree.c">
 			<Option target="DSA-Miniproject-team27"/>
 		</Unit>
+		<Unit filename="/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/question_paper/question_paper.c">
+			<Option target="DSA-Miniproject-team27"/>
+		</Unit>
+		<Unit filename="/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/question_paper/question_paper.h">
+			<Option target="DSA-Miniproject-team27"/>
+		</Unit>
 		<Unit filename="/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
