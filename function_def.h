@@ -17,11 +17,15 @@
 #define fo(i, n) for (int i = 0; i < n; i++)
 #define Fo(i, k, n) for (int i = k; k < n ? i < n : i > n; k < n ? i += 1 : i -= 1)
 
-ptrnode functionToCreateQuestionBank(ptrnode qb1);
 ptrnode make_node(elementType e);
 ptrnode insert_below(ptrnode tree, elementType e);
 ptrnode insert_horizontally(ptrnode tree, elementType e);
-ptrnode add_mcq_question_to_bank(ptrnode tree, mcq* question, int index);
+
+void add_mcq_question_to_bank(ptrnode tree, mcq* question, int index);
+void add_fill_up_question_to_bank(ptrnode tree, fill_up* question, int index);
+void add_true_false_question_to_bank(ptrnode tree, true_false* question, int index);
+void add_short_answer_question_to_bank(ptrnode tree, short_answer* question, int index);
+
 ptrnode delete_mcq_from_question_bank(ptrnode tree, mcq* question, int index);
 
 struct questions add_question_type();
@@ -29,17 +33,23 @@ void read_question_paper();
 
 void push(stack *ps, char x);
 void pop(stack *ps);
+
 double input_difficulty(stack s1,char *pre);
 char* input_text(stack s1,char *pre,char *post_line,char *buffer);
+void question_bank();
+
 mcq* insert_mcq(stack s1);
 fill_up *insert_fill_up(stack s1);
-void question_bank();
 
 void read_question_paper(ptrnode qb1);
 void sampler(ptrnode qb, question Q);
 
-
 mcq *mcq_arr[10]; // not yet Dynamic
 fill_up *fill_up_arr[10];
+true_false *true_false_arr[10];
+short_answer *short_answer_arr[10];
+
+void insert_questions(ptrnode tree);
+ptrnode functionToCreateQuestionBank(ptrnode qb1);
 
 #endif

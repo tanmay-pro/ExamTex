@@ -40,7 +40,7 @@ int *generate_randoms(int available, int n)
     return arr;
 }
 
-struct questions add_question_type()
+question add_question_type()
 {
     char ch, buffer[100];
     struct questions que;
@@ -138,6 +138,10 @@ struct questions add_question_type()
         }
         //printf("%d\n",que.no_of_questions);
 	    return que;
+    }
+    else
+    {
+    	;
     }
 }
 
