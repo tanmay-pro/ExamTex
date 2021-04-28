@@ -6,6 +6,7 @@
 #include <assert.h>
 #include <stdbool.h>
 #include <string.h>
+#include <time.h>
 
 #include"Question_Bank/question.h"
 #include"Question_Bank/tree_struct.h"

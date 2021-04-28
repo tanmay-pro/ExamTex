@@ -1,6 +1,6 @@
 #include "../function_def.h"
 #include "question_paper.h"
-#include <time.h>
+typedef int diff_type;
 
 //T.B.D=>
 mcq **mcq_struct_array;        //the array of mcqs made while reading question_bank.txt
@@ -44,7 +44,7 @@ struct questions add_question_type()
 {
     char ch, buffer[100];
     struct questions que;
-    ///////Checking if command is sample//////////
+    //Checking if command is sample
     ch=(char)getchar();
     while(ch == ' ')
     {
@@ -62,13 +62,12 @@ struct questions add_question_type()
     {
 	    ch=(char)getchar();
     }
-    /////////////////////
     if(!strcmp(buffer,"sample"))
     {   
-        ///////Checking the type of question////////////
+        //Checking the type of question
         while(ch != '{')
         {
-	        ch=(char)getchar();
+	        ch=(char)getchar(); // Inaccessible Code
         }
         scanf("%[^=]s",buffer);
         while(ch != '=')
@@ -92,7 +91,7 @@ struct questions add_question_type()
         {
 	        ch=(char)getchar();
         }
-        //!!!!!!!!!!!!!!!!add the different question types here!!!!!!!!!!!!!!!!!
+        //Add the different question types here
         if(!strcmp(buffer,"mcq"))
         {
 	        que.type=44;
@@ -103,9 +102,9 @@ struct questions add_question_type()
         }
         while(ch != '}')
         {
-	        ch=(char)getchar();
+	        ch=(char)getchar(); // Inaccessible Code
         }
-        //////////reading the difficulty of the questions///////////////
+        //Reading the difficulty of the questions
         while(ch != '{')
         {
 	        ch=(char)getchar();
@@ -166,8 +165,6 @@ void read_question_paper(ptrnode qb)
     //for(int j=0;j<i;j++)
     //printf("%d %.2f %d\n",questions_in_paper[j].type,questions_in_paper[j].diff,questions_in_paper[j].no_of_questions);
 }
-
-typedef int diff_type;
 
 void sampler(ptrnode qb, question Q)
 {
