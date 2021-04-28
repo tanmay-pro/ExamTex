@@ -7,5 +7,5 @@ int main()
 	question_bank();
 	insert_questions(qb1);
 	read_question_paper(qb1);
-  return 0;
+  	return 0;
 }

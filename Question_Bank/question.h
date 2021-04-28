@@ -11,7 +11,7 @@ typedef struct mcq
 {
     char text[1000];
     double difficulty;
-    char options[4][20];
+    char options[4][20];//char** options;
     char correct[20];
 } mcq;
 
