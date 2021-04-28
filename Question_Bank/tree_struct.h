@@ -10,7 +10,6 @@ struct treeNode
     elementType element;
     ptrnode nextsibling;
     ptrnode firstchild;
-    ptrnode parent;
 };
 
 #endif

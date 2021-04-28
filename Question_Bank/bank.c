@@ -12,8 +12,8 @@ void push(stack *ps, char x)
     else
     {
         ps->top += 1;
-        char top = ps->top;
-        ps->items[top] = x;
+        int top_val = ps->top;
+        ps->items[top_val] = x;
     }
 }
 
@@ -31,25 +31,20 @@ void pop(stack *ps)
     }
 }
 
-//bool isEmpty(stack *ps)
-//{
-//    return (ps->top == -1) ? true : false;
-//} // Function never used anywhere
-
 double input_difficulty(stack s1, char *pre)
 {
     char y, z;
     double post_num;
-    y = getchar();
+    y = (char)getchar();
     while (y != '{')
     {
-        y = getchar();
+        y = (char)getchar();
     }
     push(&s1, y);
     scanf("%[^=]s", pre);
     getchar();
     scanf("%lf", &post_num);
-    z = getchar();
+    z = (char)getchar();
     if (z == '}')
     {
         pop(&s1);
@@ -60,18 +55,18 @@ double input_difficulty(stack s1, char *pre)
 char *input_text(stack s1, char *pre, char *post_line, char *buffer)
 {
     char y, z;
-    y = getchar();
+    y = (char)getchar();
     while (y != '{')
     {
-        y = getchar();
+        y = (char)getchar();
     }
     push(&s1, y);
     scanf("%[^=]s", pre);
     getchar();
-    post_line[0] = getchar();
+    post_line[0] = (char)getchar();
     while (post_line[0] == ' ')
     {
-        post_line[0] = getchar();
+        post_line[0] = (char)getchar();
     }
     post_line[1] = '\0';
     scanf("%[^}]s", buffer);
@@ -96,30 +91,31 @@ mcq *insert_mcq(stack s1)
     question->difficulty = input_difficulty(s1, pre);
     strcpy(question->text, input_text(s1, pre, post_line, buffer));
 
-    y = getchar();
+    y = (char)getchar();
     while (y != '{')
     {
-        y = getchar();
+        y = (char)getchar();
     }
     push(&s1, y);
     scanf("%[^=]s", pre);
     getchar();
     for (int i = 0; i < 3; i++)
     {
-        post_options[i][0] = getchar();
+        post_options[i][0] = (char)getchar();
         while (post_options[i][0] == ' ')
         {
-            post_options[i][0] = getchar();
+            post_options[i][0] = (char)getchar();
         }
         post_options[i][1] = '\0';
         scanf("%[^,]s", buffer);
         strcat(post_options[i], buffer);
+        getchar();
     }
 
-    post_options[3][0] = getchar();
+    post_options[3][0] = (char)getchar();
     while (post_options[3][0] == ' ')
     {
-        post_options[3][0] = getchar();
+        post_options[3][0] = (char)getchar();
     }
     post_options[3][1] = '\0';
     scanf("%[^}]s", buffer);
@@ -133,23 +129,23 @@ mcq *insert_mcq(stack s1)
     {
         strcpy(question->options[i], post_options[i]);
     }
-    y = getchar();
+    y = (char)getchar();
     while (y != '{')
     {
-        y = getchar();
+        y = (char)getchar();
     }
     push(&s1, y);
     scanf("%[^=]s", pre);
     getchar();
-    post_correct[0] = getchar();
+    post_correct[0] = (char)getchar();
     while (post_correct[0] == ' ')
     {
-        post_correct[0] = getchar();
+        post_correct[0] = (char)getchar();
     }
     post_correct[1] = '\0';
     scanf("%[^}]s", buffer);
     strcat(post_correct, buffer);
-    z = getchar();
+    z = (char)getchar();
     if (z == '}')
     {
         pop(&s1);
@@ -167,23 +163,23 @@ fill_up *insert_fill_up(stack s1)
     char buffer[1000];
     question->difficulty = input_difficulty(s1, pre);
     strcpy(question->text, input_text(s1, pre, post_line, buffer));
-    y = getchar();
+    y = (char)getchar();
     while (y != '{')
     {
-        y = getchar();
+        y = (char)getchar();
     }
     push(&s1, y);
     scanf("%[^=]s", pre);
     getchar();
-    post_correct[0] = getchar();
+    post_correct[0] = (char)getchar();
     while (post_correct[0] == ' ')
     {
-        post_correct[0] = getchar();
+        post_correct[0] = (char)getchar();
     }
     post_correct[1] = '\0';
     scanf("%[^}]s", buffer);
     strcat(post_correct, buffer);
-    z = getchar();
+    z = (char)getchar();
     if (z == '}')
     {
         pop(&s1);
@@ -194,25 +190,24 @@ fill_up *insert_fill_up(stack s1)
 void question_bank()
 {
     char x, y, z;
-    x = getchar();
+    x = (char)getchar();
     char pre[10], post[10];
     struct stack s1;
     int i, mcq_index = 0, fill_up_index = 0;
-    s1.top = ' ';
-    mcq *mcq_arr[10]; // not yet Dynamic
-    fill_up *fill_up_arr[10];
+    s1.top = -1;
+
     while (x != EOF)
     {
-        y = getchar();
+        y = (char)getchar();
         while (y != '{')
         {
-            y = getchar();
+            y = (char)getchar();
         }
         push(&s1, y);
         scanf("%[^=]s", pre);
         getchar();
         scanf("%[^}]s", post);
-        z = getchar();
+        z = (char)getchar();
         if (z == '}')
         {
             pop(&s1);
@@ -227,31 +222,34 @@ void question_bank()
             fill_up_arr[fill_up_index] = insert_fill_up(s1);
             fill_up_index++;
         }
-        x = getchar();
+        x = (char)getchar();
     }
-    for (i = 0; i < 4; i++)
-    {
-        printf("%s\n", mcq_arr[i]->text);
-        printf("%lf\n", mcq_arr[i]->difficulty);
-        printf("%s\n", mcq_arr[i]->options[0]);
-        printf("%s\n", mcq_arr[i]->options[1]);
-        printf("%s\n", mcq_arr[i]->options[2]);
-        printf("%s\n", mcq_arr[i]->options[3]);
-        printf("%s\n", mcq_arr[i]->correct);
-    }
-    for (i = 0; i < 4; i++)
-    {
-        free(mcq_arr[i]);
-    }
-
-    for (i = 0; i < 1; i++)
-    {
-        printf("%s\n", fill_up_arr[i]->text);
-        printf("%lf\n", fill_up_arr[i]->difficulty);
-        printf("%s\n", fill_up_arr[i]->correct);
-    }
-    for (i = 0; i < 1; i++)
-    {
-        free(fill_up_arr[i]);
-    }
+    // Debugging start
+//    for (i = 0; i < 4; i++)
+//    {
+//        printf("%s\n", mcq_arr[i]->text);
+//        printf("%lf\n", mcq_arr[i]->difficulty);
+//        printf("%s\n", mcq_arr[i]->options[0]);
+//        printf("%s\n", mcq_arr[i]->options[1]);
+//        printf("%s\n", mcq_arr[i]->options[2]);
+//        printf("%s\n", mcq_arr[i]->options[3]);
+//        printf("%s\n", mcq_arr[i]->correct);
+//    }
+//
+//    for (i = 0; i < 4; i++)
+//    {
+//        free(mcq_arr[i]);
+//    }
+//
+//    for (i = 0; i < 1; i++)
+//    {
+//        printf("%s\n", fill_up_arr[i]->text);
+//        printf("%lf\n", fill_up_arr[i]->difficulty);
+//        printf("%s\n", fill_up_arr[i]->correct);
+//    }
+//    for (i = 0; i < 1; i++)
+//    {
+//        free(fill_up_arr[i]);
+//    }
+	// Debugging end
 }

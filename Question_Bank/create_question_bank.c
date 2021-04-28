@@ -3,9 +3,16 @@
 
 ptrnode functionToCreateQuestionBank(ptrnode qb1)
 {
-	int type_of_question[] = {0, 1, 2, 3, 4};
-	int number_of_types = 5;
+	int type_of_question[] = {0, 1, 2, 3};
+	// mcq = 0
+	// fill in the blanks = 1
+	// true/false = 2
+	// short Answer = 3
+	int number_of_types = 4;
 	int range_of_diff[] = {0, 1, 2};
+	// Easy = 0
+	// Medium = 1
+	// Difficult = 2
 	int number_of_diff = 3;
 	ptrnode base = qb1;
 	qb1 = make_node(-1);        // Header Node
@@ -48,4 +55,60 @@ ptrnode functionToCreateQuestionBank(ptrnode qb1)
 		}
 	}
 	return base;
+}
+
+void insert_questions(ptrnode tree)
+{
+	int i = 0;
+	while(true)
+	{
+		if(mcq_arr[i] != NULL)
+		{
+			add_mcq_question_to_bank(tree, mcq_arr[i], i);
+			i++;
+		}
+		else
+		{
+			break;
+		}
+	}
+	i = 0;
+	while(true)
+	{
+		if(fill_up_arr[i] != NULL)
+		{
+			add_fill_up_question_to_bank(tree, fill_up_arr[i], i);
+			i++;
+		}
+		else
+		{
+			break;
+		}
+	}
+	i = 0;
+	while(true)
+	{
+		if(true_false_arr[i] != NULL)
+		{
+			add_true_false_question_to_bank(tree, true_false_arr[i], i);
+			i++;
+		}
+		else
+		{
+			break;
+		}
+	}
+	i = 0;
+	while(true)
+	{
+		if(short_answer_arr[i] != NULL)
+		{
+			add_short_answer_question_to_bank(tree, short_answer_arr[i], i);
+			i++;
+		}
+		else
+		{
+			break;
+		}
+	}
 }
