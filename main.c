@@ -8,5 +8,5 @@ int main()
 	question_bank();
 	//Call function that inserts index of questions in tree
 	read_question_paper(qb1);
-  return 0;
+  	return 0;
 }
