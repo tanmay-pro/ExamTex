@@ -1,21 +1,21 @@
 \question{type =mcq }{difficulty =       0.2}
 {text   =       C is a ... language}
-{opt           = Functional ,       Procedural ,Objects      ,        Events }
+{opt           = Functional ,       Procedural ,Objects      ,        Events,  yo    }
 {ans =             Functional    }
 
 \question{type =mcq}{difficulty =0.89}
 {text =what is name?}
-{opt =Functional ,Procedural ,Objects ,Events }
+{opt =Functional ,Procedural ,Objects ,Events,hi }
 {ans =Functional }
 
 \question{type =mcq}{difficulty =0.3}
 {text =where do you live?}
-{opt =Functional ,Procedural ,Objects ,Events }
+{opt =Functional ,Procedural ,Objects ,Events,hello }
 {ans =onal }
 
 \question{type =mcq}{difficulty =2}
 {text =college name?}
-{opt =Functional ,Procedural ,Objects ,Events }
+{opt =Functional ,Procedural ,Objects ,Events,bye }
 {ans =ctio }
 
 \question{type =fill up}{difficulty =1.3}
