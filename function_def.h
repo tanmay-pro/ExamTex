@@ -8,8 +8,8 @@
 #include <string.h>
 #include <time.h>
 
-#include"Question_Bank/question.h"
-#include"Question_Bank/tree_struct.h"
+#include"Question_Bank/question_structs.h"
+#include"Question_Bank/tree_node_struct.h"
 #include"Question_Paper/question_paper.h"
 
 #define ll long long
@@ -29,7 +29,6 @@ void add_short_answer_question_to_bank(ptrnode tree, short_answer* question, int
 ptrnode delete_mcq_from_question_bank(ptrnode tree, mcq* question, int index);
 
 struct questions add_question_type();
-void read_question_paper();
 
 void push(stack *ps, char x);
 void pop(stack *ps);
@@ -51,5 +50,5 @@ short_answer *short_answer_arr[10];
 
 void insert_questions(ptrnode tree);
 ptrnode functionToCreateQuestionBank(ptrnode qb1);
-
+void functionToDeleteQuestionBank(ptrnode qb[]);
 #endif

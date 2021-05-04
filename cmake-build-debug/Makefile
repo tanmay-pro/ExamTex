@@ -143,33 +143,6 @@ DSA-Miniproject-team27/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/DSA-Miniproject-team27.dir/build.make CMakeFiles/DSA-Miniproject-team27.dir/build
 .PHONY : DSA-Miniproject-team27/fast
 
-Question_Bank/bank.o: Question_Bank/bank.c.o
-
-.PHONY : Question_Bank/bank.o
-
-# target to build an object file
-Question_Bank/bank.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DSA-Miniproject-team27.dir/build.make CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/bank.c.o
-.PHONY : Question_Bank/bank.c.o
-
-Question_Bank/bank.i: Question_Bank/bank.c.i
-
-.PHONY : Question_Bank/bank.i
-
-# target to preprocess a source file
-Question_Bank/bank.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DSA-Miniproject-team27.dir/build.make CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/bank.c.i
-.PHONY : Question_Bank/bank.c.i
-
-Question_Bank/bank.s: Question_Bank/bank.c.s
-
-.PHONY : Question_Bank/bank.s
-
-# target to generate assembly for a file
-Question_Bank/bank.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DSA-Miniproject-team27.dir/build.make CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/bank.c.s
-.PHONY : Question_Bank/bank.c.s
-
 Question_Bank/create_question_bank.o: Question_Bank/create_question_bank.c.o
 
 .PHONY : Question_Bank/create_question_bank.o
@@ -197,6 +170,60 @@ Question_Bank/create_question_bank.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/DSA-Miniproject-team27.dir/build.make CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/create_question_bank.c.s
 .PHONY : Question_Bank/create_question_bank.c.s
 
+Question_Bank/delete_questions.o: Question_Bank/delete_questions.c.o
+
+.PHONY : Question_Bank/delete_questions.o
+
+# target to build an object file
+Question_Bank/delete_questions.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DSA-Miniproject-team27.dir/build.make CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/delete_questions.c.o
+.PHONY : Question_Bank/delete_questions.c.o
+
+Question_Bank/delete_questions.i: Question_Bank/delete_questions.c.i
+
+.PHONY : Question_Bank/delete_questions.i
+
+# target to preprocess a source file
+Question_Bank/delete_questions.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DSA-Miniproject-team27.dir/build.make CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/delete_questions.c.i
+.PHONY : Question_Bank/delete_questions.c.i
+
+Question_Bank/delete_questions.s: Question_Bank/delete_questions.c.s
+
+.PHONY : Question_Bank/delete_questions.s
+
+# target to generate assembly for a file
+Question_Bank/delete_questions.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DSA-Miniproject-team27.dir/build.make CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/delete_questions.c.s
+.PHONY : Question_Bank/delete_questions.c.s
+
+Question_Bank/insert_questions.o: Question_Bank/insert_questions.c.o
+
+.PHONY : Question_Bank/insert_questions.o
+
+# target to build an object file
+Question_Bank/insert_questions.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DSA-Miniproject-team27.dir/build.make CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/insert_questions.c.o
+.PHONY : Question_Bank/insert_questions.c.o
+
+Question_Bank/insert_questions.i: Question_Bank/insert_questions.c.i
+
+.PHONY : Question_Bank/insert_questions.i
+
+# target to preprocess a source file
+Question_Bank/insert_questions.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DSA-Miniproject-team27.dir/build.make CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/insert_questions.c.i
+.PHONY : Question_Bank/insert_questions.c.i
+
+Question_Bank/insert_questions.s: Question_Bank/insert_questions.c.s
+
+.PHONY : Question_Bank/insert_questions.s
+
+# target to generate assembly for a file
+Question_Bank/insert_questions.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DSA-Miniproject-team27.dir/build.make CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/insert_questions.c.s
+.PHONY : Question_Bank/insert_questions.c.s
+
 Question_Bank/question_bank_tree.o: Question_Bank/question_bank_tree.c.o
 
 .PHONY : Question_Bank/question_bank_tree.o
@@ -223,6 +250,33 @@ Question_Bank/question_bank_tree.s: Question_Bank/question_bank_tree.c.s
 Question_Bank/question_bank_tree.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/DSA-Miniproject-team27.dir/build.make CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/question_bank_tree.c.s
 .PHONY : Question_Bank/question_bank_tree.c.s
+
+Question_Bank/reading_input_bank.o: Question_Bank/reading_input_bank.c.o
+
+.PHONY : Question_Bank/reading_input_bank.o
+
+# target to build an object file
+Question_Bank/reading_input_bank.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DSA-Miniproject-team27.dir/build.make CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/reading_input_bank.c.o
+.PHONY : Question_Bank/reading_input_bank.c.o
+
+Question_Bank/reading_input_bank.i: Question_Bank/reading_input_bank.c.i
+
+.PHONY : Question_Bank/reading_input_bank.i
+
+# target to preprocess a source file
+Question_Bank/reading_input_bank.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DSA-Miniproject-team27.dir/build.make CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/reading_input_bank.c.i
+.PHONY : Question_Bank/reading_input_bank.c.i
+
+Question_Bank/reading_input_bank.s: Question_Bank/reading_input_bank.c.s
+
+.PHONY : Question_Bank/reading_input_bank.s
+
+# target to generate assembly for a file
+Question_Bank/reading_input_bank.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DSA-Miniproject-team27.dir/build.make CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/reading_input_bank.c.s
+.PHONY : Question_Bank/reading_input_bank.c.s
 
 Question_Paper/question_paper.o: Question_Paper/question_paper.c.o
 
@@ -287,15 +341,21 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... DSA-Miniproject-team27"
-	@echo "... Question_Bank/bank.o"
-	@echo "... Question_Bank/bank.i"
-	@echo "... Question_Bank/bank.s"
 	@echo "... Question_Bank/create_question_bank.o"
 	@echo "... Question_Bank/create_question_bank.i"
 	@echo "... Question_Bank/create_question_bank.s"
+	@echo "... Question_Bank/delete_questions.o"
+	@echo "... Question_Bank/delete_questions.i"
+	@echo "... Question_Bank/delete_questions.s"
+	@echo "... Question_Bank/insert_questions.o"
+	@echo "... Question_Bank/insert_questions.i"
+	@echo "... Question_Bank/insert_questions.s"
 	@echo "... Question_Bank/question_bank_tree.o"
 	@echo "... Question_Bank/question_bank_tree.i"
 	@echo "... Question_Bank/question_bank_tree.s"
+	@echo "... Question_Bank/reading_input_bank.o"
+	@echo "... Question_Bank/reading_input_bank.i"
+	@echo "... Question_Bank/reading_input_bank.s"
 	@echo "... Question_Paper/question_paper.o"
 	@echo "... Question_Paper/question_paper.i"
 	@echo "... Question_Paper/question_paper.s"

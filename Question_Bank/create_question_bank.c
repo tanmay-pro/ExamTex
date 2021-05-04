@@ -1,4 +1,3 @@
-#include "tree_struct.h"
 #include"../function_def.h"
 
 ptrnode functionToCreateQuestionBank(ptrnode qb1)
@@ -112,3 +111,4 @@ void insert_questions(ptrnode tree)
 		}
 	}
 }
+
