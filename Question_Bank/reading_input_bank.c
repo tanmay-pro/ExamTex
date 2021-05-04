@@ -1,4 +1,4 @@
-#include "question.h"
+#include "question_structs.h"
 #include "../function_def.h"
 
 void push(stack *ps, char x)
