@@ -168,7 +168,7 @@ ptrnode delete_mcq_from_question_bank(ptrnode tree, mcq* question, int index)
 	{
 		tree = tree->firstchild->nextsibling;
 	}
-	else if(diff > 2 && diff <= 3)
+	else if(diff > 2)
 	{
 		tree = tree->firstchild->nextsibling->nextsibling;
 	}
