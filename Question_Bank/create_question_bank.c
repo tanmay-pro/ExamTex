@@ -1,4 +1,3 @@
-#include "tree_struct.h"
 #include"../function_def.h"
 
 ptrnode functionToCreateQuestionBank(ptrnode qb1)
@@ -113,13 +112,3 @@ void insert_questions(ptrnode tree)
 	}
 }
 
-ptrnode functionToDeleteQuestionBank(ptrnode qb[])
-{
-	int input_id = 0;
-	printf("Please Enter the id of the Question bank you want to Delete");
-	br;
-	scanf("%d", &input_id);
-	ptrnode temp = qb[input_id];
-	free(temp);
-	qb[input_id] = NULL;
-}
