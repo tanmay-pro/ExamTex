@@ -65,10 +65,10 @@ question add_question_type()
     if(!strcmp(buffer,"sample"))
     {   
         //Checking the type of question
-        while(ch != '{')
-        {
-	        ch=(char)getchar(); // Inaccessible Code
-        }
+		//        while(ch != '{')
+		//        {
+		//	        ch=(char)getchar(); // Inaccessible Code
+		//        }
         scanf("%[^=]s",buffer);
         while(ch != '=')
         {
@@ -136,12 +136,11 @@ question add_question_type()
         {
 	        ch=(char)getchar();
         }
-        //printf("%d\n",que.no_of_questions);
 	    return que;
     }
     else
     {
-    	;
+		;
     }
 }
 
@@ -166,8 +165,6 @@ void read_question_paper(ptrnode qb)
     {
 	    sampler(qb, questions_in_paper[j]);
     }
-    //for(int j=0;j<i;j++)
-    //printf("%d %.2f %d\n",questions_in_paper[j].type,questions_in_paper[j].diff,questions_in_paper[j].no_of_questions);
 }
 
 void sampler(ptrnode qb, question Q)

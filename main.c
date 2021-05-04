@@ -2,17 +2,16 @@
 
 int main()
 {
-	// Create Sample Question banks Even before User Enters Anything
 	ptrnode qb[100] = {NULL};
 	int count = 0;
+	int n;
 	while(true)
 	{
-		int n;
 		printf("Select the option number:\n1.Add a new Question Bank\n2.Delete Existing Question Bank\n");
 		printf("3.Add Question to Existing Question Bank\n4.Delete Question from existing Question Bank\n");
 		printf("5.Print Existing Question Bank\n6.Generate Question Paper\n7.Exit\n");
-		scanf("%d",&n);
-		if(n == 8)
+		scanf("%d", &n);
+		if(n == 7)
 		{
 			printf("Thank You\n");
 			break;
@@ -20,14 +19,14 @@ int main()
 		else if(n == 1)
 		{
 			functionToCreateQuestionBank(qb[count]);
-			count++;
 			printf("The Unique Question Bank id is = %d", count);
 			br;
 			printf("Please remember this id");
 			br;
+			count++;
 			question_bank();
 			insert_questions(qb[count]);
-			read_question_paper(qb[count]);
+			//read_question_paper(qb[count]);
 		}
 		else if(n == 2)
 		{
