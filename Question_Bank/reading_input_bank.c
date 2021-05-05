@@ -191,6 +191,74 @@ fill_up *insert_fill_up(stack s1)
     strcpy(question->correct, post_correct);
     return question;
 }
+
+true_false *insert_true_false(stack s1)
+{
+    true_false *question;
+    question = (true_false *)malloc(sizeof(true_false));
+    char post_correct, pre[10], post_line[1000];
+    char y, z;
+    char buffer[1000];
+    question->difficulty = input_difficulty(s1, pre);
+    strcpy(question->text, input_text(s1, pre, post_line, buffer));
+	fscanf(fp, "%c", &y);
+    while (y != '{')
+    {
+	    fscanf(fp, "%c", &y);
+    }
+    push(&s1, y);
+    fscanf(fp, "%[^=]s", pre);
+    char ch;
+	fscanf(fp, "%c", &ch);
+	fscanf(fp, "%c", &post_correct);
+    while (post_correct == ' ')
+    {
+	    fscanf(fp, "%c", &post_correct);
+    }
+    fscanf(fp, "%c", &z);
+    if (z == '}')
+    {
+        pop(&s1);
+    }
+    
+    question->correct=post_correct;
+    return question;
+}
+
+short_answer *insert_short_answer(stack s1)
+{
+    short_answer *question;
+    question = (short_answer *)malloc(sizeof(short_answer));
+    char post_correct[1000], pre[10], post_line[1000];
+    char y, z;
+    char buffer[1000];
+    question->difficulty = input_difficulty(s1, pre);
+    strcpy(question->text, input_text(s1, pre, post_line, buffer));
+	fscanf(fp, "%c", &y);
+    while (y != '{')
+    {
+	    fscanf(fp, "%c", &y);
+    }
+    push(&s1, y);
+    fscanf(fp, "%[^=]s", pre);
+    char ch;
+	fscanf(fp, "%c", &ch);
+	fscanf(fp, "%c", &post_correct[0]);
+    while (post_correct[0] == ' ')
+    {
+	    fscanf(fp, "%c", &post_correct[0]);
+    }
+    fscanf(fp, "%[^}]s", post_correct + 1);
+    fscanf(fp, "%c", &z);
+    if (z == '}')
+    {
+        pop(&s1);
+    }
+    strcpy(question->correct, post_correct);
+ 
+    return question;
+}
+
 void question_bank(int type_number[])
 {
 	char str[1000];
@@ -211,7 +279,7 @@ void question_bank(int type_number[])
 	fscanf(fp, "%c", &x);
     char pre[10], post[10], ch;
     struct stack s1;
-    int i, mcq_index = 0, fill_up_index = 0;
+    int i, mcq_index = 0, fill_up_index = 0,true_false_index = 0,short_answer_index=0;
     s1.top = -1;
     while (x != 35)
     {
@@ -234,6 +302,7 @@ void question_bank(int type_number[])
         {
             pop(&s1);
         }
+        printf("%c\n",post[0]);
         if (post[0] == 'm')
         {
             mcq_arr[mcq_index] = insert_mcq(s1);
@@ -246,6 +315,20 @@ void question_bank(int type_number[])
             fill_up_index++;
 	        type_number[1]++;
         }
+        else if (post[0] == 't')
+        {
+            true_false_arr[true_false_index] = insert_true_false(s1);
+            true_false_index++;
+	        type_number[2]++;
+        }
+        else if (post[0] == 's')
+        {
+            
+            short_answer_arr[short_answer_index] = insert_short_answer(s1);
+            short_answer_index++;
+	        type_number[3]++;
+            printf("hello\n");
+        }
 	    fscanf(fp, "%c",&x);
 	}
     fclose(fp);
@@ -253,22 +336,34 @@ void question_bank(int type_number[])
 	//Debugging start
     // for (i = 0; i < 4; i++)
     // {
-    //     fprintf("%s\n", mcq_arr[i]->text);
-    //     fprintf("%lf\n", mcq_arr[i]->difficulty);
+    //     printf("%s\n", mcq_arr[i]->text);
+    //     printf("%lf\n", mcq_arr[i]->difficulty);
     //     //int p=sizeof(mcq_arr[i]->options)/(sizeof(mcq_arr[i]->options[0]));
     //     int p=mcq_arr[i]->no_of_options;
     //     //fprintf("%d\n",p);
     //     //fprintf("%lu\n",sizeof(mcq_arr[i]->options));
     //     // fprintf("%lu\n",sizeof(mcq_arr[i]->options[0]));
     //     for(int j=0;j<p;j++)
-    //      fprintf("%s\n",mcq_arr[i]->options[j]);
-    //     fprintf("%s\n", mcq_arr[i]->correct);
+    //      printf("%s\n",mcq_arr[i]->options[j]);
+    //     printf("%s\n", mcq_arr[i]->correct);
     // }
     // for (i = 0; i < 1; i++)
     // {
-    //     fprintf("%s\n", fill_up_arr[i]->text);
-    //     fprintf("%lf\n", fill_up_arr[i]->difficulty);
-    //     fprintf("%s\n", fill_up_arr[i]->correct);
+    //     printf("%s\n", fill_up_arr[i]->text);
+    //     printf("%lf\n", fill_up_arr[i]->difficulty);
+    //     printf("%s\n", fill_up_arr[i]->correct);
+    // }
+    // for (i = 0; i < 1; i++)
+    // {
+    //     printf("%s\n", true_false_arr[i]->text);
+    //     printf("%lf\n", true_false_arr[i]->difficulty);
+    //     printf("%c\n", true_false_arr[i]->correct);
+    // }
+    // for (i = 0; i < 1; i++)
+    // {
+    //     printf("%s\n", short_answer_arr[i]->text);
+    //     printf("%lf\n", short_answer_arr[i]->difficulty);
+    //     printf("%s\n", short_answer_arr[i]->correct);
     // }
     //Debugging end
 }
