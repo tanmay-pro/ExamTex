@@ -326,7 +326,7 @@ void question_bank(int type_number[])
 	        type_number[3]++;
         }
 	    fscanf(fp, "%c",&x);
-	}
+    }
     fclose(fp);
     //fprintf("i have entered here2\n");
 	//Debugging start
