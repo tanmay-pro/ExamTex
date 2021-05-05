@@ -138,7 +138,7 @@ mcq *insert_mcq(stack s1)
     {
 	    fscanf(fp, "%c", &y);
     }
-    push(&s1, y);			br;
+    push(&s1, y);
     fscanf(fp, "%[^=]s", pre);
     char cra;
 	fscanf(fp, "%c", &cra);
