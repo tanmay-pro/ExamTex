@@ -13,8 +13,8 @@ ptrnode functionToCreateQuestionBank(ptrnode qb1)
 	// Medium = 1
 	// Difficult = 2
 	int number_of_diff = 3;
+	qb1 = make_node(-1); // Header Node
 	ptrnode base = qb1;
-	qb1 = make_node(-1);        // Header Node
 	qb1 = insert_below(qb1, 0); // Inserting type of Question
 	qb1 = qb1->firstchild;
 	qb1 = insert_below(qb1, 0);
@@ -28,10 +28,6 @@ ptrnode functionToCreateQuestionBank(ptrnode qb1)
 		temp = temp->nextsibling;
 		temp = insert_below(temp, 0);
 	}
-	fo(k, number_of_diff - 1)
-	{
-		qb1 = insert_horizontally(qb1, range_of_diff[k + 1]);
-	} // Inserting All difficulties
 	ptrnode for_inserting_diff[number_of_types - 1];
 	fo(i, number_of_types - 1)
 	{
@@ -41,6 +37,7 @@ ptrnode functionToCreateQuestionBank(ptrnode qb1)
 			for_inserting_diff[i] = for_inserting_diff[i]->nextsibling;
 		}
 	}
+	qb1 = qb1->firstchild;
 	fo(k, number_of_diff - 1)
 	{
 		qb1 = insert_horizontally(qb1, range_of_diff[k + 1]);
@@ -56,59 +53,51 @@ ptrnode functionToCreateQuestionBank(ptrnode qb1)
 	return base;
 }
 
-void insert_questions(ptrnode tree)
+void insert_questions(ptrnode tree, int type_number[])
 {
 	int i = 0;
 	while(true)
 	{
-		if(mcq_arr[i] != NULL)
-		{
-			add_mcq_question_to_bank(tree, mcq_arr[i], i);
-			i++;
-		}
-		else
+		if(type_number[0] == 0)
 		{
 			break;
 		}
+		tree = add_mcq_question_to_bank(tree, mcq_arr[i], i);
+		i++;
+		type_number[0]--;
 	}
 	i = 0;
 	while(true)
 	{
-		if(fill_up_arr[i] != NULL)
-		{
-			add_fill_up_question_to_bank(tree, fill_up_arr[i], i);
-			i++;
-		}
-		else
+		if(type_number[1] == 0)
 		{
 			break;
 		}
+		tree = add_fill_up_question_to_bank(tree, fill_up_arr[i], i);
+		i++;
+		type_number[1]--;
 	}
 	i = 0;
 	while(true)
 	{
-		if(true_false_arr[i] != NULL)
-		{
-			add_true_false_question_to_bank(tree, true_false_arr[i], i);
-			i++;
-		}
-		else
+		if(type_number[2] == 0)
 		{
 			break;
 		}
+		tree = add_true_false_question_to_bank(tree, true_false_arr[i], i);
+		i++;
+		type_number[2]--;
 	}
 	i = 0;
 	while(true)
 	{
-		if(short_answer_arr[i] != NULL)
-		{
-			add_short_answer_question_to_bank(tree, short_answer_arr[i], i);
-			i++;
-		}
-		else
+		if(type_number[3] == 0)
 		{
 			break;
 		}
+		tree = add_short_answer_question_to_bank(tree, short_answer_arr[i], i);
+		i++;
+		type_number[3]--;
 	}
 }
 

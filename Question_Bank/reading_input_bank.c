@@ -50,9 +50,7 @@ char *input_text(stack s1, char *pre, char *post_line, char *buffer)
     {
 	    fscanf(fp, "%c", &post_line[0]);
     }
-    //post_line[1] = '\0';
     fscanf(fp, "%[^}]s", post_line+1);
-    //strcat(post_line, buffer);
     fscanf(fp, "%c", &z);
     if (z == '}')
     {
@@ -91,7 +89,6 @@ mcq *insert_mcq(stack s1)
         {
 	        fscanf(fp, "%c", &post_options[i][0]);
         }
-        //post_options[i][1] = '\0';
         j=1;
 	    fscanf(fp, "%c", &p);
         while(p!=','&&p!='}')
@@ -101,14 +98,15 @@ mcq *insert_mcq(stack s1)
 	        fscanf(fp, "%c", &p);
         }
         post_options[i][j]='\0';
-        //strcat(post_options[i], buffer);
-        //fprintf("%c",p);
         i++;
         if(p=='}')
-         break;
+        {
+	        break;
+        }
         if(i%4==1)
-         post_options=(char**)realloc(post_options,4*sizeof(char*));
-         
+        {
+	        post_options=(char**)realloc(post_options,4*sizeof(char*));
+        }
     }
     // post_options[3]=(char*)malloc(100*sizeof(char));
     // post_options[3][0] = (char)getchar();
@@ -184,10 +182,8 @@ fill_up *insert_fill_up(stack s1)
     {
 	    fscanf(fp, "%c", &post_correct[0]);
     }
-    //post_correct[1] = '\0';
     fscanf(fp, "%[^}]s", post_correct + 1);
-    //strcat(post_correct, buffer);
-	fscanf(fp, "%c", &z);
+    fscanf(fp, "%c", &z);
     if (z == '}')
     {
         pop(&s1);
@@ -195,9 +191,15 @@ fill_up *insert_fill_up(stack s1)
     strcpy(question->correct, post_correct);
     return question;
 }
-void question_bank()
+void question_bank(int type_number[])
 {
 	char str[1000];
+	printf("Please Enter the name of the Input file.");
+	br;
+	printf("In case You are running the program on terminal, the file should be present inside Project Directory Folder");
+	br;
+	printf("In case You are running the program on Clion, etc IDE, the file should be present inside Debug Folder");
+	br;
 	scanf("%s", str);
 	fp = fopen(str, "r");
 	if (fp == NULL)
@@ -236,18 +238,15 @@ void question_bank()
         {
             mcq_arr[mcq_index] = insert_mcq(s1);
             mcq_index++;
+			type_number[0]++;
         }
         else if (post[0] == 'f')
         {
             fill_up_arr[fill_up_index] = insert_fill_up(s1);
             fill_up_index++;
+	        type_number[1]++;
         }
-	    //fprintf("i have entered here");
-        //br;
-		// x = getchar();
-        fscanf(fp, "%c",&x);
-        printf("%d",x);
-        br;
+	    fscanf(fp, "%c",&x);
 	}
     fclose(fp);
     //fprintf("i have entered here2\n");

@@ -1,120 +1,122 @@
 #include "tree_node_struct.h"
 #include "../function_def.h"
 
-void add_mcq_question_to_bank(ptrnode tree, mcq* question, int index)
+ptrnode add_mcq_question_to_bank(ptrnode tree, mcq* question, int index)
 {
-	tree = tree->firstchild;
+	ptrnode temp = tree;
+	temp = temp->firstchild;
 	double diff = question->difficulty;
-	// Difficulty < 1 => Easy; Difficulty < 2 => Medium; Difficulty < 3 => Hard
+	// Difficulty < 1 => Easy; Difficulty < 2 => Medium; Difficulty > 2 => Hard
 	if(diff <= 1)
 	{
-		tree = tree->firstchild;
+		temp = temp->firstchild;
 	}
 	else if(diff > 1 && diff <= 2)
 	{
-		tree = tree->firstchild->nextsibling;
+		temp = temp->firstchild->nextsibling;
 	}
 	else if(diff > 2 && diff <= 3)
 	{
-		tree = tree->firstchild->nextsibling->nextsibling;
+		temp = temp->firstchild->nextsibling->nextsibling;
 	}
-	if(tree->firstchild == NULL)
+	if(temp->firstchild == NULL)
 	{
-		tree = insert_below(tree, index);
+		temp = insert_below(temp, index);
 	}
 	else
 	{
-		tree = tree->firstchild;
-		tree = insert_horizontally(tree, index);
+		temp = temp->firstchild;
+		temp = insert_horizontally(temp, index);
 	}
+	return tree;
 }
 
-void add_fill_up_question_to_bank(ptrnode tree, fill_up* question, int index)
+ptrnode add_fill_up_question_to_bank(ptrnode tree, fill_up* question, int index)
 {
-	tree = tree->firstchild;
-	tree = tree->nextsibling;
+	ptrnode temp = tree;
+	temp = temp->firstchild->nextsibling;
 	double diff = question->difficulty;
-	// Difficulty < 1 => Easy; Difficulty < 2 => Medium; Difficulty < 3 => Hard
+	// Difficulty < 1 => Easy; Difficulty < 2 => Medium; Difficulty > 2 => Hard
 	if(diff <= 1)
 	{
-		tree = tree->firstchild;
+		temp = temp->firstchild;
 	}
 	else if(diff > 1 && diff <= 2)
 	{
-		tree = tree->firstchild->nextsibling;
+		temp = temp->firstchild->nextsibling;
 	}
 	else if(diff > 2 && diff <= 3)
 	{
-		tree = tree->firstchild->nextsibling->nextsibling;
+		temp = temp->firstchild->nextsibling->nextsibling;
 	}
-	if(tree->firstchild == NULL)
+	if(temp->firstchild == NULL)
 	{
-		tree = insert_below(tree, index);
+		temp = insert_below(temp, index);
 	}
 	else
 	{
-		tree = tree->firstchild;
-		tree = insert_horizontally(tree, index);
+		temp = temp->firstchild;
+		temp = insert_horizontally(temp, index);
 	}
+	return tree;
 }
 
-void add_true_false_question_to_bank(ptrnode tree, true_false* question, int index)
+ptrnode add_true_false_question_to_bank(ptrnode tree, true_false* question, int index)
 {
-	tree = tree->firstchild;
-	tree = tree->nextsibling;
-	tree = tree->nextsibling;
+	ptrnode temp = tree;
+	temp = temp->firstchild->nextsibling->nextsibling;
 	double diff = question->difficulty;
-	// Difficulty < 1 => Easy; Difficulty < 2 => Medium; Difficulty < 3 => Hard
+	// Difficulty < 1 => Easy; Difficulty < 2 => Medium; Difficulty > 2 => Hard
 	if(diff <= 1)
 	{
-		tree = tree->firstchild;
+		temp = temp->firstchild;
 	}
 	else if(diff > 1 && diff <= 2)
 	{
-		tree = tree->firstchild->nextsibling;
+		temp = temp->firstchild->nextsibling;
 	}
 	else if(diff > 2 && diff <= 3)
 	{
-		tree = tree->firstchild->nextsibling->nextsibling;
+		temp = temp->firstchild->nextsibling->nextsibling;
 	}
-	if(tree->firstchild == NULL)
+	if(temp->firstchild == NULL)
 	{
-		tree = insert_below(tree, index);
+		temp = insert_below(temp, index);
 	}
 	else
 	{
-		tree = tree->firstchild;
-		tree = insert_horizontally(tree, index);
+		temp = temp->firstchild;
+		temp = insert_horizontally(temp, index);
 	}
+	return tree;
 }
 
-void add_short_answer_question_to_bank(ptrnode tree, short_answer* question, int index)
+ptrnode add_short_answer_question_to_bank(ptrnode tree, short_answer* question, int index)
 {
-	tree = tree->firstchild;
-	tree = tree->nextsibling;
-	tree = tree->nextsibling;
-	tree = tree->nextsibling;
+	ptrnode temp = tree;
+	temp = temp->firstchild->nextsibling->nextsibling->nextsibling;
 	double diff = question->difficulty;
-	// Difficulty < 1 => Easy; Difficulty < 2 => Medium; Difficulty < 3 => Hard
+	// Difficulty < 1 => Easy; Difficulty < 2 => Medium; Difficulty > 2=> Hard
 	if(diff <= 1)
 	{
-		tree = tree->firstchild;
+		temp = temp->firstchild;
 	}
 	else if(diff > 1 && diff <= 2)
 	{
-		tree = tree->firstchild->nextsibling;
+		temp = temp->firstchild->nextsibling;
 	}
 	else if(diff > 2 && diff <= 3)
 	{
-		tree = tree->firstchild->nextsibling->nextsibling;
+		temp = temp->firstchild->nextsibling->nextsibling;
 	}
-	if(tree->firstchild == NULL)
+	if(temp->firstchild == NULL)
 	{
-		tree = insert_below(tree, index);
+		temp = insert_below(temp, index);
 	}
 	else
 	{
-		tree = tree->firstchild;
-		tree = insert_horizontally(tree, index);
+		temp = temp->firstchild;
+		temp = insert_horizontally(temp, index);
 	}
+	return tree;
 }
