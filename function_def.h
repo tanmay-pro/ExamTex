@@ -51,4 +51,5 @@ short_answer *short_answer_arr[10];
 void insert_questions(ptrnode tree);
 ptrnode functionToCreateQuestionBank(ptrnode qb1);
 void functionToDeleteQuestionBank(ptrnode qb[]);
+FILE *fp;
 #endif

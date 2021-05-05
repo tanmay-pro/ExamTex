@@ -1,16 +1,25 @@
 #include"function_def.h"
+#include<stdio_ext.h>
 
 int main()
 {
 	ptrnode qb[100] = {NULL};
 	int count = 0;
-	int n;
+	int n,ct=0;
+	char s[1000];
 	while(true)
 	{
 		printf("Select the option number:\n1.Add a new Question Bank\n2.Delete Existing Question Bank\n");
 		printf("3.Add Question to Existing Question Bank\n4.Delete Question from existing Question Bank\n");
 		printf("5.Print Existing Question Bank\n6.Generate Question Paper\n7.Exit\n");
+		// if(ct!=0){
+		//   scanf("%[^\n]s",s);
+		//   printf("%s",s);
+		// }
+		// else
 		scanf("%d", &n);
+		fseek(stdin,0,SEEK_END);
+		ct++;
 		if(n == 7)
 		{
 			printf("Thank You\n");
@@ -18,19 +27,19 @@ int main()
 		}
 		else if(n == 1)
 		{
-			functionToCreateQuestionBank(qb[count]);
+			//functionToCreateQuestionBank(qb[count]);
 			printf("The Unique Question Bank id is = %d", count);
 			br;
 			printf("Please remember this id");
 			br;
 			count++;
 			question_bank();
-			insert_questions(qb[count]);
+			//insert_questions(qb[count]);
 			//read_question_paper(qb[count]);
 		}
 		else if(n == 2)
 		{
-			functionToDeleteQuestionBank(qb);
+			//functionToDeleteQuestionBank(qb);
 		}
 		else if(n == 3)
 		{
@@ -53,7 +62,7 @@ int main()
 			printf("Please enter the id of the Question Bank you want to generate the Question Paper from");
 			br;
 			scanf("%d", &input_id);
-			read_question_paper(qb[input_id]);
+			//read_question_paper(qb[input_id]);
 		}
 	}
   	return 0;
