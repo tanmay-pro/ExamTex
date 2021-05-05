@@ -56,59 +56,51 @@ ptrnode functionToCreateQuestionBank(ptrnode qb1)
 	return base;
 }
 
-void insert_questions(ptrnode tree)
+void insert_questions(ptrnode tree, int type_number[])
 {
 	int i = 0;
 	while(true)
 	{
-		if(mcq_arr[i] != NULL)
-		{
-			add_mcq_question_to_bank(tree, mcq_arr[i], i);
-			i++;
-		}
-		else
+		if(type_number[0] == 0)
 		{
 			break;
 		}
+		add_mcq_question_to_bank(tree, mcq_arr[i], i);
+		i++;
+		type_number[0]--;
 	}
 	i = 0;
 	while(true)
 	{
-		if(fill_up_arr[i] != NULL)
-		{
-			add_fill_up_question_to_bank(tree, fill_up_arr[i], i);
-			i++;
-		}
-		else
+		if(type_number[1] == 0)
 		{
 			break;
 		}
+		add_fill_up_question_to_bank(tree, fill_up_arr[i], i);
+		i++;
+		type_number[1]--;
 	}
 	i = 0;
 	while(true)
 	{
-		if(true_false_arr[i] != NULL)
-		{
-			add_true_false_question_to_bank(tree, true_false_arr[i], i);
-			i++;
-		}
-		else
+		if(type_number[2] == 0)
 		{
 			break;
 		}
+		add_true_false_question_to_bank(tree, true_false_arr[i], i);
+		i++;
+		type_number[2]--;
 	}
 	i = 0;
 	while(true)
 	{
-		if(short_answer_arr[i] != NULL)
-		{
-			add_short_answer_question_to_bank(tree, short_answer_arr[i], i);
-			i++;
-		}
-		else
+		if(type_number[3] == 0)
 		{
 			break;
 		}
+		add_short_answer_question_to_bank(tree, short_answer_arr[i], i);
+		i++;
+		type_number[3]--;
 	}
 }
 
