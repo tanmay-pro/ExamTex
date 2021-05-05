@@ -1,10 +1,5 @@
 #include "../function_def.h"
-#include "question_paper.h"
 typedef int diff_type;
-
-//T.B.D=>
-mcq **mcq_struct_array;        //the array of mcqs made while reading question_bank.txt
-fill_up **fill_up_struct_array; //the array of fill_ups made while reading question_bank.txt
 
 void printer_mcq(FILE *file, mcq *q)
 {
@@ -43,124 +38,144 @@ int *generate_randoms(int available, int n)
 question add_question_type()
 {
     char ch, buffer[100];
-    struct questions que;
-    //Checking if command is sample
-    ch=(char)getchar();
-    while(ch == ' ')
+    question que;
+	fscanf(fp2, "%c", &ch);
+	while(ch == ' ')
     {
-	    ch=(char)getchar();
+	    fscanf(fp2, "%c", &ch);
     }
     int j=0;
     while( (ch != ' ') && (ch != '{') )
     {
         buffer[j]=ch;
         j++;
-        ch=(char)getchar();
+	    fscanf(fp2, "%c", &ch);
     }       
     buffer[j]='\0';
     while(ch != '{')
     {
-	    ch=(char)getchar();
+	    fscanf(fp2, "%c", &ch);
     }
     if(!strcmp(buffer,"sample"))
-    {   
-        //Checking the type of question
-		//        while(ch != '{')
-		//        {
-		//	        ch=(char)getchar(); // Inaccessible Code
-		//        }
-        scanf("%[^=]s",buffer);
+    {
+    	while(ch != '{')
+    	{
+		    fscanf(fp2, "%c", &ch);
+	    }
+        fscanf(fp2, "%[^=]s",buffer);
         while(ch != '=')
         {
-	        ch=(char)getchar();
+	        fscanf(fp2, "%c", &ch);
         }
-        ch=(char)getchar();
-        while(ch == ' ')
+	    fscanf(fp2, "%c", &ch);
+	    while(ch == ' ')
         {
-	        ch=(char)getchar();
+	        fscanf(fp2, "%c", &ch);
         }
         int i=0;
         while((ch != ' ') && (ch != '}'))
         {
             buffer[i]=ch;
             i++;
-            ch=(char)getchar();
+	        fscanf(fp2, "%c", &ch);
         }
         buffer[i]='\0';
         while(ch != '}')
         {
-	        ch=(char)getchar();
+	        fscanf(fp2, "%c", &ch);
         }
         //Add the different question types here
         if(!strcmp(buffer,"mcq"))
         {
-	        que.type=44;
+	        que.type=0;
         }
-        if(!strcmp(buffer,"scq"))
+        else if(!strcmp(buffer,"sa"))
         {
-	        que.type=55;
+	        que.type=3;
+        }
+        else if(!strcmp(buffer,"fill_up"))
+        {
+	        que.type=1;
+        }
+        else if(!strcmp(buffer,"true_false"))
+        {
+	        que.type=2;
         }
         while(ch != '}')
         {
-	        ch=(char)getchar(); // Inaccessible Code
-        }
+	        fscanf(fp2, "%c", &ch);
+	    }
         //Reading the difficulty of the questions
         while(ch != '{')
         {
-	        ch=(char)getchar();
+	        fscanf(fp2, "%c", &ch);
         }
-        scanf("%[^=]s",buffer);
+        fscanf(fp2, "%[^=]s",buffer);
         while(ch != '=')
         {
-	        ch=(char)getchar();
+	        fscanf(fp2, "%c", &ch);
         }
-        scanf("%f",&que.diff);
+        fscanf(fp2, "%f",&que.diff);
         while(ch != '}')
         {
-	        ch=(char)getchar();
+	        fscanf(fp2, "%c", &ch);
         }
-        //printf("%f\n",que.diff);
         while(ch != '{')
         {
-	        ch=(char)getchar();
-        }
-        scanf("%[^=]s",buffer);
+	        fscanf(fp2, "%c", &ch);
+	    }
+        fscanf(fp2, "%[^=]s",buffer);
         while(ch != '=')
         {
-	        ch=(char)getchar();
+	        fscanf(fp2, "%c", &ch);
         }
         int temp;
-        scanf(" %d",&temp);
+        fscanf(fp2, " %d",&temp);
         que.no_of_questions = temp;
         while(ch != '}')
         {
-	        ch=(char)getchar();
+	        fscanf(fp2, "%c", &ch);
         }
 	    return que;
     }
     else
     {
-		;
+		printf("Input Invalid");
     }
 }
 
 void read_question_paper(ptrnode qb)
 {
     srand(time(0));
-    char ch, buffer[100];
-    struct questions questions_in_paper[5];
+    char ch;
+    question questions_in_paper[4];
     int i = 0;
-    ch = (char)getchar();
-    while (ch != '.') //eof here!!!
-    {
-        while (ch != 92)
-        {
-	        ch = (char)getchar();
-        }
-        questions_in_paper[i] = add_question_type();
-        i++;
-        ch = (char)getchar();
-    }
+	char str[1000];
+	printf("Please Enter the name of the Input file.");
+	br;
+	printf("Note: In case You are running the program on terminal, the file should be present inside Project Directory Folder");
+	br;
+	printf("Note: In case You are running the program on Clion, etc IDE, the file should be present inside Debug Folder");
+	br;
+	scanf("%s", str);
+	fp2 = fopen(str, "r");
+	if (fp2 == NULL)
+	{
+		perror("Error While opening the file");
+		exit(EXIT_FAILURE);
+	}
+	fscanf(fp2, "%c", &ch);
+	while (ch != '#') //eof here!!!
+	{
+		while (ch != 92)
+		{
+			fscanf(fp2, "%c", &ch);
+		}
+		questions_in_paper[i] = add_question_type();
+		i++;
+		fscanf(fp2, "%c", &ch);
+	}
+	fclose(fp2);
     for (int j = 0; j < i; j++)
     {
 	    sampler(qb, questions_in_paper[j]);
@@ -197,11 +212,11 @@ void sampler(ptrnode qb, question Q)
             {
                 if (Q.type == 0)
                 {
-	                printer_mcq(paper_ptr, mcq_struct_array[qb->element]);
+	                printer_mcq(paper_ptr, mcq_arr[qb->element]);
                 }
                 else if (Q.type == 1)
                 {
-	                printer_fill_up(paper_ptr, fill_up_struct_array[qb->element]);
+	                printer_fill_up(paper_ptr, fill_up_arr[qb->element]);
                 }
                 //add more
             }

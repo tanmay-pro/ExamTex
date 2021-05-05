@@ -10,4 +10,8 @@
 {   difficulty <= 3  }
 {  number    = 5  }
 
+\    sample  { type =  sa }
+{   difficulty <= 3  }
+{  number    = 5  }
+
 
