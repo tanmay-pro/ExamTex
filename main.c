@@ -5,7 +5,7 @@ int main()
 	ptrnode qb[100] = {NULL};
 	int count = 0;
 	int n;
-	printf("Welcome to Latex");
+	printf("Welcome to ExamTex");
 	while(true)
 	{
 		br;
@@ -23,15 +23,15 @@ int main()
 		}
 		else if(n == 1)
 		{
-			functionToCreateQuestionBank(qb[count]);
+			qb[count] = functionToCreateQuestionBank(qb[count]);
 			printf("The Unique Question Bank id is = %d.", count);
 			br;
 			printf("Please remember this id for future use.");
 			br;
-			count++;
-			int type_number[4]; // 4 is number of types of Questions
+			int type_number[4] = {0}; // 4 is number of types of Questions
 			question_bank(type_number);
 			insert_questions(qb[count], type_number);
+			count++;
 		}
 		else if(n == 2)
 		{

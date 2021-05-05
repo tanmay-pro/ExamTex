@@ -3,7 +3,7 @@
 {opt           = Functional ,       Procedural ,Objects      ,        Events,  yo    }
 {ans =             Functional    }
 
-\question{type =mcq}{difficulty =0.89}
+\question{type =mcq}{difficulty =2.89}
 {text =what is name?}
 {opt =Functional ,Procedural ,Objects ,Events,hi }
 {ans =Functional }

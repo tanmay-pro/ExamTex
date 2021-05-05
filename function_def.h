@@ -21,10 +21,10 @@ ptrnode make_node(elementType e);
 ptrnode insert_below(ptrnode tree, elementType e);
 ptrnode insert_horizontally(ptrnode tree, elementType e);
 
-void add_mcq_question_to_bank(ptrnode tree, mcq* question, int index);
-void add_fill_up_question_to_bank(ptrnode tree, fill_up* question, int index);
-void add_true_false_question_to_bank(ptrnode tree, true_false* question, int index);
-void add_short_answer_question_to_bank(ptrnode tree, short_answer* question, int index);
+ptrnode add_mcq_question_to_bank(ptrnode tree, mcq* question, int index);
+ptrnode add_fill_up_question_to_bank(ptrnode tree, fill_up* question, int index);
+ptrnode add_true_false_question_to_bank(ptrnode tree, true_false* question, int index);
+ptrnode add_short_answer_question_to_bank(ptrnode tree, short_answer* question, int index);
 
 ptrnode delete_mcq_from_question_bank(ptrnode tree, mcq* question, int index);
 
