@@ -4,9 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/Question_Bank/bank.c" "/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/bank.c.o"
   "/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/Question_Bank/create_question_bank.c" "/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/create_question_bank.c.o"
+  "/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/Question_Bank/delete_questions.c" "/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/delete_questions.c.o"
+  "/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/Question_Bank/insert_questions.c" "/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/insert_questions.c.o"
   "/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/Question_Bank/question_bank_tree.c" "/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/question_bank_tree.c.o"
+  "/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/Question_Bank/reading_input_bank.c" "/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/reading_input_bank.c.o"
   "/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/Question_Paper/question_paper.c" "/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/Question_Paper/question_paper.c.o"
   "/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/main.c" "/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/main.c.o"
   )
