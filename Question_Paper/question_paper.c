@@ -17,6 +17,16 @@ void printer_fill_up(FILE *file, fill_up *q)
     fprintf(file, "%s\n", q->text);
 }
 
+void printer_true_false(FILE *file, true_false *q)
+{
+	fprintf(file, "%s\n", q->text);
+}
+
+void printer_short_answer(FILE *file, struct short_answer *q)
+{
+	fprintf(file, "%s\n", q->text);
+}
+
 // int number_of_children(ptrnode tree);
 //T.B.D =>needed to check if the number of questions sought are available (during sampling)
 
@@ -208,17 +218,24 @@ void sampler(ptrnode qb, question Q)
         int *arr = generate_randoms(available, num);
         while (available--)
         {
-            if (arr[i])
+            if (arr[i] == true)
             {
                 if (Q.type == 0)
                 {
 	                printer_mcq(paper_ptr, mcq_arr[qb->element]);
                 }
+                else if (Q.type == 2)
+                {
+	                printer_true_false(paper_ptr, true_false_arr[qb->element]);
+                }
+                else if (Q.type == 3)
+                {
+	                printer_short_answer(paper_ptr, short_answer_arr[qb->element]);
+                }
                 else if (Q.type == 1)
                 {
 	                printer_fill_up(paper_ptr, fill_up_arr[qb->element]);
                 }
-                //add more
             }
             i++;
             qb = qb->nextsibling;
