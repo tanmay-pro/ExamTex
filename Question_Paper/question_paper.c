@@ -115,7 +115,7 @@ question add_question_type()
         {
 	        fscanf(fp2, "%c", &ch);
         }
-        fscanf(fp2, "%f",&que.diff);
+        fscanf(fp2, "%f",&que.difficulty);
         while(ch != '}')
         {
 	        fscanf(fp2, "%c", &ch);
@@ -192,7 +192,7 @@ void sampler(ptrnode qb, question Q)
     {
         qb = qb->nextsibling;
     }
-    diff_type diff = Q.diff;
+    diff_type diff = Q.difficulty;
     qb = qb->firstchild;
     while (diff--)
     {
@@ -226,7 +226,6 @@ void sampler(ptrnode qb, question Q)
     }
     else
     {
-        fprintf(stderr, "could not generate %d questions of type %d and difficulty %lf, available = %d\n", num, Q.type, Q.diff, available);
-        //T.B.D =>here you'd like to print type_string (instead of index) which needs some type_index <-> type_string referencing
+        fprintf(stderr, "could not generate %d questions of type %d and difficulty %lf, available = %d\n", num, Q.type, Q.difficulty, available);
     }
 }
