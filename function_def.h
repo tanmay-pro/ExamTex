@@ -6,7 +6,7 @@
 #include <assert.h>
 #include <stdbool.h>
 #include <string.h>
-#include<stdio_ext.h>
+#include <stdio_ext.h>
 #include <time.h>
 
 #include"Question_Bank/question_structs.h"
@@ -45,6 +45,8 @@ void sampler(ptrnode qb, question Q);
 
 void printer_mcq(FILE *file, mcq *q);
 void printer_fill_up(FILE *file, fill_up *q);
+void printer_true_false(FILE *file, true_false *q);
+void printer_short_answer(FILE *file, short_answer *q);
 int *generate_randoms(int available, int n);
 
 mcq *mcq_arr[10];
