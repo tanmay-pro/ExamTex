@@ -4,17 +4,60 @@ typedef int diff_type;
 void printer_mcq(FILE *file, mcq *q)
 {
     fprintf(file, "%s\n", q->text);
-    int len = sizeof(q->options) / sizeof(q->correct);
+    /*int len = sizeof(q->options) / sizeof(q->correct);
     fo(i, len)
     {
     	fprintf(file, "%s\n", q->options[i]);
         //yet to be modulated to facilitate random generation
 	}
+    */
+   char options_to_print[4][100];
+   int correct_optionID=(rand())%4;
+   int n=q->no_of_options;
+   int option_selected[n]={0};
+
+
+   strcpy(options_to_print[correct_optionID],q->correct)
+   for(int i=0;i<4;i++)
+   {
+       if(i !=k)
+       {
+           int p=(rand())%n;
+           if(!strcmp(q->options[p],options_to_print[correct_optionID]))
+           {
+               option_selected[p]=1;
+           }
+           while(option_selected[p] != 0)
+           {
+               p=(rand())%n;               
+           }
+           strcpy(options_to_print[i],q->options[p]);
+           option_selected[p]=1;
+       }
+   }
+   for(int i=0;i<4;i++)
+   {
+       fprintf(file,"%c)%s\t",65+i,options_to_print[i]);
+   }
+   fprintf(file,"\n\n");
 }
 
 void printer_fill_up(FILE *file, fill_up *q)
 {
     fprintf(file, "%s\n", q->text);
+    fprintf(file,"Ans:\n\n");
+}
+
+void printer_true_false(FILE *file,true_false q)
+{
+    fprintf(file, "%s\n", q->text);
+    fprintf(file,"A)True\tB)False\n\n");
+}
+
+void printer_short_answer(FILE *file,short_answer q)
+{
+    fprintf(file, "%s\n", q->text);
+    fprintf(file,"Ans:\n\n");
 }
 
 // int number_of_children(ptrnode tree);
@@ -89,7 +132,7 @@ question add_question_type()
         {
 	        que.type=0;
         }
-        else if(!strcmp(buffer,"sa"))
+        else if(!strcmp(buffer,"short_answer"))
         {
 	        que.type=3;
         }
@@ -218,7 +261,15 @@ void sampler(ptrnode qb, question Q)
                 {
 	                printer_fill_up(paper_ptr, fill_up_arr[qb->element]);
                 }
-                //add more
+                else if (Q.type == 2)
+                {
+	                printer_true_false(paper_ptr, true_false_arr[qb->element]);
+                }
+                else if (Q.type == 3)
+                {
+	                printer_short_answer(paper_ptr, short_answer_arr[qb->element]);
+                }
+            
             }
             i++;
             qb = qb->nextsibling;
