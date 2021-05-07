@@ -12,8 +12,9 @@ typedef struct mcq
     char text[1000];
     double difficulty;
     char** options;//char** options;
-    char correct[20];
+    char** correct;
     int no_of_options;
+    int no_of_correct;
 } mcq;
 
 typedef struct fill_up

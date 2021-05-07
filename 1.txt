@@ -1,7 +1,7 @@
 \question{type =mcq }{difficulty =    2}
 {text   =       C is a ... language}
-{opt           = Functional,       Procedural ,Objects      ,        Events,  yo    }
-{ans = Functional}
+{opt           = Functional ,       Procedural ,Objects      ,        Events,  yo    }
+{ans =             Functional ,hello   }
 
 \question{type =mcq}{difficulty = 2}
 {text =What is name?}
