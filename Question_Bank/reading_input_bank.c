@@ -327,7 +327,7 @@ void question_bank(int type_number[])
     struct stack s1;
     int i, mcq_index = 0, fill_up_index = 0,true_false_index = 0,short_answer_index=0;
     s1.top = -1;
-    while (x != 35)
+    while (x != EOF)
     {
 	    fscanf(fp, "%c", &y);
         while (y != '{')
@@ -375,7 +375,7 @@ void question_bank(int type_number[])
             short_answer_index++;
 	        type_number[3]++;
         }
-	    fscanf(fp, "%c",&x);
+	    x=getc(fp);
     }
     fclose(fp);
     //fprintf("i have entered here2\n");
