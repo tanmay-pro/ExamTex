@@ -3,28 +3,52 @@ typedef int diff_type;
 
 void printer_mcq(FILE *file, mcq *q)
 {
-    fprintf(file, "%s\n", q->text);
-    int len = sizeof(q->options) / sizeof(q->correct);
-    fo(i, len)
-    {
-    	fprintf(file, "%s\n", q->options[i]);
-        //yet to be modulated to facilitate random generation
-	}
+   fprintf(file, "%s\n", q->text);
+   char options_to_print[4][100];
+   int correct_optionID=(rand())%4;
+   int n = q->no_of_options;
+   int option_selected[n]={0};
+   strcpy(options_to_print[correct_optionID],q->correct)
+   for(int i=0;i<4;i++)
+   {
+       if(i !=k)
+       {
+           int p=(rand()) % n;
+           if(!strcmp(q->options[p],options_to_print[correct_optionID]))
+           {
+               option_selected[p]=1;
+           }
+           while(option_selected[p] != 0)
+           {
+               p=(rand())%n;               
+           }
+           strcpy(options_to_print[i],q->options[p]);
+           option_selected[p]=1;
+       }
+   }
+   for(int i=0;i<4;i++)
+   {
+       fprintf(file,"%c)%s\t",65+i,options_to_print[i]);
+   }
+   fprintf(file,"\n\n");
 }
 
 void printer_fill_up(FILE *file, fill_up *q)
 {
     fprintf(file, "%s\n", q->text);
+    fprintf(file,"Ans:\n\n");
 }
 
 void printer_true_false(FILE *file, true_false *q)
 {
 	fprintf(file, "%s\n", q->text);
+  fprintf(file,"A)True\tB)False\n\n");
 }
 
 void printer_short_answer(FILE *file, struct short_answer *q)
 {
 	fprintf(file, "%s\n", q->text);
+  fprintf(file,"Ans:\n\n");
 }
 
 // int number_of_children(ptrnode tree);
@@ -49,8 +73,8 @@ question add_question_type()
 {
     char ch, buffer[100];
     question que;
-	fscanf(fp2, "%c", &ch);
-	while(ch == ' ')
+	  fscanf(fp2, "%c", &ch);
+	  while(ch == ' ')
     {
 	    fscanf(fp2, "%c", &ch);
     }
@@ -72,16 +96,16 @@ question add_question_type()
     	{
 		    fscanf(fp2, "%c", &ch);
 	    }
-        fscanf(fp2, "%[^=]s",buffer);
-        while(ch != '=')
-        {
-	        fscanf(fp2, "%c", &ch);
-        }
+      fscanf(fp2, "%[^=]s",buffer);
+      while(ch != '=')
+      {
+	      fscanf(fp2, "%c", &ch);
+      }
 	    fscanf(fp2, "%c", &ch);
 	    while(ch == ' ')
-        {
-	        fscanf(fp2, "%c", &ch);
-        }
+      {
+	      fscanf(fp2, "%c", &ch);
+      }
         int i=0;
         while((ch != ' ') && (ch != '}'))
         {
@@ -99,7 +123,7 @@ question add_question_type()
         {
 	        que.type=0;
         }
-        else if(!strcmp(buffer,"sa"))
+        else if(!strcmp(buffer,"short_answer"))
         {
 	        que.type=3;
         }
@@ -114,7 +138,7 @@ question add_question_type()
         while(ch != '}')
         {
 	        fscanf(fp2, "%c", &ch);
-	    }
+	      }
         //Reading the difficulty of the questions
         while(ch != '{')
         {
@@ -133,7 +157,7 @@ question add_question_type()
         while(ch != '{')
         {
 	        fscanf(fp2, "%c", &ch);
-	    }
+	      }
         fscanf(fp2, "%[^=]s",buffer);
         while(ch != '=')
         {
@@ -209,7 +233,7 @@ void sampler(ptrnode qb, question Q)
         qb = qb->nextsibling;
     }
     int num = Q.no_of_questions;
-	//int available = number_of_children(qb);
+	  //int available = number_of_children(qb);
 	int available = 0;
     int i = 0;
     if (available >= num)
