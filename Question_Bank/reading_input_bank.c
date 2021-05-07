@@ -123,7 +123,7 @@ mcq *insert_mcq(stack s1)
         {
 	        break;
         }
-        if(i%4==1)
+        if(i%4==0)
         {
 	        post_options=(char**)realloc(post_options,4*sizeof(char*));
         }
@@ -187,10 +187,7 @@ mcq *insert_mcq(stack s1)
         {
 	        break;
         }
-        if(i%4==1)
-        {
-	        post_correct=(char**)realloc(post_correct,sizeof(char*));
-        }
+	    post_correct=(char**)realloc(post_correct,sizeof(char*));
     }
     question->correct=(char**)malloc(i*sizeof(char*));
     for(j=0;j<i;j++)
@@ -325,6 +322,10 @@ void question_bank(int type_number[])
 	fscanf(fp, "%c", &x);
     char pre[10], post[10], ch;
     struct stack s1;
+    mcq_arr = (mcq **)malloc(10*sizeof(mcq *));
+    fill_up_arr = (fill_up **)malloc(10*sizeof(fill_up *));
+    true_false_arr = (true_false **)malloc(10*sizeof(true_false *));
+    short_answer_arr = (short_answer **)malloc(10*sizeof(short_answer *));
     int i, mcq_index = 0, fill_up_index = 0,true_false_index = 0,short_answer_index=0;
     s1.top = -1;
     while (x != EOF)
@@ -355,18 +356,24 @@ void question_bank(int type_number[])
             mcq_arr[mcq_index] = insert_mcq(s1);
             mcq_index++;
 			type_number[0]++;
+            if(mcq_index%10==0);
+             mcq_arr=(mcq **)realloc(mcq_arr ,10*sizeof(mcq *));
         }
         else if (post[0] == 'f')
         {
             fill_up_arr[fill_up_index] = insert_fill_up(s1);
             fill_up_index++;
 	        type_number[1]++;
+            if(fill_up_index%10==0);
+             fill_up_arr=(fill_up **)realloc(fill_up_arr ,10*sizeof(fill_up *));
         }
         else if (post[0] == 't')
         {
             true_false_arr[true_false_index] = insert_true_false(s1);
             true_false_index++;
 	        type_number[2]++;
+            if(true_false_index%10==0);
+             true_false_arr=(true_false **)realloc(true_false_arr ,10*sizeof(true_false *));
         }
         else if (post[0] == 's')
         {
@@ -374,6 +381,8 @@ void question_bank(int type_number[])
             short_answer_arr[short_answer_index] = insert_short_answer(s1);
             short_answer_index++;
 	        type_number[3]++;
+            if(short_answer_index%10==0);
+             short_answer_arr=(short_answer **)realloc(short_answer_arr ,10*sizeof(short_answer *));
         }
 	    x=getc(fp);
     }
