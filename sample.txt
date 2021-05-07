@@ -1,0 +1,4 @@
+\sample{type=mcq}
+{difficulty <= 2}
+{number=1}#
+
