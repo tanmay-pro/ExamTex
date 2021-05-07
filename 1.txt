@@ -1,28 +1,28 @@
-\question{type =mcq }{difficulty =       0.2}
+\question{type =mcq }{difficulty =    2}
 {text   =       C is a ... language}
 {opt           = Functional ,       Procedural ,Objects      ,        Events,  yo    }
 {ans =             Functional ,hello   }
 
-\question{type =mcq}{difficulty =0.89}
-{text =what is name?}
-{opt =Functional ,Procedural ,Objects ,Events,hi }
-{ans =Functional }
+\question{type =mcq}{difficulty = 2}
+{text =What is name?}
+{opt =Functional, Procedural, Objects ,Events, hi}
+{ans =Functional}
 
-\question{type =mcq}{difficulty =0.3}
+\question{type =mcq}{difficulty = 2}
 {text =where do you live?}
 {opt =Functional ,Procedural ,Objects ,Events,hello }
-{ans =onal }
+{ans =hello }
 
 \question{type =mcq}{difficulty =2}
 {text =college name?}
-{opt =Functional ,Procedural ,Objects ,Events,bye }
-{ans =ctio }
+{opt =Functional ,Procedural ,Objects ,Events,bye}
+{ans =bye}
 
-\question{type =fill up}{difficulty =1.3}
+\question{type =fill up}{difficulty =1}
 {text = President of USA is .....?}
-{ans = Biden }
+{ans = Biden}
 
-\question{type = true_false  }{difficulty =0.7}
+\question{type = true_false  }{difficulty =0}
 {text = This Code is Written in Java}
 {ans = F}
 

@@ -17,7 +17,7 @@ int main()
 		scanf("%d", &n);
 		if(n == 7)
 		{
-			printf("Thank You\n");
+			printf("Thank You!!\n");
 			br;
 			break;
 		}
