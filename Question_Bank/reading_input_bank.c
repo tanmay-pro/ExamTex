@@ -220,8 +220,7 @@ true_false *insert_true_false(stack s1)
     {
         pop(&s1);
     }
-    
-    question->correct=post_correct;
+    question->correct = post_correct;
     return question;
 }
 
@@ -255,7 +254,6 @@ short_answer *insert_short_answer(stack s1)
         pop(&s1);
     }
     strcpy(question->correct, post_correct);
- 
     return question;
 }
 
@@ -264,9 +262,9 @@ void question_bank(int type_number[])
 	char str[1000];
 	printf("Please Enter the name of the Input file.");
 	br;
-	printf("In case You are running the program on terminal, the file should be present inside Project Directory Folder");
+	printf("Note: In case You are running the program on terminal, the file should be present inside Project Directory Folder");
 	br;
-	printf("In case You are running the program on Clion, etc IDE, the file should be present inside Debug Folder");
+	printf("Note: In case You are running the program on Clion, etc IDE, the file should be present inside Debug Folder");
 	br;
 	scanf("%s", str);
 	fp = fopen(str, "r");
@@ -302,7 +300,6 @@ void question_bank(int type_number[])
         {
             pop(&s1);
         }
-        printf("%c\n",post[0]);
         if (post[0] == 'm')
         {
             mcq_arr[mcq_index] = insert_mcq(s1);
@@ -327,10 +324,9 @@ void question_bank(int type_number[])
             short_answer_arr[short_answer_index] = insert_short_answer(s1);
             short_answer_index++;
 	        type_number[3]++;
-            printf("hello\n");
         }
 	    fscanf(fp, "%c",&x);
-	}
+    }
     fclose(fp);
     //fprintf("i have entered here2\n");
 	//Debugging start
