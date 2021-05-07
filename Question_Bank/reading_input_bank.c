@@ -63,9 +63,10 @@ mcq *insert_mcq(stack s1)
 {
     mcq *question;
     question = (mcq *)malloc(sizeof(mcq));
-    char** post_options;
+    char **post_options, **post_correct;
     post_options=(char**)malloc(4*sizeof(char*));
-    char post_correct[20], pre[10], post_line[1000];
+    post_correct=(char**)malloc(sizeof(char*));
+    char pre[10], post_line[1000];
     char y, z,x,p, ch;
     char buffer[1000];
 
@@ -140,22 +141,43 @@ mcq *insert_mcq(stack s1)
     }
     push(&s1, y);
     fscanf(fp, "%[^=]s", pre);
-    char cra;
-	fscanf(fp, "%c", &cra);
-	fscanf(fp, "%c", &post_correct[0]);
-    while (post_correct[0] == ' ')
+	fscanf(fp, "%c", &ch);
+    i=0;
+    j=0;
+    while(1)
     {
-	    fscanf(fp, "%c", &post_correct[0]);
+        post_correct[i]=(char*)malloc(100*sizeof(char));
+	    fscanf(fp, "%c", &post_correct[i][0]);
+        while (post_correct[i][0] == ' ')
+        {
+	        fscanf(fp, "%c", &post_correct[i][0]);
+        }
+        j=1;
+	    fscanf(fp, "%c", &p);
+        while(p!=','&&p!='}')
+        {
+           post_correct[i][j]=p;
+           j++;
+	        fscanf(fp, "%c", &p);
+        }
+        post_correct[i][j]='\0';
+        i++;
+        if(p=='}')
+        {
+	        break;
+        }
+        if(i%4==1)
+        {
+	        post_correct=(char**)realloc(post_correct,sizeof(char*));
+        }
     }
-    //post_correct[1] = '\0';
-    fscanf(fp, "%[^}]s", post_correct + 1);
-    //strcat(post_correct, buffer);
-	fscanf(fp, "%c", &z);
-    if (z == '}')
+    question->correct=(char**)malloc(i*sizeof(char*));
+    for(j=0;j<i;j++)
     {
-        pop(&s1);
+        question->correct[j]=(char*)malloc(100*sizeof(char));
+        strcpy(question->correct[j], post_correct[j]);
     }
-    strcpy(question->correct, post_correct);
+    question->no_of_correct=i;
     return question;
 }
 
@@ -341,7 +363,9 @@ void question_bank(int type_number[])
     //     // fprintf("%lu\n",sizeof(mcq_arr[i]->options[0]));
     //     for(int j=0;j<p;j++)
     //      printf("%s\n",mcq_arr[i]->options[j]);
-    //     printf("%s\n", mcq_arr[i]->correct);
+    //     int q=mcq_arr[i]->no_of_correct;
+    //     for(int j=0;j<q;j++)
+    //      printf("%s\n", mcq_arr[i]->correct[j]);
     // }
     // for (i = 0; i < 1; i++)
     // {
