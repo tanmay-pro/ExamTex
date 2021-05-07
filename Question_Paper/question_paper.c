@@ -3,26 +3,17 @@ typedef int diff_type;
 
 void printer_mcq(FILE *file, mcq *q)
 {
-    fprintf(file, "%s\n", q->text);
-    /*int len = sizeof(q->options) / sizeof(q->correct);
-    fo(i, len)
-    {
-    	fprintf(file, "%s\n", q->options[i]);
-        //yet to be modulated to facilitate random generation
-	}
-    */
+   fprintf(file, "%s\n", q->text);
    char options_to_print[4][100];
    int correct_optionID=(rand())%4;
-   int n=q->no_of_options;
+   int n = q->no_of_options;
    int option_selected[n]={0};
-
-
    strcpy(options_to_print[correct_optionID],q->correct)
    for(int i=0;i<4;i++)
    {
        if(i !=k)
        {
-           int p=(rand())%n;
+           int p=(rand()) % n;
            if(!strcmp(q->options[p],options_to_print[correct_optionID]))
            {
                option_selected[p]=1;
@@ -48,16 +39,16 @@ void printer_fill_up(FILE *file, fill_up *q)
     fprintf(file,"Ans:\n\n");
 }
 
-void printer_true_false(FILE *file,true_false q)
+void printer_true_false(FILE *file, true_false *q)
 {
-    fprintf(file, "%s\n", q->text);
-    fprintf(file,"A)True\tB)False\n\n");
+	fprintf(file, "%s\n", q->text);
+  fprintf(file,"A)True\tB)False\n\n");
 }
 
-void printer_short_answer(FILE *file,short_answer q)
+void printer_short_answer(FILE *file, struct short_answer *q)
 {
-    fprintf(file, "%s\n", q->text);
-    fprintf(file,"Ans:\n\n");
+	fprintf(file, "%s\n", q->text);
+  fprintf(file,"Ans:\n\n");
 }
 
 // int number_of_children(ptrnode tree);
@@ -82,8 +73,8 @@ question add_question_type()
 {
     char ch, buffer[100];
     question que;
-	fscanf(fp2, "%c", &ch);
-	while(ch == ' ')
+	  fscanf(fp2, "%c", &ch);
+	  while(ch == ' ')
     {
 	    fscanf(fp2, "%c", &ch);
     }
@@ -105,16 +96,16 @@ question add_question_type()
     	{
 		    fscanf(fp2, "%c", &ch);
 	    }
-        fscanf(fp2, "%[^=]s",buffer);
-        while(ch != '=')
-        {
-	        fscanf(fp2, "%c", &ch);
-        }
+      fscanf(fp2, "%[^=]s",buffer);
+      while(ch != '=')
+      {
+	      fscanf(fp2, "%c", &ch);
+      }
 	    fscanf(fp2, "%c", &ch);
 	    while(ch == ' ')
-        {
-	        fscanf(fp2, "%c", &ch);
-        }
+      {
+	      fscanf(fp2, "%c", &ch);
+      }
         int i=0;
         while((ch != ' ') && (ch != '}'))
         {
@@ -147,7 +138,7 @@ question add_question_type()
         while(ch != '}')
         {
 	        fscanf(fp2, "%c", &ch);
-	    }
+	      }
         //Reading the difficulty of the questions
         while(ch != '{')
         {
@@ -158,7 +149,7 @@ question add_question_type()
         {
 	        fscanf(fp2, "%c", &ch);
         }
-        fscanf(fp2, "%f",&que.diff);
+        fscanf(fp2, "%f",&que.difficulty);
         while(ch != '}')
         {
 	        fscanf(fp2, "%c", &ch);
@@ -166,7 +157,7 @@ question add_question_type()
         while(ch != '{')
         {
 	        fscanf(fp2, "%c", &ch);
-	    }
+	      }
         fscanf(fp2, "%[^=]s",buffer);
         while(ch != '=')
         {
@@ -235,14 +226,14 @@ void sampler(ptrnode qb, question Q)
     {
         qb = qb->nextsibling;
     }
-    diff_type diff = Q.diff;
+    diff_type diff = Q.difficulty;
     qb = qb->firstchild;
     while (diff--)
     {
         qb = qb->nextsibling;
     }
     int num = Q.no_of_questions;
-	//int available = number_of_children(qb);
+	  //int available = number_of_children(qb);
 	int available = 0;
     int i = 0;
     if (available >= num)
@@ -251,15 +242,11 @@ void sampler(ptrnode qb, question Q)
         int *arr = generate_randoms(available, num);
         while (available--)
         {
-            if (arr[i])
+            if (arr[i] == true)
             {
                 if (Q.type == 0)
                 {
 	                printer_mcq(paper_ptr, mcq_arr[qb->element]);
-                }
-                else if (Q.type == 1)
-                {
-	                printer_fill_up(paper_ptr, fill_up_arr[qb->element]);
                 }
                 else if (Q.type == 2)
                 {
@@ -269,7 +256,10 @@ void sampler(ptrnode qb, question Q)
                 {
 	                printer_short_answer(paper_ptr, short_answer_arr[qb->element]);
                 }
-            
+                else if (Q.type == 1)
+                {
+	                printer_fill_up(paper_ptr, fill_up_arr[qb->element]);
+                }
             }
             i++;
             qb = qb->nextsibling;
@@ -277,7 +267,6 @@ void sampler(ptrnode qb, question Q)
     }
     else
     {
-        fprintf(stderr, "could not generate %d questions of type %d and difficulty %lf, available = %d\n", num, Q.type, Q.diff, available);
-        //T.B.D =>here you'd like to print type_string (instead of index) which needs some type_index <-> type_string referencing
+        fprintf(stderr, "could not generate %d questions of type %d and difficulty %lf, available = %d\n", num, Q.type, Q.difficulty, available);
     }
 }
