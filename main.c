@@ -7,6 +7,7 @@ int main()
 	fill_up_arr = (fill_up **)malloc(10*sizeof(fill_up *));
 	true_false_arr = (true_false **)malloc(10*sizeof(true_false *));
 	short_answer_arr = (short_answer **)malloc(10*sizeof(short_answer *));
+	int realloc_ct[4]={0};
 	int count = -1;
 	int n;
 	int filled_val[4] = {0};
@@ -35,7 +36,7 @@ int main()
 			printf("Please remember this id for future use.");
 			br;
 			int type_number[4] = {0}; // 4 is number of types of Questions
-			question_bank(type_number, filled_val);
+			question_bank(type_number, filled_val,realloc_ct);
 			insert_questions(qb[count], type_number, filled_val);
 		}
 		else if(n == 2)
@@ -49,7 +50,7 @@ int main()
 			br;
 			scanf("%d", &input_id);
 			int type_number[4] = {0}; // 4 is number of types of Questions
-			question_bank(type_number, filled_val);
+			question_bank(type_number, filled_val,realloc_ct);
 			insert_questions(qb[input_id], type_number, filled_val);
 		}
 		else if(n == 4)
@@ -75,7 +76,7 @@ int main()
 			printf("Please Enter the number of files you want to Generate");
 			br;
 			scanf("%d", &number_of_files);
-			read_question_paper(qb[input_id], number_of_files);
+		    read_question_paper(qb[input_id], number_of_files);
 		}
 	}
   	return 0;
