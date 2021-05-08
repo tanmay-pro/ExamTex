@@ -1,17 +1,4 @@
 \sample{type=mcq}
-{difficulty <= 0.2}
-{number=5}
-
-
-\ sample  {  type = mcq }  { difficulty <= 5 }  {  number   =   4  }
-
-
-\    sample  { type =  fill_up } 
-{   difficulty <= 3  }
-{  number    = 5  }
-
-\    sample  { type =  sa }
-{   difficulty <= 3  }
-{  number    = 5  }
-
+{difficulty = 3}
+{number=3}#
 

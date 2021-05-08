@@ -224,6 +224,33 @@ Question_Bank/insert_questions.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/DSA-Miniproject-team27.dir/build.make CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/insert_questions.c.s
 .PHONY : Question_Bank/insert_questions.c.s
 
+Question_Bank/print_question_bank.o: Question_Bank/print_question_bank.c.o
+
+.PHONY : Question_Bank/print_question_bank.o
+
+# target to build an object file
+Question_Bank/print_question_bank.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DSA-Miniproject-team27.dir/build.make CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/print_question_bank.c.o
+.PHONY : Question_Bank/print_question_bank.c.o
+
+Question_Bank/print_question_bank.i: Question_Bank/print_question_bank.c.i
+
+.PHONY : Question_Bank/print_question_bank.i
+
+# target to preprocess a source file
+Question_Bank/print_question_bank.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DSA-Miniproject-team27.dir/build.make CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/print_question_bank.c.i
+.PHONY : Question_Bank/print_question_bank.c.i
+
+Question_Bank/print_question_bank.s: Question_Bank/print_question_bank.c.s
+
+.PHONY : Question_Bank/print_question_bank.s
+
+# target to generate assembly for a file
+Question_Bank/print_question_bank.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DSA-Miniproject-team27.dir/build.make CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/print_question_bank.c.s
+.PHONY : Question_Bank/print_question_bank.c.s
+
 Question_Bank/question_bank_tree.o: Question_Bank/question_bank_tree.c.o
 
 .PHONY : Question_Bank/question_bank_tree.o
@@ -350,6 +377,9 @@ help:
 	@echo "... Question_Bank/insert_questions.o"
 	@echo "... Question_Bank/insert_questions.i"
 	@echo "... Question_Bank/insert_questions.s"
+	@echo "... Question_Bank/print_question_bank.o"
+	@echo "... Question_Bank/print_question_bank.i"
+	@echo "... Question_Bank/print_question_bank.s"
 	@echo "... Question_Bank/question_bank_tree.o"
 	@echo "... Question_Bank/question_bank_tree.i"
 	@echo "... Question_Bank/question_bank_tree.s"
