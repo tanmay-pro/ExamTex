@@ -34,10 +34,12 @@ void pop(stack *ps);
 
 double input_difficulty(stack s1,char *pre);
 char* input_text(stack s1,char *pre,char *post_line,char *buffer);
-void question_bank(int type_number[]);
+void question_bank(int type_number[], int filled_val[]);
 
 mcq* insert_mcq(stack s1);
 fill_up *insert_fill_up(stack s1);
+true_false *insert_true_false(stack s1);
+short_answer *insert_short_answer(stack s1);
 
 void read_question_paper(ptrnode qb1, int number_of_files);
 void sampler(ptrnode qb, question Q);
@@ -53,8 +55,9 @@ fill_up **fill_up_arr;
 true_false **true_false_arr;
 short_answer **short_answer_arr;
 
-void insert_questions(ptrnode tree, int type_number[]);
+void insert_questions(ptrnode tree, int type_number[], const int filled_val[]);
 ptrnode functionToCreateQuestionBank(ptrnode qb1);
 void functionToDeleteQuestionBank(ptrnode qb[]);
+void print_bank(ptrnode tree);
 FILE *fp, *fp2;
 #endif

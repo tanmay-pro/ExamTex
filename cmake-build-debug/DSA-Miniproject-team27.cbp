@@ -91,6 +91,9 @@
 		<Unit filename="/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/Question_Bank/insert_questions.c">
 			<Option target="DSA-Miniproject-team27"/>
 		</Unit>
+		<Unit filename="/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/Question_Bank/print_question_bank.c">
+			<Option target="DSA-Miniproject-team27"/>
+		</Unit>
 		<Unit filename="/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/Question_Bank/question_bank_tree.c">
 			<Option target="DSA-Miniproject-team27"/>
 		</Unit>

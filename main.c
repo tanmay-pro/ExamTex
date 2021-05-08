@@ -3,8 +3,13 @@
 int main()
 {
 	ptrnode qb[100] = {NULL};
+	mcq_arr = (mcq **)malloc(10*sizeof(mcq *));
+	fill_up_arr = (fill_up **)malloc(10*sizeof(fill_up *));
+	true_false_arr = (true_false **)malloc(10*sizeof(true_false *));
+	short_answer_arr = (short_answer **)malloc(10*sizeof(short_answer *));
 	int count = 0;
 	int n;
+	int filled_val[4] = {0};
 	printf("Welcome to ExamTex");
 	while(true)
 	{
@@ -29,8 +34,8 @@ int main()
 			printf("Please remember this id for future use.");
 			br;
 			int type_number[4] = {0}; // 4 is number of types of Questions
-			question_bank(type_number);
-			insert_questions(qb[count], type_number);
+			question_bank(type_number, filled_val);
+			insert_questions(qb[count], type_number, filled_val);
 			count++;
 		}
 		else if(n == 2)
@@ -49,13 +54,16 @@ int main()
 		}
 		else if(n == 5)
 		{
-			printf("Sorry but this feature has not yet been implemented");
+			int input_id = 0;
+			printf("Please enter the id of the Question Bank you want to generate the Question Paper from");
 			br;
+			scanf("%d", &input_id);
+			print_bank(qb[input_id]);
 		}
 		else if(n == 6)
 		{
 			int input_id = 0;
-			printf("Please enter the id of the Question Bank you want to generate the Question Paper from");
+			printf("Please enter the id of the Question Bank you want to print");
 			br;
 			scanf("%d", &input_id);
 			int number_of_files;
