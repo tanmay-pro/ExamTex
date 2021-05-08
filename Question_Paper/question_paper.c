@@ -10,9 +10,9 @@ void printer_mcq(FILE *file, mcq *q)
     int option_selected[n];
     fo(i, n)
     {
-    	option_selected[i] = 0;
+        option_selected[i] = 0;
     }
-    strcpy(options_to_print[correct_optionID], q->correct);
+    strcpy(options_to_print[correct_optionID], *q->correct);
     fo(i, 4)
     {
         if (i != correct_optionID)
@@ -122,19 +122,19 @@ question add_question_type()
         //Add the different question types here
         if (!strcmp(buffer, "mcq"))
         {
-            que.type = 0;
+            que->type = 0;
         }
         else if (!strcmp(buffer, "short_answer"))
         {
-            que.type = 3;
+            que->type = 3;
         }
         else if (!strcmp(buffer, "fill_up"))
         {
-            que.type = 1;
+            que->type = 1;
         }
         else if (!strcmp(buffer, "true_false"))
         {
-            que.type = 2;
+            que->type = 2;
         }
         while (ch != '}')
         {
@@ -150,7 +150,7 @@ question add_question_type()
         {
             fscanf(fp2, "%c", &ch);
         }
-        fscanf(fp2, "%f", &que.difficulty);
+        fscanf(fp2, "%d", &que->difficulty);
         while (ch != '}')
         {
             fscanf(fp2, "%c", &ch);
@@ -166,7 +166,7 @@ question add_question_type()
         }
         int temp;
         fscanf(fp2, " %d", &temp);
-        que.no_of_questions = temp;
+        que->no_of_questions = temp;
         while (ch != '}')
         {
             fscanf(fp2, "%c", &ch);
@@ -179,7 +179,7 @@ question add_question_type()
     }
 }
 
-void read_question_paper(ptrnode qb)
+void read_question_paper(ptrnode qb, int number_of_files)
 {
     srand(time(0));
     char ch;
@@ -211,56 +211,61 @@ void read_question_paper(ptrnode qb)
         fscanf(fp2, "%c", &ch);
     }
     fclose(fp2);
-    for (int j = 0; j < i; j++)
+    char file_name[] = "../Current/x.md";
+    fo(k, number_of_files)
     {
-        sampler(qb, questions_in_paper[j]);
+        file_name[sizeof(file_name)-4] = k + '0';
+        for (int j = 0; j < i; j++)
+        {
+            sampler(qb, questions_in_paper[j], file_name);
+        }
     }
 }
 
-void sampler(ptrnode qb, question Q)
+void sampler(ptrnode qb, question Q, char file_name[])
 {
     FILE *paper_ptr;
-    paper_ptr = fopen("QP.txt", "a");
-	//paper_ptr = stdout;
-    int type = Q.type;
+    paper_ptr = fopen(file_name, "a");
+    //paper_ptr = stdout;
+    int type = Q->type;
     qb = qb->firstchild;
     while (type--)
     {
         qb = qb->nextsibling;
     }
-    diff_type diff = Q.difficulty;
+    diff_type diff = Q->difficulty;
     qb = qb->firstchild;
     while (diff--)
     {
         qb = qb->nextsibling;
     }
-    int num = Q.no_of_questions;
+    int num = Q->no_of_questions;
     //int available = number_of_children(qb);
-    int available = 4;
+    int avail = available[Q->type][Q->difficulty];
     int i = 0;
-    if (available >= num)
+    if (avail >= num)
     {
         qb = qb->firstchild;
-	    int *arr = generate_randoms(available, num);
-        while (available--)
+        int *arr = generate_randoms(avail, num);
+        while (avail--)
         {
             if (arr[i] == true)
             {
-                if (Q.type == 0)
+                if (Q->type == 0)
                 {
-                	printf("qb->element = %d", qb->element);
-                	br;
+                    printf("qb->element = %d", qb->element);
+                    br;
                     printer_mcq(paper_ptr, mcq_arr[qb->element]);
                 }
-                else if (Q.type == 2)
+                else if (Q->type == 2)
                 {
                     printer_true_false(paper_ptr, true_false_arr[qb->element]);
                 }
-                else if (Q.type == 3)
+                else if (Q->type == 3)
                 {
                     printer_short_answer(paper_ptr, short_answer_arr[qb->element]);
                 }
-                else if (Q.type == 1)
+                else if (Q->type == 1)
                 {
                     printer_fill_up(paper_ptr, fill_up_arr[qb->element]);
                 }
@@ -271,7 +276,7 @@ void sampler(ptrnode qb, question Q)
     }
     else
     {
-        fprintf(stderr, "could not generate %d questions of type %d and difficulty %lf, available = %d\n", num, Q.type, Q.difficulty, available);
+        fprintf(stderr, "could not generate %d questions of type %d and difficulty %d, available = %d\n", num, Q->type, Q->difficulty, avail);
     }
     fclose(paper_ptr);
 }

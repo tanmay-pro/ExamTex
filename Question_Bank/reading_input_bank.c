@@ -100,7 +100,7 @@ mcq *insert_mcq(stack s1)
     fix(pre);
 	fscanf(fp, "%c", &ch);
     int i=0,j=0;
-    while(1)
+    while(true)
     {
         post_options[i]=(char*)malloc(100*sizeof(char));
 	    fscanf(fp, "%c", &post_options[i][0]);
@@ -302,7 +302,7 @@ short_answer *insert_short_answer(stack s1)
     return question;
 }
 
-void question_bank(int type_number[])
+void question_bank(int type_number[], int filled_val[])
 {
 	char str[1000];
 	printf("Please Enter the name of the Input file.");
@@ -322,11 +322,7 @@ void question_bank(int type_number[])
 	fscanf(fp, "%c", &x);
     char pre[10], post[10], ch;
     struct stack s1;
-    mcq_arr = (mcq **)malloc(10*sizeof(mcq *));
-    fill_up_arr = (fill_up **)malloc(10*sizeof(fill_up *));
-    true_false_arr = (true_false **)malloc(10*sizeof(true_false *));
-    short_answer_arr = (short_answer **)malloc(10*sizeof(short_answer *));
-    int i, mcq_index = 0, fill_up_index = 0,true_false_index = 0,short_answer_index=0;
+    int mcq_index = filled_val[0], fill_up_index = filled_val[1],true_false_index = filled_val[2], short_answer_index = filled_val[3];
     s1.top = -1;
     while (x != EOF)
     {
@@ -354,73 +350,86 @@ void question_bank(int type_number[])
         if (post[0] == 'm')
         {
             mcq_arr[mcq_index] = insert_mcq(s1);
+            //printf("Mcq index = %d", mcq_index);
             mcq_index++;
 			type_number[0]++;
-            if(mcq_index%10==0);
-             mcq_arr=(mcq **)realloc(mcq_arr ,10*sizeof(mcq *));
+			filled_val[0]++;
+            if(mcq_index%10==0)
+            {
+	            mcq_arr=(mcq **)realloc(mcq_arr ,10*sizeof(mcq *));
+            }
         }
         else if (post[0] == 'f')
         {
             fill_up_arr[fill_up_index] = insert_fill_up(s1);
             fill_up_index++;
 	        type_number[1]++;
-            if(fill_up_index%10==0);
-             fill_up_arr=(fill_up **)realloc(fill_up_arr ,10*sizeof(fill_up *));
+	        filled_val[1]++;
+            if(fill_up_index%10==0)
+            {
+	            fill_up_arr=(fill_up **)realloc(fill_up_arr ,10*sizeof(fill_up *));
+            }
         }
         else if (post[0] == 't')
         {
             true_false_arr[true_false_index] = insert_true_false(s1);
             true_false_index++;
 	        type_number[2]++;
-            if(true_false_index%10==0);
-             true_false_arr=(true_false **)realloc(true_false_arr ,10*sizeof(true_false *));
+	        filled_val[2]++;
+            if(true_false_index%10==0)
+            {
+	            true_false_arr=(true_false **)realloc(true_false_arr ,10*sizeof(true_false *));
+            }
         }
         else if (post[0] == 's')
         {
-            
             short_answer_arr[short_answer_index] = insert_short_answer(s1);
             short_answer_index++;
 	        type_number[3]++;
-            if(short_answer_index%10==0);
-             short_answer_arr=(short_answer **)realloc(short_answer_arr ,10*sizeof(short_answer *));
+	        filled_val[3]++;
+            if(short_answer_index%10==0)
+            {
+	            short_answer_arr=(short_answer **)realloc(short_answer_arr ,10*sizeof(short_answer *));
+            }
         }
 	    x=getc(fp);
     }
     fclose(fp);
     //fprintf("i have entered here2\n");
 	//Debugging start
-    // for (i = 0; i < 4; i++)
-    // {
-    //     printf("%s2\n", mcq_arr[i]->text);
-    //     printf("%lf2\n", mcq_arr[i]->difficulty);
-    //     //int p=sizeof(mcq_arr[i]->options)/(sizeof(mcq_arr[i]->options[0]));
-    //     int p=mcq_arr[i]->no_of_options;
-    //     //fprintf("%d\n",p);
-    //     //fprintf("%lu\n",sizeof(mcq_arr[i]->options));
-    //     // fprintf("%lu\n",sizeof(mcq_arr[i]->options[0]));
-    //     for(int j=0;j<p;j++)
-    //      printf("%s2\n",mcq_arr[i]->options[j]);
-    //     int q=mcq_arr[i]->no_of_correct;
-    //     for(int j=0;j<q;j++)
-    //      printf("%s2\n", mcq_arr[i]->correct[j]);
-    // }
-    // for (i = 0; i < 1; i++)
-    // {
-    //     printf("%s2\n", fill_up_arr[i]->text);
-    //     printf("%lf2\n", fill_up_arr[i]->difficulty);
-    //     printf("%s2\n", fill_up_arr[i]->correct);
-    // }
-    // for (i = 0; i < 1; i++)
-    // {
-    //     printf("%s2\n", true_false_arr[i]->text);
-    //     printf("%lf2\n", true_false_arr[i]->difficulty);
-    //     printf("%c2\n", true_false_arr[i]->correct);
-    // }
-    // for (i = 0; i < 1; i++)
-    // {
-    //     printf("%s2\n", short_answer_arr[i]->text);
-    //     printf("%lf2\n", short_answer_arr[i]->difficulty);
-    //     printf("%s2\n", short_answer_arr[i]->correct);
-    // }
-    //Debugging end
+//     for (int i = 0; i < 4; i++)
+//     {
+//         printf("%s2\n", mcq_arr[i]->text);
+//         printf("%lf2\n", mcq_arr[i]->difficulty);
+//         //int p=sizeof(mcq_arr[i]->options)/(sizeof(mcq_arr[i]->options[0]));
+//         int p=mcq_arr[i]->no_of_options;
+//         //fprintf("%d\n",p);
+//         //fprintf("%lu\n",sizeof(mcq_arr[i]->options));
+//         // fprintf("%lu\n",sizeof(mcq_arr[i]->options[0]));
+//         for(int j=0;j<p;j++)
+//          printf("%s2\n",mcq_arr[i]->options[j]);
+//         int q=mcq_arr[i]->no_of_correct;
+//         for(int j=0;j<q;j++)
+//          printf("%s2\n", mcq_arr[i]->correct[j]);
+//     }
+//     for (int i = 0; i < 1; i++)
+//     {
+//         printf("%s2\n", fill_up_arr[i]->text);
+//         printf("%lf2\n", fill_up_arr[i]->difficulty);
+//         printf("%s2\n", fill_up_arr[i]->correct);
+//     }
+//     for (int i = 0; i < 1; i++)
+//     {
+//         printf("%s2\n", true_false_arr[i]->text);
+//         printf("%lf2\n", true_false_arr[i]->difficulty);
+//         printf("%c2\n", true_false_arr[i]->correct);
+//     }
+//     for (int i = 0; i < 1; i++)
+//     {
+//         printf("%s2\n", short_answer_arr[i]->text);
+//         printf("%lf2\n", short_answer_arr[i]->difficulty);
+//         printf("%s2\n", short_answer_arr[i]->correct);
+//     }
+//		printf("Location = %p", mcq_arr[0]);
+//    Debugging end
 }

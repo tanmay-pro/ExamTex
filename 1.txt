@@ -1,14 +1,14 @@
-\question{type =mcq }{difficulty =    2}
+\question{type =mcq }{difficulty =    3}
 {text   =       C is a ... language}
 {opt           = Functional ,       Procedural ,Objects      ,        Events,  yo    }
 {ans =             Functional ,hello   }
 
-\question{type =mcq}{difficulty = 2}
+\question{type =mcq}{difficulty = 3}
 {text =What is name?}
 {opt =Functional, Procedural, Objects ,Events, hi}
 {ans =Functional}
 
-\question{type =mcq}{difficulty = 2}
+\question{type =mcq}{difficulty = 3}
 {text =where do you live?}
 {opt =Functional ,Procedural ,Objects ,Events,hello }
 {ans =hello,yo }
