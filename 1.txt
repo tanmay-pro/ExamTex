@@ -1,31 +1,27 @@
-\question{type =mcq }{difficulty =    3}
+\question{type =mcq }{difficulty =       2}
 {text   =       C is a ... language}
-{opt           = Functional ,       Procedural ,Objects      ,        Events,  yo    }
-{ans =             Functional ,hello   }
+{wrong           = Procedural ,Objects      ,        Events,  yo    }
+{ans =             Functional    }
 
-\question{type =mcq}{difficulty = 3}
-{text =What is name?}
-{opt =Functional, Procedural, Objects ,Events, hi}
-{ans =Functional}
+\question{type =mcq}{difficulty =2}
+{text =what is name?}
+{wrong =Functional ,Procedural ,Objects ,Events,hi }
+{ans =hello,  hello2}
 
-\question{type =mcq}{difficulty = 3}
+\question{type =mcq}{difficulty =2}
 {text =where do you live?}
-{opt =Functional ,Procedural ,Objects ,Events,hello }
-{ans =hello,yo }
+{wrong =Functional ,Procedural ,Objects ,Events,hello }
+{ans =onal }
 
 \question{type =mcq}{difficulty =2}
 {text =college name?}
-{opt =Functional ,Procedural ,Objects ,Events,bye}
-{ans =bye,what}
+{wrong =Functional ,Procedural ,Objects ,Events,bye }
+{ans =ctio }
 
 \question{type =fill up}{difficulty =1}
 {text = President of USA is .....?}
-{ans = Biden}
+{correct = Biden }
 
 \question{type = true_false  }{difficulty =0}
 {text = This Code is Written in Java}
 {ans = F}
-
-\question{type = short_answer}{difficulty = 1}
-{text = Write the Definition of "WAN"}
-{ans = A computer network that covers a broad area (i.e., any network, whose communications links cross metropolitan, regional or national boundaries).}

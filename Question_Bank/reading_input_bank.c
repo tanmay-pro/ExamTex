@@ -80,8 +80,8 @@ mcq *insert_mcq(stack s1)
 {
     mcq *question;
     question = (mcq *)malloc(sizeof(mcq));
-    char **post_options, **post_correct;
-    post_options=(char**)malloc(4*sizeof(char*));
+    char **post_wrong, **post_correct;
+    post_wrong=(char**)malloc(4*sizeof(char*));
     post_correct=(char**)malloc(sizeof(char*));
     char pre[10], post_line[1000];
     char y, z,x,p, ch;
@@ -102,22 +102,22 @@ mcq *insert_mcq(stack s1)
     int i=0,j=0;
     while(true)
     {
-        post_options[i]=(char*)malloc(100*sizeof(char));
-	    fscanf(fp, "%c", &post_options[i][0]);
-        while (post_options[i][0] == ' ')
+        post_wrong[i]=(char*)malloc(100*sizeof(char));
+	    fscanf(fp, "%c", &post_wrong[i][0]);
+        while (post_wrong[i][0] == ' ')
         {
-	        fscanf(fp, "%c", &post_options[i][0]);
+	        fscanf(fp, "%c", &post_wrong[i][0]);
         }
         j=1;
 	    fscanf(fp, "%c", &p);
         while(p!=','&&p!='}')
         {
-           post_options[i][j]=p;
+           post_wrong[i][j]=p;
            j++;
 	        fscanf(fp, "%c", &p);
         }
-        post_options[i][j]='\0';
-        fix(post_options[i]);
+        post_wrong[i][j]='\0';
+        fix(post_wrong[i]);
         i++;
         if(p=='}')
         {
@@ -125,18 +125,18 @@ mcq *insert_mcq(stack s1)
         }
         if(i%4==0)
         {
-	        post_options=(char**)realloc(post_options,4*sizeof(char*));
+	        post_wrong=(char**)realloc(post_wrong,4*sizeof(char*));
         }
     }
-    // post_options[3]=(char*)malloc(100*sizeof(char));
-    // post_options[3][0] = (char)getchar();
-    // while (post_options[3][0] == ' ')
+    // post_wrong[3]=(char*)malloc(100*sizeof(char));
+    // post_wrong[3][0] = (char)getchar();
+    // while (post_wrong[3][0] == ' ')
     // {
-    //     post_options[3][0] = (char)getchar();
+    //     post_wrong[3][0] = (char)getchar();
     // }
-    // //post_options[3][1] = '\0';
-    // fscanf(fp, "%[^}]s", post_options[3] + 1);
-    // //strcat(post_options[3], buffer);
+    // //post_wrong[3][1] = '\0';
+    // fscanf(fp, "%[^}]s", post_wrong[3] + 1);
+    // //strcat(post_wrong[3], buffer);
     // fscanf(fp, "%c", &z);
     // if (z == '}')
     // {
@@ -144,15 +144,15 @@ mcq *insert_mcq(stack s1)
     // }
     // for (int i = 0; i < 4; i++)
     // {
-    //     strcpy(question->options[i], post_options[i]);
+    //     strcpy(question->wrong[i], post_wrong[i]);
     // }
-    question->options=(char**)malloc(i*sizeof(char*));
+    question->wrong=(char**)malloc(i*sizeof(char*));
     for(j=0;j<i;j++)
     {
-        question->options[j]=(char*)malloc(100*sizeof(char));
-        strcpy(question->options[j], post_options[j]);
+        question->wrong[j]=(char*)malloc(100*sizeof(char));
+        strcpy(question->wrong[j], post_wrong[j]);
     }
-    question->no_of_options=i;
+    question->no_of_wrong=i;
 	fscanf(fp, "%c", &y);
     while (y != '{')
     {
@@ -404,13 +404,13 @@ void question_bank(int type_number[], int filled_val[])
 //     {
 //         printf("%s2\n", mcq_arr[i]->text);
 //         printf("%lf2\n", mcq_arr[i]->difficulty);
-//         //int p=sizeof(mcq_arr[i]->options)/(sizeof(mcq_arr[i]->options[0]));
-//         int p=mcq_arr[i]->no_of_options;
+//         //int p=sizeof(mcq_arr[i]->wrong)/(sizeof(mcq_arr[i]->wrong[0]));
+//         int p=mcq_arr[i]->no_of_wrong;
 //         //fprintf("%d\n",p);
-//         //fprintf("%lu\n",sizeof(mcq_arr[i]->options));
-//         // fprintf("%lu\n",sizeof(mcq_arr[i]->options[0]));
+//         //fprintf("%lu\n",sizeof(mcq_arr[i]->wrong));
+//         // fprintf("%lu\n",sizeof(mcq_arr[i]->wrong[0]));
 //         for(int j=0;j<p;j++)
-//          printf("%s2\n",mcq_arr[i]->options[j]);
+//          printf("%s2\n",mcq_arr[i]->wrong[j]);
 //         int q=mcq_arr[i]->no_of_correct;
 //         for(int j=0;j<q;j++)
 //          printf("%s2\n", mcq_arr[i]->correct[j]);

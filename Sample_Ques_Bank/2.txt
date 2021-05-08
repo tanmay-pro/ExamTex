@@ -1,11 +1,11 @@
 \question{type =mcq }{difficulty =       0.2}
 {text   = Which of the following is the first calculating device?   }
-{opt  = Abacus, Calculator , Turing Machine, Pascaline}
+{wrong  = Abacus, Calculator , Turing Machine, Pascaline}
 {ans = Abacus }
 
 \question{type =mcq}{difficulty =0.89}
 {text = Who is Father of AI}
-{opt = Charles Babbage , Lee De Forest , John McCarthy , JP EcKert }
+{wrong = Charles Babbage , Lee De Forest , John McCarthy , JP EcKert }
 {ans = John McCarthy }
 
 \question{type = true_false  }{difficulty =0.7}
@@ -23,7 +23,7 @@ that incorporates the functions of a CPU (central processing unit) on a single I
 (integrated circuit).}
 
 \question{type =fill up}{difficulty =24.3}
-{text = President of USA is _______?}
+{text = President of USA is __________?}
 {ans = Biden}
 
 \question{type = true_false}
