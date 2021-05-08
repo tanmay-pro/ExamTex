@@ -12,22 +12,26 @@ void functionToDeleteQuestionBank(ptrnode qb[])
 	qb[input_id] = NULL;
 }
 
-ptrnode delete_mcq_from_question_bank(ptrnode tree, mcq* question, int index)
+ptrnode delete_mcq_from_question_bank(ptrnode tree_base, mcq* question, int index)
 {
+	ptrnode tree = tree_base;
 	tree = tree->firstchild;
 	double diff = question->difficulty;
-	// Difficulty < 1 => Easy; Difficulty < 2 => Medium; Difficulty < 3 => Hard
-	if(diff <= 1)
+	if(diff == 0)
 	{
 		tree = tree->firstchild;
 	}
-	else if(diff > 1 && diff <= 2)
+	else if(diff == 1)
 	{
 		tree = tree->firstchild->nextsibling;
 	}
-	else if(diff > 2)
+	else if(diff == 2)
 	{
 		tree = tree->firstchild->nextsibling->nextsibling;
+	}
+	else if(diff == 3)
+	{
+		tree = tree->firstchild->nextsibling->nextsibling->nextsibling;
 	}
 	if(tree->firstchild != NULL)
 	{
