@@ -1,7 +1,7 @@
 \question{type =mcq }{difficulty =    2}
 {text   =       C is a ... language}
-{opt           = Functional,       Procedural ,Objects      ,        Events,  yo    }
-{ans = Functional}
+{opt           = Functional ,       Procedural ,Objects      ,        Events,  yo    }
+{ans =             Functional ,hello   }
 
 \question{type =mcq}{difficulty = 2}
 {text =What is name?}
@@ -11,12 +11,12 @@
 \question{type =mcq}{difficulty = 2}
 {text =where do you live?}
 {opt =Functional ,Procedural ,Objects ,Events,hello }
-{ans =hello }
+{ans =hello,yo }
 
 \question{type =mcq}{difficulty =2}
 {text =college name?}
 {opt =Functional ,Procedural ,Objects ,Events,bye}
-{ans =bye}
+{ans =bye,what}
 
 \question{type =fill up}{difficulty =1}
 {text = President of USA is .....?}
@@ -28,4 +28,4 @@
 
 \question{type = short_answer}{difficulty = 1}
 {text = Write the Definition of "WAN"}
-{ans = A computer network that covers a broad area (i.e., any network, whose communications links cross metropolitan, regional or national boundaries).}#
+{ans = A computer network that covers a broad area (i.e., any network, whose communications links cross metropolitan, regional or national boundaries).}

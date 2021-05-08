@@ -49,10 +49,10 @@ void printer_true_false(FILE *file, true_false *q);
 void printer_short_answer(FILE *file, short_answer *q);
 int *generate_randoms(int available, int n);
 
-mcq *mcq_arr[100];
-fill_up *fill_up_arr[100];
-true_false *true_false_arr[100];
-short_answer *short_answer_arr[100];
+mcq **mcq_arr;
+fill_up **fill_up_arr;
+true_false **true_false_arr;
+short_answer **short_answer_arr;
 
 void insert_questions(ptrnode tree, int type_number[]);
 ptrnode functionToCreateQuestionBank(ptrnode qb1);
