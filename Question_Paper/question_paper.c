@@ -12,7 +12,7 @@ void printer_mcq(FILE *file, mcq *q)
     {
     	option_selected[i] = 0;
     }
-    strcpy(options_to_print[correct_optionID], q->correct);
+    strcpy(options_to_print[correct_optionID], *q->correct);
     fo(i, 4)
     {
         if (i != correct_optionID)
