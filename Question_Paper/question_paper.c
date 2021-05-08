@@ -227,7 +227,7 @@ void sampler(ptrnode qb, question Q, char file_name[])
 {
 
     FILE *paper_ptr;
-    printf("ooooooooooooooooo-%s\n", file_name);
+    printf("%s\n", file_name);
     paper_ptr = fopen(file_name, "a");
     //paper_ptr = stdout;
     int type = Q->type;
@@ -255,7 +255,7 @@ void sampler(ptrnode qb, question Q, char file_name[])
             {
                 if (Q->type == 0)
                 {
-                    printf("ooooooooooooooo-qb->element = %d\n", qb->element);
+                    printf("qb->element = %d\n", qb->element);
                     br;
                     printer_mcq(paper_ptr, mcq_arr[qb->element]);
                 }
