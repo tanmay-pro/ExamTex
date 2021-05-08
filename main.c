@@ -50,7 +50,7 @@ int main()
 			scanf("%d", &input_id);
 			int type_number[4] = {0}; // 4 is number of types of Questions
 			question_bank(type_number, filled_val);
-			insert_questions(qb[input_id], type_number, filled_val);
+			insert_questions(qb[input_id], type_number, filled_val); 
 		}
 		else if(n == 4)
 		{
