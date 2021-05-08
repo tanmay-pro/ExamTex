@@ -54,9 +54,9 @@ ptrnode functionToCreateQuestionBank(ptrnode qb1)
 	return base;
 }
 
-void insert_questions(ptrnode tree, int type_number[])
+void insert_questions(ptrnode tree, int type_number[], const int filled_val[])
 {
-	int i = 0;
+	int i = filled_val[0] - 1;
 	while(true)
 	{
 		if(type_number[0] == 0)
@@ -64,10 +64,10 @@ void insert_questions(ptrnode tree, int type_number[])
 			break;
 		}
 		tree = add_mcq_question_to_bank(tree, mcq_arr[i], i);
-		i++;
+		i--;
 		type_number[0]--;
 	}
-	i = 0;
+	i = filled_val[1] - 1;
 	while(true)
 	{
 		if(type_number[1] == 0)
@@ -75,10 +75,10 @@ void insert_questions(ptrnode tree, int type_number[])
 			break;
 		}
 		tree = add_fill_up_question_to_bank(tree, fill_up_arr[i], i);
-		i++;
+		i--;
 		type_number[1]--;
 	}
-	i = 0;
+	i = filled_val[2] - 1;
 	while(true)
 	{
 		if(type_number[2] == 0)
@@ -86,10 +86,10 @@ void insert_questions(ptrnode tree, int type_number[])
 			break;
 		}
 		tree = add_true_false_question_to_bank(tree, true_false_arr[i], i);
-		i++;
+		i--;
 		type_number[2]--;
 	}
-	i = 0;
+	i = filled_val[3] - 1;
 	while(true)
 	{
 		if(type_number[3] == 0)
@@ -97,7 +97,7 @@ void insert_questions(ptrnode tree, int type_number[])
 			break;
 		}
 		tree = add_short_answer_question_to_bank(tree, short_answer_arr[i], i);
-		i++;
+		i--;
 		type_number[3]--;
 	}
 }
