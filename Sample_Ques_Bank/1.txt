@@ -25,4 +25,3 @@
 \question{type = true_false  }{difficulty =0.7}
 {text = This Code is Written in Java}
 {ans = F}
-#
