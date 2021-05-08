@@ -6,7 +6,6 @@ ptrnode add_mcq_question_to_bank(ptrnode tree, mcq* question, int index)
 	ptrnode temp = tree;
 	temp = temp->firstchild;
 	double diff = question->difficulty;
-	// Difficulty < 1 => Easy; Difficulty < 2 => Medium; Difficulty > 2 => Hard
 	if(diff == 0)
 	{
 		temp = temp->firstchild;
@@ -18,6 +17,10 @@ ptrnode add_mcq_question_to_bank(ptrnode tree, mcq* question, int index)
 	else if(diff == 2)
 	{
 		temp = temp->firstchild->nextsibling->nextsibling;
+	}
+	else if(diff == 3)
+	{
+		temp = temp->firstchild->nextsibling->nextsibling->nextsibling;
 	}
 	if(temp->firstchild == NULL)
 	{
@@ -36,7 +39,6 @@ ptrnode add_fill_up_question_to_bank(ptrnode tree, fill_up* question, int index)
 	ptrnode temp = tree;
 	temp = temp->firstchild->nextsibling;
 	double diff = question->difficulty;
-	// Difficulty < 1 => Easy; Difficulty < 2 => Medium; Difficulty > 2 => Hard
 	if(diff == 0)
 	{
 		temp = temp->firstchild;
@@ -48,6 +50,10 @@ ptrnode add_fill_up_question_to_bank(ptrnode tree, fill_up* question, int index)
 	else if(diff == 2)
 	{
 		temp = temp->firstchild->nextsibling->nextsibling;
+	}
+	else if(diff == 3)
+	{
+		temp = temp->firstchild->nextsibling->nextsibling->nextsibling;
 	}
 	if(temp->firstchild == NULL)
 	{
@@ -66,7 +72,6 @@ ptrnode add_true_false_question_to_bank(ptrnode tree, true_false* question, int 
 	ptrnode temp = tree;
 	temp = temp->firstchild->nextsibling->nextsibling;
 	double diff = question->difficulty;
-	// Difficulty < 1 => Easy; Difficulty < 2 => Medium; Difficulty > 2 => Hard
 	if(diff == 0)
 	{
 		temp = temp->firstchild;
@@ -78,6 +83,10 @@ ptrnode add_true_false_question_to_bank(ptrnode tree, true_false* question, int 
 	else if(diff == 2)
 	{
 		temp = temp->firstchild->nextsibling->nextsibling;
+	}
+	else if(diff == 3)
+	{
+		temp = temp->firstchild->nextsibling->nextsibling->nextsibling;
 	}
 	if(temp->firstchild == NULL)
 	{
@@ -96,7 +105,6 @@ ptrnode add_short_answer_question_to_bank(ptrnode tree, short_answer* question, 
 	ptrnode temp = tree;
 	temp = temp->firstchild->nextsibling->nextsibling->nextsibling;
 	double diff = question->difficulty;
-	// Difficulty < 1 => Easy; Difficulty < 2 => Medium; Difficulty > 2=> Hard
 	if(diff == 0)
 	{
 		temp = temp->firstchild;
@@ -108,6 +116,10 @@ ptrnode add_short_answer_question_to_bank(ptrnode tree, short_answer* question, 
 	else if(diff == 2)
 	{
 		temp = temp->firstchild->nextsibling->nextsibling;
+	}
+	else if(diff == 3)
+	{
+		temp = temp->firstchild->nextsibling->nextsibling->nextsibling;
 	}
 	if(temp->firstchild == NULL)
 	{
