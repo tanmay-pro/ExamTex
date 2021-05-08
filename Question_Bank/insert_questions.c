@@ -4,15 +4,9 @@
 ptrnode add_mcq_question_to_bank(ptrnode tree, mcq* question, int index)
 {
 	ptrnode temp = tree;
-	temp = temp->firstchild->firstchild;
-	int diff = question->difficulty;
-	while (diff--)
-    {
-        temp = temp->nextsibling;
-	}
-    //!!!can do this for other types as well to make the code consise especially if u would wanna add more difficulty levels in future
-	//
-	/*if(diff == 0)
+	temp = temp->firstchild;
+	double diff = question->difficulty;
+	if(diff == 0)
 	{
 		temp = temp->firstchild;
 	}
@@ -27,7 +21,7 @@ ptrnode add_mcq_question_to_bank(ptrnode tree, mcq* question, int index)
 	else if(diff == 3)
 	{
 		temp = temp->firstchild->nextsibling->nextsibling->nextsibling;
-	}*/
+	}
 	if(temp->firstchild == NULL)
 	{
 		temp = insert_below(temp, index);
