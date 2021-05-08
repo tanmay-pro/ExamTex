@@ -1,18 +1,18 @@
-\question{type =mcq }{difficulty =       0.2}
+\question{type =mcq }{difficulty =       2}
 {text   = Which of the following is the first calculating device?   }
 {opt  = Abacus, Calculator , Turing Machine, Pascaline}
 {ans = Abacus }
 
-\question{type =mcq}{difficulty =0.89}
+\question{type =mcq}{difficulty =3}
 {text = Who is Father of AI}
 {opt = Charles Babbage , Lee De Forest , John McCarthy , JP EcKert }
 {ans = John McCarthy }
 
-\question{type = true_false  }{difficulty =0.7}
+\question{type = true_false  }{difficulty =1}
 {text = This Code is Written in Java}
 {ans = F}
 
-\question{type =short_answer}{difficulty =5.3}
+\question{type =short_answer}{difficulty =2}
 {text = Desribe working of Microprocessor in short.}
 {ans = The microprocessor is the central unit of a computer system that performs arithmetic 
 and logic operations, which generally include adding, subtracting, transferring numbers from one 
@@ -22,11 +22,11 @@ that goes into motion when the computer is switched on. It's a programmable, mul
 that incorporates the functions of a CPU (central processing unit) on a single IC
 (integrated circuit).}
 
-\question{type =fill up}{difficulty =24.3}
+\question{type =fill up}{difficulty =3}
 {text = President of USA is _______?}
 {ans = Biden}
 
-\question{type = true_false}
+\question{type = true_false}{difficulty = 0}
 {text = John Brunner,  used the term computer worm for the first time}
 {ans = T}
 

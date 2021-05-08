@@ -3,10 +3,10 @@
 ptrnode make_node(elementType e)
 {
     ptrnode p_new;
-	p_new = (ptrnode)malloc(sizeof(treeNode));
-	p_new->element = e;
-	p_new->nextsibling = NULL;
-	p_new->firstchild = NULL;
+    p_new = (ptrnode)malloc(sizeof(treeNode));
+    p_new->element = e;
+    p_new->nextsibling = NULL;
+    p_new->firstchild = NULL;
     return p_new;
 }
 

@@ -211,7 +211,7 @@ void read_question_paper(ptrnode qb, int number_of_files)
         fscanf(fp2, "%c", &ch);
     }
     fclose(fp2);
-   
+
     char file_name[] = "Current/x.md";
     fo(k, number_of_files)
     {

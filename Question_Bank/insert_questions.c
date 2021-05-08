@@ -4,13 +4,8 @@
 ptrnode add_mcq_question_to_bank(ptrnode tree, mcq *question, int index)
 {
 	ptrnode temp = tree;
-	temp = temp->firstchild->firstchild;
+	temp = temp->firstchild;
 	int diff = question->difficulty;
-	while (diff--)
-	{
-		temp = temp->nextsibling;
-	}
-	/*
 	if (diff == 0)
 	{
 		temp = temp->firstchild;
@@ -26,7 +21,7 @@ ptrnode add_mcq_question_to_bank(ptrnode tree, mcq *question, int index)
 	else if (diff == 3)
 	{
 		temp = temp->firstchild->nextsibling->nextsibling->nextsibling;
-	}*/
+	}
 	if (temp->firstchild == NULL)
 	{
 		temp = insert_below(temp, index);

@@ -11,8 +11,8 @@ typedef struct mcq
 {
     char text[1000];
     int difficulty;
-    char** options;//char** options;
-    char** correct;
+    char **options; //char** options;
+    char **correct;
     int no_of_options;
     int no_of_correct;
 } mcq;
@@ -26,17 +26,16 @@ typedef struct fill_up
 
 typedef struct true_false
 {
-	char text[1000];
-	int difficulty;
-	char correct;
+    char text[1000];
+    int difficulty;
+    char correct;
 } true_false;
 
 typedef struct short_answer
 {
-	char text[1000];
-	int difficulty;
-	char correct[1000];
-}short_answer;
+    char text[1000];
+    int difficulty;
+    char correct[1000];
+} short_answer;
 
 #endif
-
