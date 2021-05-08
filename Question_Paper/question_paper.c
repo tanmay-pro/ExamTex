@@ -150,7 +150,7 @@ question add_question_type()
         {
             fscanf(fp2, "%c", &ch);
         }
-        fscanf(fp2, "%f", &que.difficulty);
+        fscanf(fp2, "%d", &que.difficulty);
         while (ch != '}')
         {
             fscanf(fp2, "%c", &ch);
@@ -248,7 +248,6 @@ void sampler(ptrnode qb, question Q)
             {
                 if (Q.type == 0)
                 {
-                	printf("qb->element = %d", qb->element);
                 	br;
                     printer_mcq(paper_ptr, mcq_arr[qb->element]);
                 }
@@ -271,7 +270,7 @@ void sampler(ptrnode qb, question Q)
     }
     else
     {
-        fprintf(stderr, "could not generate %d questions of type %d and difficulty %lf, available = %d\n", num, Q.type, Q.difficulty, available);
+        fprintf(stderr, "could not generate %d questions of type %d and difficulty %d, available = %d\n", num, Q.type, Q.difficulty, available);
     }
     fclose(paper_ptr);
 }
