@@ -1,7 +1,7 @@
 #ifndef QUESTION_PAPER_H
 #define QUESTION_PAPER_H
 
-typedef struct questions question;
+typedef struct questions * question;
 struct questions
 {
     int type;
