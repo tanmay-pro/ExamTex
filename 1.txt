@@ -1,4 +1,4 @@
-\question{type =mcq }{difficulty =    1}
+\question{type =mcq }{difficulty =    3}
 {text   =       C is a ... language}
 {opt           = Functional ,       Procedural ,Objects      ,        Events,  yo    }
 {ans =             Functional ,hello   }

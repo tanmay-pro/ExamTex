@@ -350,7 +350,7 @@ void question_bank(int type_number[], int filled_val[])
         if (post[0] == 'm')
         {
             mcq_arr[mcq_index] = insert_mcq(s1);
-//            printf("Mcq index = %d", mcq_index);
+            //printf("Mcq index = %d", mcq_index);
             mcq_index++;
 			type_number[0]++;
 			filled_val[0]++;
