@@ -8,11 +8,12 @@ ptrnode functionToCreateQuestionBank(ptrnode qb1)
 	// true/false = 2
 	// short Answer = 3
 	int number_of_types = 4;
-	int range_of_diff[] = {0, 1, 2};
+	int range_of_diff[] = {0, 1, 2, 3};
 	// Easy = 0
 	// Medium = 1
 	// Difficult = 2
-	int number_of_diff = 3;
+	// Dhasu = 3
+	int number_of_diff = 4;
 	qb1 = make_node(-1); // Header Node
 	ptrnode base = qb1;
 	qb1 = insert_below(qb1, 0); // Inserting type of Question

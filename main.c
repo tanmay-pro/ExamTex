@@ -30,12 +30,12 @@ int main()
 			br;
 			int type_number[4] = {0}; // 4 is number of types of Questions
 			question_bank(type_number);
-			//insert_questions(qb[count], type_number);
+			insert_questions(qb[count], type_number);
 			count++;
 		}
 		else if(n == 2)
 		{
-			//functionToDeleteQuestionBank(qb);
+			functionToDeleteQuestionBank(qb);
 		}
 		else if(n == 3)
 		{
@@ -58,7 +58,11 @@ int main()
 			printf("Please enter the id of the Question Bank you want to generate the Question Paper from");
 			br;
 			scanf("%d", &input_id);
-			//read_question_paper(qb[input_id]);
+			int number_of_files;
+			printf("Please Enter the number of files you want to Generate");
+			br;
+			scanf("%d", &number_of_files);
+			read_question_paper(qb[input_id], number_of_files);
 		}
 	}
   	return 0;

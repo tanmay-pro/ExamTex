@@ -15,7 +15,6 @@
 
 #define br printf("\n")
 #define fo(i, n) for (int i = 0; i < n; i++)
-#define Fo(i, k, n) for (int i = k; k < n ? i < n : i > n; k < n ? i += 1 : i -= 1)
 
 ptrnode make_node(elementType e);
 ptrnode insert_below(ptrnode tree, elementType e);
@@ -40,7 +39,7 @@ void question_bank(int type_number[]);
 mcq* insert_mcq(stack s1);
 fill_up *insert_fill_up(stack s1);
 
-void read_question_paper(ptrnode qb1);
+void read_question_paper(ptrnode qb1, int number_of_files);
 void sampler(ptrnode qb, question Q);
 
 void printer_mcq(FILE *file, mcq *q);
@@ -49,10 +48,10 @@ void printer_true_false(FILE *file, true_false *q);
 void printer_short_answer(FILE *file, short_answer *q);
 int *generate_randoms(int available, int n);
 
-mcq *mcq_arr[100];
-fill_up *fill_up_arr[100];
-true_false *true_false_arr[100];
-short_answer *short_answer_arr[100];
+mcq **mcq_arr;
+fill_up **fill_up_arr;
+true_false **true_false_arr;
+short_answer **short_answer_arr;
 
 void insert_questions(ptrnode tree, int type_number[]);
 ptrnode functionToCreateQuestionBank(ptrnode qb1);

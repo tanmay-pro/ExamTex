@@ -12,7 +12,7 @@ void printer_mcq(FILE *file, mcq *q)
     {
     	option_selected[i] = 0;
     }
-    strcpy(options_to_print[correct_optionID], q->correct);
+    strcpy(options_to_print[correct_optionID], *q->correct);
     fo(i, 4)
     {
         if (i != correct_optionID)
@@ -179,7 +179,7 @@ question add_question_type()
     }
 }
 
-void read_question_paper(ptrnode qb)
+void read_question_paper(ptrnode qb, int number_of_files)
 {
     srand(time(0));
     char ch;
@@ -236,7 +236,7 @@ void sampler(ptrnode qb, question Q)
     }
     int num = Q.no_of_questions;
     //int available = number_of_children(qb);
-    int available = 4;
+    int available = 3;
     int i = 0;
     if (available >= num)
     {
