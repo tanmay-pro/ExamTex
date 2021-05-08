@@ -10,7 +10,7 @@ typedef struct stack
 typedef struct mcq
 {
     char text[1000];
-    int difficulty;
+    double difficulty;
     char** options;//char** options;
     char** correct;
     int no_of_options;
@@ -20,21 +20,21 @@ typedef struct mcq
 typedef struct fill_up
 {
     char text[1000];
-    int difficulty;
+    double difficulty;
     char correct[20];
 } fill_up;
 
 typedef struct true_false
 {
 	char text[1000];
-	int difficulty;
+	double difficulty;
 	char correct;
 } true_false;
 
 typedef struct short_answer
 {
 	char text[1000];
-	int difficulty;
+	double difficulty;
 	char correct[1000];
 }short_answer;
 
