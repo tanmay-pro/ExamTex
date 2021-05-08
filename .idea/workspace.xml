@@ -31,6 +31,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c1c9fd8e-37b9-45e3-98fa-50053d63e515" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/a.out" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,12 +81,12 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="DSA-Miniproject-team27" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="DSA-Miniproject-team27" TARGET_NAME="DSA-Miniproject-team27" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="DSA-Miniproject-team27" RUN_TARGET_NAME="DSA-Miniproject-team27">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+    <configuration name="DSA-Miniproject-team27" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="DSA-Miniproject-team27" TARGET_NAME="DSA-Miniproject-team27" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="DSA-Miniproject-team27" RUN_TARGET_NAME="DSA-Miniproject-team27">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -118,6 +119,7 @@
       <workItem from="1620234936154" duration="1557000" />
       <workItem from="1620312921362" duration="1487000" />
       <workItem from="1620400929090" duration="8251000" />
+      <workItem from="1620485035599" duration="736000" />
     </task>
     <servers />
   </component>
@@ -176,30 +178,30 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="454" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1619198651106" />
-    <state x="642" y="355" width="697" height="403" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1620408896727">
+    <state x="642" y="355" width="697" height="403" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1620482792908">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state x="642" y="355" width="697" height="403" key="#com.intellij.fileTypes.FileTypeChooser/72.27.1848.1053@72.27.1848.1053" timestamp="1620408896727" />
+    <state x="642" y="355" width="697" height="403" key="#com.intellij.fileTypes.FileTypeChooser/72.27.1848.1053@72.27.1848.1053" timestamp="1620482792908" />
     <state x="779" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1620401185983">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="779" y="311" width="424" height="491" key="FileChooserDialogImpl/72.27.1848.1053@72.27.1848.1053" timestamp="1620401185983" />
-    <state width="1802" height="275" key="GridCell.Tab.0.bottom" timestamp="1620466067113">
+    <state width="1802" height="275" key="GridCell.Tab.0.bottom" timestamp="1620484882909">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state width="1802" height="275" key="GridCell.Tab.0.bottom/72.27.1848.1053@72.27.1848.1053" timestamp="1620466067113" />
-    <state width="1802" height="275" key="GridCell.Tab.0.center" timestamp="1620466067112">
+    <state width="1802" height="275" key="GridCell.Tab.0.bottom/72.27.1848.1053@72.27.1848.1053" timestamp="1620484882909" />
+    <state width="1802" height="275" key="GridCell.Tab.0.center" timestamp="1620484882909">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state width="1802" height="275" key="GridCell.Tab.0.center/72.27.1848.1053@72.27.1848.1053" timestamp="1620466067112" />
-    <state width="1802" height="275" key="GridCell.Tab.0.left" timestamp="1620466067112">
+    <state width="1802" height="275" key="GridCell.Tab.0.center/72.27.1848.1053@72.27.1848.1053" timestamp="1620484882909" />
+    <state width="1802" height="275" key="GridCell.Tab.0.left" timestamp="1620484882909">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state width="1802" height="275" key="GridCell.Tab.0.left/72.27.1848.1053@72.27.1848.1053" timestamp="1620466067112" />
-    <state width="1802" height="275" key="GridCell.Tab.0.right" timestamp="1620466067113">
+    <state width="1802" height="275" key="GridCell.Tab.0.left/72.27.1848.1053@72.27.1848.1053" timestamp="1620484882909" />
+    <state width="1802" height="275" key="GridCell.Tab.0.right" timestamp="1620484882909">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state width="1802" height="275" key="GridCell.Tab.0.right/72.27.1848.1053@72.27.1848.1053" timestamp="1620466067113" />
+    <state width="1802" height="275" key="GridCell.Tab.0.right/72.27.1848.1053@72.27.1848.1053" timestamp="1620484882909" />
     <state width="1802" height="340" key="GridCell.Tab.1.bottom" timestamp="1620196849426">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>

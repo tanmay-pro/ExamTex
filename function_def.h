@@ -32,9 +32,9 @@ question add_question_type();
 void push(stack *ps, char x);
 void pop(stack *ps);
 
-double input_difficulty(stack s1,char *pre);
+int input_difficulty(stack s1,char *pre);
 char* input_text(stack s1,char *pre,char *post_line,char *buffer);
-void question_bank(int type_number[], int filled_val[]);
+void question_bank(int type_number[], int filled_val[], int realloc_ct[]);
 
 mcq* insert_mcq(stack s1);
 fill_up *insert_fill_up(stack s1);

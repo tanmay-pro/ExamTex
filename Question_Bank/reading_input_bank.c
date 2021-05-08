@@ -3,45 +3,45 @@
 
 void push(stack *ps, char x)
 {
-	ps->top += 1;
-	int top_val = ps->top;
-	ps->items[top_val] = x;
+    ps->top += 1;
+    int top_val = ps->top;
+    ps->items[top_val] = x;
 }
 
 void pop(stack *ps)
 {
-	ps->top -= 1;
+    ps->top -= 1;
 }
 
 void fix(char s[])
 {
-    int x=strlen(s);
+    int x = strlen(s);
     int i;
-    for(i=x-1;i>=0;i--)
+    for (i = x - 1; i >= 0; i--)
     {
-        if(s[i]!=' ')
+        if (s[i] != ' ')
         {
-            s[i+1]='\0';
+            s[i + 1] = '\0';
             break;
         }
     }
 }
 
-double input_difficulty(stack s1, char *pre)
+int input_difficulty(stack s1, char *pre)
 {
     char y, z, ch;
-    double post_num;
-	fscanf(fp, "%c", &y);
+    int post_num;
+    fscanf(fp, "%c", &y);
     while (y != '{')
     {
-	    fscanf(fp, "%c", &y);
+        fscanf(fp, "%c", &y);
     }
     push(&s1, y);
     fscanf(fp, "%[^=]s", pre);
     fix(pre);
-	fscanf(fp, "%c", &ch);
-    fscanf(fp, "%lf", &post_num);
-	fscanf(fp, "%c", &z);
+    fscanf(fp, "%c", &ch);
+    fscanf(fp, "%d", &post_num);
+    fscanf(fp, "%c", &z);
     if (z == '}')
     {
         pop(&s1);
@@ -52,21 +52,21 @@ double input_difficulty(stack s1, char *pre)
 char *input_text(stack s1, char *pre, char *post_line, char *buffer)
 {
     char y, z, ch;
-	fscanf(fp, "%c", &y);
+    fscanf(fp, "%c", &y);
     while (y != '{')
     {
-	    fscanf(fp, "%c", &y);
+        fscanf(fp, "%c", &y);
     }
     push(&s1, y);
     fscanf(fp, "%[^=]s", pre);
     fix(pre);
-	fscanf(fp, "%c", &ch);
-	fscanf(fp, "%c", &post_line[0]);
+    fscanf(fp, "%c", &ch);
+    fscanf(fp, "%c", &post_line[0]);
     while (post_line[0] == ' ')
     {
-	    fscanf(fp, "%c", &post_line[0]);
+        fscanf(fp, "%c", &post_line[0]);
     }
-    fscanf(fp, "%[^}]s", post_line+1);
+    fscanf(fp, "%[^}]s", post_line + 1);
     fix(post_line);
     fscanf(fp, "%c", &z);
     if (z == '}')
@@ -80,72 +80,67 @@ mcq *insert_mcq(stack s1)
 {
     mcq *question;
     question = (mcq *)malloc(sizeof(mcq));
+
     char **post_wrong, **post_correct;
     post_wrong=(char**)malloc(4*sizeof(char*));
     post_correct=(char**)malloc(sizeof(char*));
+
     char pre[10], post_line[1000];
+
     char y, z,x,p, ch;
+    int ct1=0,ct2=0;
     char buffer[1000];
 
     question->difficulty = input_difficulty(s1, pre);
     strcpy(question->text, input_text(s1, pre, post_line, buffer));
-	
-	fscanf(fp, "%c", &y);
+
+    fscanf(fp, "%c", &y);
     while (y != '{')
     {
-	    fscanf(fp, "%c", &y);
+        fscanf(fp, "%c", &y);
     }
     push(&s1, y);
     fscanf(fp, "%[^=]s", pre);
     fix(pre);
-	fscanf(fp, "%c", &ch);
-    int i=0,j=0;
-    while(true)
+    fscanf(fp, "%c", &ch);
+    int i = 0, j = 0;
+    while (true)
     {
+
         post_wrong[i]=(char*)malloc(100*sizeof(char));
 	    fscanf(fp, "%c", &post_wrong[i][0]);
         while (post_wrong[i][0] == ' ')
         {
 	        fscanf(fp, "%c", &post_wrong[i][0]);
+
         }
-        j=1;
-	    fscanf(fp, "%c", &p);
-        while(p!=','&&p!='}')
+        j = 1;
+        fscanf(fp, "%c", &p);
+        while (p != ',' && p != '}')
         {
+
            post_wrong[i][j]=p;
            j++;
 	        fscanf(fp, "%c", &p);
         }
         post_wrong[i][j]='\0';
         fix(post_wrong[i]);
+
         i++;
-        if(p=='}')
+        if (p == '}')
         {
-	        break;
+            break;
         }
-        if(i%4==0)
+        if (i % 4 == 0)
         {
-	        post_wrong=(char**)realloc(post_wrong,4*sizeof(char*));
+
+            ct1++;
+	        post_wrong=(char**)realloc(post_wrong,4*(ct1+1)*sizeof(char*));
+
         }
     }
-    // post_wrong[3]=(char*)malloc(100*sizeof(char));
-    // post_wrong[3][0] = (char)getchar();
-    // while (post_wrong[3][0] == ' ')
-    // {
-    //     post_wrong[3][0] = (char)getchar();
-    // }
-    // //post_wrong[3][1] = '\0';
-    // fscanf(fp, "%[^}]s", post_wrong[3] + 1);
-    // //strcat(post_wrong[3], buffer);
-    // fscanf(fp, "%c", &z);
-    // if (z == '}')
-    // {
-    //     pop(&s1);
-    // }
-    // for (int i = 0; i < 4; i++)
-    // {
-    //     strcpy(question->wrong[i], post_wrong[i]);
-    // }
+
+
     question->wrong=(char**)malloc(i*sizeof(char*));
     for(j=0;j<i;j++)
     {
@@ -154,48 +149,50 @@ mcq *insert_mcq(stack s1)
     }
     question->no_of_wrong=i;
 	fscanf(fp, "%c", &y);
+
     while (y != '{')
     {
-	    fscanf(fp, "%c", &y);
+        fscanf(fp, "%c", &y);
     }
     push(&s1, y);
     fscanf(fp, "%[^=]s", pre);
     fix(pre);
-	fscanf(fp, "%c", &ch);
-    i=0;
-    j=0;
-    while(1)
+    fscanf(fp, "%c", &ch);
+    i = 0;
+    j = 0;
+    while (1)
     {
-        post_correct[i]=(char*)malloc(100*sizeof(char));
-	    fscanf(fp, "%c", &post_correct[i][0]);
+        post_correct[i] = (char *)malloc(100 * sizeof(char));
+        fscanf(fp, "%c", &post_correct[i][0]);
         while (post_correct[i][0] == ' ')
         {
-	        fscanf(fp, "%c", &post_correct[i][0]);
+            fscanf(fp, "%c", &post_correct[i][0]);
         }
-        j=1;
-	    fscanf(fp, "%c", &p);
-        while(p!=','&&p!='}')
+        j = 1;
+        fscanf(fp, "%c", &p);
+        while (p != ',' && p != '}')
         {
-           post_correct[i][j]=p;
-           j++;
-	        fscanf(fp, "%c", &p);
+            post_correct[i][j] = p;
+            j++;
+            fscanf(fp, "%c", &p);
         }
-        post_correct[i][j]='\0';
+        post_correct[i][j] = '\0';
         fix(post_correct[i]);
         i++;
-        if(p=='}')
+        if (p == '}')
         {
-	        break;
+            break;
         }
-	    post_correct=(char**)realloc(post_correct,sizeof(char*));
+        ct2++;
+	    post_correct=(char**)realloc(post_correct,(ct2+1)*sizeof(char*));
     }
-    question->correct=(char**)malloc(i*sizeof(char*));
-    for(j=0;j<i;j++)
+    question->correct = (char **)malloc(i * sizeof(char *));
+    for (j = 0; j < i; j++)
     {
-        question->correct[j]=(char*)malloc(100*sizeof(char));
+        question->correct[j] = (char *)malloc(100 * sizeof(char));
         strcpy(question->correct[j], post_correct[j]);
     }
-    question->no_of_correct=i;
+    question->no_of_correct = i;
     return question;
 }
 
@@ -208,20 +205,20 @@ fill_up *insert_fill_up(stack s1)
     char buffer[1000];
     question->difficulty = input_difficulty(s1, pre);
     strcpy(question->text, input_text(s1, pre, post_line, buffer));
-	fscanf(fp, "%c", &y);
+    fscanf(fp, "%c", &y);
     while (y != '{')
     {
-	    fscanf(fp, "%c", &y);
+        fscanf(fp, "%c", &y);
     }
     push(&s1, y);
     fscanf(fp, "%[^=]s", pre);
     fix(pre);
     char ch;
-	fscanf(fp, "%c", &ch);
-	fscanf(fp, "%c", &post_correct[0]);
+    fscanf(fp, "%c", &ch);
+    fscanf(fp, "%c", &post_correct[0]);
     while (post_correct[0] == ' ')
     {
-	    fscanf(fp, "%c", &post_correct[0]);
+        fscanf(fp, "%c", &post_correct[0]);
     }
     fscanf(fp, "%[^}]s", post_correct + 1);
     fix(post_correct);
@@ -243,20 +240,20 @@ true_false *insert_true_false(stack s1)
     char buffer[1000];
     question->difficulty = input_difficulty(s1, pre);
     strcpy(question->text, input_text(s1, pre, post_line, buffer));
-	fscanf(fp, "%c", &y);
+    fscanf(fp, "%c", &y);
     while (y != '{')
     {
-	    fscanf(fp, "%c", &y);
+        fscanf(fp, "%c", &y);
     }
     push(&s1, y);
     fscanf(fp, "%[^=]s", pre);
     fix(pre);
     char ch;
-	fscanf(fp, "%c", &ch);
-	fscanf(fp, "%c", &post_correct);
+    fscanf(fp, "%c", &ch);
+    fscanf(fp, "%c", &post_correct);
     while (post_correct == ' ')
     {
-	    fscanf(fp, "%c", &post_correct);
+        fscanf(fp, "%c", &post_correct);
     }
     fscanf(fp, "%c", &z);
     if (z == '}')
@@ -276,20 +273,20 @@ short_answer *insert_short_answer(stack s1)
     char buffer[1000];
     question->difficulty = input_difficulty(s1, pre);
     strcpy(question->text, input_text(s1, pre, post_line, buffer));
-	fscanf(fp, "%c", &y);
+    fscanf(fp, "%c", &y);
     while (y != '{')
     {
-	    fscanf(fp, "%c", &y);
+        fscanf(fp, "%c", &y);
     }
     push(&s1, y);
     fscanf(fp, "%[^=]s", pre);
     fix(pre);
     char ch;
-	fscanf(fp, "%c", &ch);
-	fscanf(fp, "%c", &post_correct[0]);
+    fscanf(fp, "%c", &ch);
+    fscanf(fp, "%c", &post_correct[0]);
     while (post_correct[0] == ' ')
     {
-	    fscanf(fp, "%c", &post_correct[0]);
+        fscanf(fp, "%c", &post_correct[0]);
     }
     fscanf(fp, "%[^}]s", post_correct + 1);
     fix(post_correct);
@@ -302,47 +299,47 @@ short_answer *insert_short_answer(stack s1)
     return question;
 }
 
-void question_bank(int type_number[], int filled_val[])
+void question_bank(int type_number[], int filled_val[], int realloc_ct[])
 {
-	char str[1000];
-	printf("Please Enter the name of the Input file.");
-	br;
-	printf("Note: In case You are running the program on terminal, the file should be present inside Project Directory Folder");
-	br;
-	printf("Note: In case You are running the program on Clion, etc IDE, the file should be present inside Debug Folder");
-	br;
-	scanf("%s", str);
-	fp = fopen(str, "r");
-	if (fp == NULL)
-	{
-		perror("Error While opening the file");
-		exit(EXIT_FAILURE);
-	}
-	char x, y, z;
-	fscanf(fp, "%c", &x);
+    char str[1000];
+    printf("Please Enter the name of the Input file.");
+    br;
+    printf("Note: In case You are running the program on terminal, the file should be present inside Project Directory Folder");
+    br;
+    printf("Note: In case You are running the program on Clion, etc IDE, the file should be present inside Debug Folder");
+    br;
+    scanf("%s", str);
+    fp = fopen(str, "r");
+    if (fp == NULL)
+    {
+        perror("Error While opening the file");
+        exit(EXIT_FAILURE);
+    }
+    char x, y, z;
+    fscanf(fp, "%c", &x);
     char pre[10], post[10], ch;
     struct stack s1;
-    int mcq_index = filled_val[0], fill_up_index = filled_val[1],true_false_index = filled_val[2], short_answer_index = filled_val[3];
+    int mcq_index = filled_val[0], fill_up_index = filled_val[1], true_false_index = filled_val[2], short_answer_index = filled_val[3];
     s1.top = -1;
     while (x != EOF)
     {
-	    fscanf(fp, "%c", &y);
+        fscanf(fp, "%c", &y);
         while (y != '{')
         {
-	        fscanf(fp, "%c", &y);
+            fscanf(fp, "%c", &y);
         }
         push(&s1, y);
         fscanf(fp, "%[^=]s", pre);
         fix(pre);
-	    fscanf(fp, "%c", &ch);
-	    fscanf(fp, "%c", &post[0]);
+        fscanf(fp, "%c", &ch);
+        fscanf(fp, "%c", &post[0]);
         while (post[0] == ' ')
         {
-	        fscanf(fp, "%c", &post[0]);
+            fscanf(fp, "%c", &post[0]);
         }
         fscanf(fp, "%[^}]s", post + 1);
         fix(post);
-	    fscanf(fp, "%c", &z);
+        fscanf(fp, "%c", &z);
         if (z == '}')
         {
             pop(&s1);
@@ -352,11 +349,12 @@ void question_bank(int type_number[], int filled_val[])
             mcq_arr[mcq_index] = insert_mcq(s1);
             available[0][(mcq_arr[mcq_index])->difficulty]++;
             mcq_index++;
-			type_number[0]++;
-			filled_val[0]++;
-            if(mcq_index%10==0)
+            type_number[0]++;
+            filled_val[0]++;
+            if (mcq_index % 10 == 0)
             {
-	            mcq_arr=(mcq **)realloc(mcq_arr ,10*sizeof(mcq *));
+                realloc_ct[0]++;
+	            mcq_arr=(mcq **)realloc(mcq_arr ,10*(realloc_ct[0]+1)*sizeof(mcq *));
             }
         }
         else if (post[0] == 'f')
@@ -364,11 +362,12 @@ void question_bank(int type_number[], int filled_val[])
             fill_up_arr[fill_up_index] = insert_fill_up(s1);
             available[1][(fill_up_arr[fill_up_index])->difficulty]++;
             fill_up_index++;
-	        type_number[1]++;
-	        filled_val[1]++;
-            if(fill_up_index%10==0)
+            type_number[1]++;
+            filled_val[1]++;
+            if (fill_up_index % 10 == 0)
             {
-	            fill_up_arr=(fill_up **)realloc(fill_up_arr ,10*sizeof(fill_up *));
+                realloc_ct[1]++;
+	            fill_up_arr=(fill_up **)realloc(fill_up_arr ,10*(realloc_ct[1]+1)*sizeof(fill_up *));
             }
         }
         else if (post[0] == 't')
@@ -376,11 +375,12 @@ void question_bank(int type_number[], int filled_val[])
             true_false_arr[true_false_index] = insert_true_false(s1);
             available[2][(true_false_arr[true_false_index])->difficulty]++;
             true_false_index++;
-	        type_number[2]++;
-	        filled_val[2]++;
-            if(true_false_index%10==0)
+            type_number[2]++;
+            filled_val[2]++;
+            if (true_false_index % 10 == 0)
             {
-	            true_false_arr=(true_false **)realloc(true_false_arr ,10*sizeof(true_false *));
+                realloc_ct[2]++;
+	            true_false_arr=(true_false **)realloc(true_false_arr ,10*(realloc_ct[2]+1)*sizeof(true_false *));
             }
         }
         else if (post[0] == 's')
@@ -388,17 +388,19 @@ void question_bank(int type_number[], int filled_val[])
             short_answer_arr[short_answer_index] = insert_short_answer(s1);
             available[3][(short_answer_arr[short_answer_index])->difficulty]++;
             short_answer_index++;
-	        type_number[3]++;
-	        filled_val[3]++;
-            if(short_answer_index%10==0)
+            type_number[3]++;
+            filled_val[3]++;
+            if (short_answer_index % 10 == 0)
             {
-	            short_answer_arr=(short_answer **)realloc(short_answer_arr ,10*sizeof(short_answer *));
+                realloc_ct[3]++;
+	            short_answer_arr=(short_answer **)realloc(short_answer_arr ,10*(realloc_ct[3]+1)*sizeof(short_answer *));
             }
         }
-	    x=getc(fp);
+        x = getc(fp);
     }
     fclose(fp);
     //fprintf("i have entered here2\n");
+
 	//Debugging start
 //     for (int i = 0; i < 4; i++)
 //     {
@@ -435,4 +437,50 @@ void question_bank(int type_number[], int filled_val[])
 //     }
 //		printf("Location = %p", mcq_arr[0]);
 //    Debugging end
+
+}
+
+void one_question()
+{
+    char str[1000];
+	printf("Please Enter the name of the Input file.");
+	br;
+	printf("Note: In case You are running the program on terminal, the file should be present inside Project Directory Folder");
+	br;
+	printf("Note: In case You are running the program on Clion, etc IDE, the file should be present inside Debug Folder");
+	br;
+	scanf("%s", str);
+	fp = fopen(str, "r");
+	if (fp == NULL)
+	{
+		perror("Error While opening the file");
+		exit(EXIT_FAILURE);
+	}
+	char x, y, z;
+	fscanf(fp, "%c", &x);
+    char pre[10], post[10], ch;
+    int diff;
+    char text[1000];
+    char post_line[1000];
+    char buffer[1000];
+    struct stack s1;
+    s1.top = -1;
+	    fscanf(fp, "%c", &y);
+        while (y != '{')
+        {
+	        fscanf(fp, "%c", &y);
+        }
+        push(&s1, y);
+        fscanf(fp, "%[^=]s", pre);
+        fix(pre);
+	    fscanf(fp, "%c", &ch);
+	    fscanf(fp, "%c", &post[0]);
+        while (post[0] == ' ')
+        {
+	        fscanf(fp, "%c", &post[0]);
+        }
+        fscanf(fp, "%[^}]s", post + 1);
+        fix(post);
+	    diff=input_difficulty(s1,pre);
+        strcpy(text,input_text(s1,pre,post_line,buffer));
 }

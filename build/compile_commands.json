@@ -1,0 +1,42 @@
+[
+{
+  "directory": "/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/build",
+  "command": "/bin/x86_64-linux-gnu-gcc-10   -g   -std=gnu11 -o CMakeFiles/DSA-Miniproject-team27.dir/main.c.o   -c /home/tanmaypro/Desktop/git/DSA-Miniproject-team27/main.c",
+  "file": "/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/main.c"
+},
+{
+  "directory": "/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/build",
+  "command": "/bin/x86_64-linux-gnu-gcc-10   -g   -std=gnu11 -o CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/question_bank_tree.c.o   -c /home/tanmaypro/Desktop/git/DSA-Miniproject-team27/Question_Bank/question_bank_tree.c",
+  "file": "/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/Question_Bank/question_bank_tree.c"
+},
+{
+  "directory": "/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/build",
+  "command": "/bin/x86_64-linux-gnu-gcc-10   -g   -std=gnu11 -o CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/create_question_bank.c.o   -c /home/tanmaypro/Desktop/git/DSA-Miniproject-team27/Question_Bank/create_question_bank.c",
+  "file": "/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/Question_Bank/create_question_bank.c"
+},
+{
+  "directory": "/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/build",
+  "command": "/bin/x86_64-linux-gnu-gcc-10   -g   -std=gnu11 -o CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/reading_input_bank.c.o   -c /home/tanmaypro/Desktop/git/DSA-Miniproject-team27/Question_Bank/reading_input_bank.c",
+  "file": "/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/Question_Bank/reading_input_bank.c"
+},
+{
+  "directory": "/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/build",
+  "command": "/bin/x86_64-linux-gnu-gcc-10   -g   -std=gnu11 -o CMakeFiles/DSA-Miniproject-team27.dir/Question_Paper/question_paper.c.o   -c /home/tanmaypro/Desktop/git/DSA-Miniproject-team27/Question_Paper/question_paper.c",
+  "file": "/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/Question_Paper/question_paper.c"
+},
+{
+  "directory": "/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/build",
+  "command": "/bin/x86_64-linux-gnu-gcc-10   -g   -std=gnu11 -o CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/insert_questions.c.o   -c /home/tanmaypro/Desktop/git/DSA-Miniproject-team27/Question_Bank/insert_questions.c",
+  "file": "/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/Question_Bank/insert_questions.c"
+},
+{
+  "directory": "/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/build",
+  "command": "/bin/x86_64-linux-gnu-gcc-10   -g   -std=gnu11 -o CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/delete_questions.c.o   -c /home/tanmaypro/Desktop/git/DSA-Miniproject-team27/Question_Bank/delete_questions.c",
+  "file": "/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/Question_Bank/delete_questions.c"
+},
+{
+  "directory": "/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/build",
+  "command": "/bin/x86_64-linux-gnu-gcc-10   -g   -std=gnu11 -o CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/print_question_bank.c.o   -c /home/tanmaypro/Desktop/git/DSA-Miniproject-team27/Question_Bank/print_question_bank.c",
+  "file": "/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/Question_Bank/print_question_bank.c"
+}
+]
