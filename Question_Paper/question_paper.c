@@ -1,24 +1,74 @@
 #include "../function_def.h"
 typedef int diff_type;
 
+char **shuffle(char **a, int N) //returns a pseudo-randomly shuffled list
+{
+    srand(time(0) + rand());
+    int curr;
+    char *temp = (char *)malloc(sizeof(char) * 100);
+    for (int i = 0; i < N; i++)
+    {
+        curr = (i + rand()) % N;
+        strcpy(temp, a[i]);
+        strcpy(a[i], a[curr]);
+        strcpy(a[curr], temp);
+    }
+    return a;
+}
+
 void printer_mcq(FILE *file, mcq *q)
 {
-    fprintf(file, "%s\n", q->text);
-    char options_to_print[4][100];
+    fprintf(file, "_Question[MCQ]_\t");
+    fprintf(file, "%s\n\n", q->text);
+    char **to_print = (char **)calloc(4, sizeof(char *));
+    fo(i, 4)
+    {
+        to_print[i] = (char *)calloc(100, sizeof(char));
+    }
+    int *correct_arr = generate_randoms(q->no_of_correct, 1);
+    int *wrong_arr = generate_randoms(q->no_of_wrong, 3);
+    fo(i, q->no_of_correct)
+    {
+        if (correct_arr[i])
+        {
+            strcpy(to_print[0], q->correct[i]);
+            break;
+        }
+    }
+
+    int t = 1;
+    fo(i, q->no_of_wrong)
+    {
+        if (correct_arr[i])
+        {
+            strcpy(to_print[t++], q->correct[i]);
+        }
+    }
+    fo(i, 4)
+    {
+        printf("%s\n",to_print[i]);
+    }
+    to_print = shuffle(to_print, 4);
+    printf("Hello\n");
+        fo(i, 4)
+    {
+        printf("%s\n",to_print[i]);
+    }
+    /*
     int correct_optionID = (rand()) % 4;
-    int n = q->no_of_options;
+    int n = q->no_of_wrong;
     int option_selected[n];
     fo(i, n)
     {
         option_selected[i] = 0;
     }
-    strcpy(options_to_print[correct_optionID], *q->correct);
+    strcpy(to_print[correct_optionID], *q->correct);
     fo(i, 4)
     {
         if (i != correct_optionID)
         {
             int p = (rand()) % n;
-            if (!strcmp(q->options[p], options_to_print[correct_optionID]))
+            if (!strcmp(q->wrong[p], to_print[correct_optionID]))
             {
                 option_selected[p] = 1;
             }
@@ -26,33 +76,38 @@ void printer_mcq(FILE *file, mcq *q)
             {
                 p = (rand()) % n;
             }
-            strcpy(options_to_print[i], q->options[p]);
+            strcpy(to_print[i], q->wrong[p]);
             option_selected[p] = 1;
         }
-    }
+    }*/
     for (int i = 0; i < 4; i++)
     {
-        fprintf(file, "%c)%s\t", 65 + i, options_to_print[i]);
+        fprintf(file, "1.\t%s\n\n", to_print[i]);
     }
-    fprintf(file, "\n\n");
+    fprintf(file, "\n\n\n");
 }
 
 void printer_fill_up(FILE *file, fill_up *q)
 {
-    fprintf(file, "%s\n", q->text);
-    fprintf(file, "Ans:\n\n");
+    fprintf(file, "_Question[Fill-up]_\t");
+    fprintf(file, "%s\n\n", q->text);
+    fprintf(file, "\n\n\n");
 }
 
 void printer_true_false(FILE *file, true_false *q)
 {
-    fprintf(file, "%s\n", q->text);
-    fprintf(file, "A)True\tB)False\n\n");
+    fprintf(file, "_Question[True/False]_\t");
+    fprintf(file, "%s\n\n", q->text);
+    fprintf(file, "*\tTrue\n\n*\tFalse\n\n");
+    fprintf(file, "\n\n\n");
 }
 
 void printer_short_answer(FILE *file, struct short_answer *q)
 {
-    fprintf(file, "%s\n", q->text);
-    fprintf(file, "Ans:\n\n");
+    fprintf(file, "_Question[Short-Answer]_\t");
+    fprintf(file, "%s\n\n", q->text);
+    fprintf(file, "\tAns:________________\n\n");
+    fprintf(file, "\n\n\n");
 }
 
 int *generate_randoms(int avail, int n)
