@@ -5,7 +5,7 @@ ptrnode add_mcq_question_to_bank(ptrnode tree, mcq *question, int index)
 {
 	ptrnode temp = tree;
 	temp = temp->firstchild;
-	double diff = question->difficulty;
+	int diff = question->difficulty;
 	if (diff == 0)
 	{
 		temp = temp->firstchild;
