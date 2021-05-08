@@ -1,4 +1,4 @@
-#include"../function_def.h"
+#include "../function_def.h"
 
 ptrnode functionToCreateQuestionBank(ptrnode qb1)
 {
@@ -57,9 +57,9 @@ ptrnode functionToCreateQuestionBank(ptrnode qb1)
 void insert_questions(ptrnode tree, int type_number[], const int filled_val[])
 {
 	int i = filled_val[0] - 1;
-	while(true)
+	while (true)
 	{
-		if(type_number[0] == 0)
+		if (type_number[0] == 0)
 		{
 			break;
 		}
@@ -68,9 +68,9 @@ void insert_questions(ptrnode tree, int type_number[], const int filled_val[])
 		type_number[0]--;
 	}
 	i = filled_val[1] - 1;
-	while(true)
+	while (true)
 	{
-		if(type_number[1] == 0)
+		if (type_number[1] == 0)
 		{
 			break;
 		}
@@ -79,9 +79,9 @@ void insert_questions(ptrnode tree, int type_number[], const int filled_val[])
 		type_number[1]--;
 	}
 	i = filled_val[2] - 1;
-	while(true)
+	while (true)
 	{
-		if(type_number[2] == 0)
+		if (type_number[2] == 0)
 		{
 			break;
 		}
@@ -90,9 +90,9 @@ void insert_questions(ptrnode tree, int type_number[], const int filled_val[])
 		type_number[2]--;
 	}
 	i = filled_val[3] - 1;
-	while(true)
+	while (true)
 	{
-		if(type_number[3] == 0)
+		if (type_number[3] == 0)
 		{
 			break;
 		}
@@ -101,4 +101,3 @@ void insert_questions(ptrnode tree, int type_number[], const int filled_val[])
 		type_number[3]--;
 	}
 }
-
