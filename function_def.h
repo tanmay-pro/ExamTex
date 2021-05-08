@@ -27,12 +27,12 @@ ptrnode add_short_answer_question_to_bank(ptrnode tree, short_answer* question, 
 
 ptrnode delete_mcq_from_question_bank(ptrnode tree, mcq* question, int index);
 
-struct questions add_question_type();
+question add_question_type();
 
 void push(stack *ps, char x);
 void pop(stack *ps);
 
-double input_difficulty(stack s1,char *pre);
+int input_difficulty(stack s1,char *pre);
 char* input_text(stack s1,char *pre,char *post_line,char *buffer);
 void question_bank(int type_number[], int filled_val[], int realloc_ct[]);
 
@@ -42,7 +42,7 @@ true_false *insert_true_false(stack s1);
 short_answer *insert_short_answer(stack s1);
 
 void read_question_paper(ptrnode qb1, int number_of_files);
-void sampler(ptrnode qb, question Q);
+void sampler(ptrnode qb, question Q, char file_name[]);
 
 void printer_mcq(FILE *file, mcq *q);
 void printer_fill_up(FILE *file, fill_up *q);
@@ -54,6 +54,12 @@ mcq **mcq_arr;
 fill_up **fill_up_arr;
 true_false **true_false_arr;
 short_answer **short_answer_arr;
+
+//
+#define TYPES 4
+#define DIFFICULTY_LEVELS 4
+int available[TYPES][DIFFICULTY_LEVELS];
+//
 
 void insert_questions(ptrnode tree, int type_number[], const int filled_val[]);
 ptrnode functionToCreateQuestionBank(ptrnode qb1);
