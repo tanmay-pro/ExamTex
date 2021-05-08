@@ -58,6 +58,12 @@ short_answer **short_answer_arr;
 void insert_questions(ptrnode tree, int type_number[], const int filled_val[]);
 ptrnode functionToCreateQuestionBank(ptrnode qb1);
 void functionToDeleteQuestionBank(ptrnode qb[]);
+
 void print_bank(ptrnode tree);
+void print_a(int index, int count);
+void print_b(int index, int count);
+void print_c(int index, int count);
+void print_d(int index, int count);
+
 FILE *fp, *fp2;
 #endif
