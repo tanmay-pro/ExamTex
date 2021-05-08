@@ -179,7 +179,7 @@ question add_question_type()
     }
 }
 
-void read_question_paper(ptrnode qb)
+void read_question_paper(ptrnode qb, int number_of_files)
 {
     srand(time(0));
     char ch;
