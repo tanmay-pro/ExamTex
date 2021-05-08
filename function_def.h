@@ -40,7 +40,7 @@ void question_bank(int type_number[]);
 mcq* insert_mcq(stack s1);
 fill_up *insert_fill_up(stack s1);
 
-void read_question_paper(ptrnode qb1);
+void read_question_paper(ptrnode qb1, int number_of_files);
 void sampler(ptrnode qb, question Q);
 
 void printer_mcq(FILE *file, mcq *q);

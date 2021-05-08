@@ -1,9 +1,0 @@
-C is a ... language
-A)Functional	B)Events	C)Procedural	D)yo	
-
-What is name?
-A)Functional	B)Procedural	C)Objects	D)Functional	
-
-where do you live?
-A)Objects	B)Events	C)Functional	D)hello	
-
