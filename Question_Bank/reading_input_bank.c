@@ -38,6 +38,7 @@ double input_difficulty(stack s1, char *pre)
     }
     push(&s1, y);
     fscanf(fp, "%[^=]s", pre);
+    fix(pre);
 	fscanf(fp, "%c", &ch);
     fscanf(fp, "%lf", &post_num);
 	fscanf(fp, "%c", &z);
@@ -58,6 +59,7 @@ char *input_text(stack s1, char *pre, char *post_line, char *buffer)
     }
     push(&s1, y);
     fscanf(fp, "%[^=]s", pre);
+    fix(pre);
 	fscanf(fp, "%c", &ch);
 	fscanf(fp, "%c", &post_line[0]);
     while (post_line[0] == ' ')
@@ -65,6 +67,7 @@ char *input_text(stack s1, char *pre, char *post_line, char *buffer)
 	    fscanf(fp, "%c", &post_line[0]);
     }
     fscanf(fp, "%[^}]s", post_line+1);
+    fix(post_line);
     fscanf(fp, "%c", &z);
     if (z == '}')
     {
@@ -85,7 +88,6 @@ mcq *insert_mcq(stack s1)
     char buffer[1000];
 
     question->difficulty = input_difficulty(s1, pre);
-
     strcpy(question->text, input_text(s1, pre, post_line, buffer));
 	
 	fscanf(fp, "%c", &y);
@@ -95,6 +97,7 @@ mcq *insert_mcq(stack s1)
     }
     push(&s1, y);
     fscanf(fp, "%[^=]s", pre);
+    fix(pre);
 	fscanf(fp, "%c", &ch);
     int i=0,j=0;
     while(true)
@@ -114,12 +117,13 @@ mcq *insert_mcq(stack s1)
 	        fscanf(fp, "%c", &p);
         }
         post_options[i][j]='\0';
+        fix(post_options[i]);
         i++;
         if(p=='}')
         {
 	        break;
         }
-        if(i%4==1)
+        if(i%4==0)
         {
 	        post_options=(char**)realloc(post_options,4*sizeof(char*));
         }
@@ -156,6 +160,7 @@ mcq *insert_mcq(stack s1)
     }
     push(&s1, y);
     fscanf(fp, "%[^=]s", pre);
+    fix(pre);
 	fscanf(fp, "%c", &ch);
     i=0;
     j=0;
@@ -176,15 +181,13 @@ mcq *insert_mcq(stack s1)
 	        fscanf(fp, "%c", &p);
         }
         post_correct[i][j]='\0';
+        fix(post_correct[i]);
         i++;
         if(p=='}')
         {
 	        break;
         }
-        if(i%4==1)
-        {
-	        post_correct=(char**)realloc(post_correct,sizeof(char*));
-        }
+	    post_correct=(char**)realloc(post_correct,sizeof(char*));
     }
     question->correct=(char**)malloc(i*sizeof(char*));
     for(j=0;j<i;j++)
@@ -212,6 +215,7 @@ fill_up *insert_fill_up(stack s1)
     }
     push(&s1, y);
     fscanf(fp, "%[^=]s", pre);
+    fix(pre);
     char ch;
 	fscanf(fp, "%c", &ch);
 	fscanf(fp, "%c", &post_correct[0]);
@@ -220,6 +224,7 @@ fill_up *insert_fill_up(stack s1)
 	    fscanf(fp, "%c", &post_correct[0]);
     }
     fscanf(fp, "%[^}]s", post_correct + 1);
+    fix(post_correct);
     fscanf(fp, "%c", &z);
     if (z == '}')
     {
@@ -245,6 +250,7 @@ true_false *insert_true_false(stack s1)
     }
     push(&s1, y);
     fscanf(fp, "%[^=]s", pre);
+    fix(pre);
     char ch;
 	fscanf(fp, "%c", &ch);
 	fscanf(fp, "%c", &post_correct);
@@ -277,6 +283,7 @@ short_answer *insert_short_answer(stack s1)
     }
     push(&s1, y);
     fscanf(fp, "%[^=]s", pre);
+    fix(pre);
     char ch;
 	fscanf(fp, "%c", &ch);
 	fscanf(fp, "%c", &post_correct[0]);
@@ -285,6 +292,7 @@ short_answer *insert_short_answer(stack s1)
 	    fscanf(fp, "%c", &post_correct[0]);
     }
     fscanf(fp, "%[^}]s", post_correct + 1);
+    fix(post_correct);
     fscanf(fp, "%c", &z);
     if (z == '}')
     {
@@ -316,7 +324,7 @@ void question_bank(int type_number[], int filled_val[])
     struct stack s1;
     int mcq_index = filled_val[0], fill_up_index = filled_val[1],true_false_index = filled_val[2], short_answer_index = filled_val[3];
     s1.top = -1;
-    while (x != 35)
+    while (x != EOF)
     {
 	    fscanf(fp, "%c", &y);
         while (y != '{')
@@ -325,6 +333,7 @@ void question_bank(int type_number[], int filled_val[])
         }
         push(&s1, y);
         fscanf(fp, "%[^=]s", pre);
+        fix(pre);
 	    fscanf(fp, "%c", &ch);
 	    fscanf(fp, "%c", &post[0]);
         while (post[0] == ' ')
@@ -332,6 +341,7 @@ void question_bank(int type_number[], int filled_val[])
 	        fscanf(fp, "%c", &post[0]);
         }
         fscanf(fp, "%[^}]s", post + 1);
+        fix(post);
 	    fscanf(fp, "%c", &z);
         if (z == '}')
         {
@@ -340,8 +350,7 @@ void question_bank(int type_number[], int filled_val[])
         if (post[0] == 'm')
         {
             mcq_arr[mcq_index] = insert_mcq(s1);
-
-            available[0][(mcq_arr[mcq_index])->difficulty]++;
+            //printf("Mcq index = %d", mcq_index);
             mcq_index++;
 			type_number[0]++;
 			filled_val[0]++;
@@ -353,11 +362,9 @@ void question_bank(int type_number[], int filled_val[])
         else if (post[0] == 'f')
         {
             fill_up_arr[fill_up_index] = insert_fill_up(s1);
-            available[1][(fill_up_arr[fill_up_index])->difficulty]++;
             fill_up_index++;
 	        type_number[1]++;
-
-          filled_val[1]++;
+	        filled_val[1]++;
             if(fill_up_index%10==0)
             {
 	            fill_up_arr=(fill_up **)realloc(fill_up_arr ,10*sizeof(fill_up *));
@@ -366,10 +373,8 @@ void question_bank(int type_number[], int filled_val[])
         else if (post[0] == 't')
         {
             true_false_arr[true_false_index] = insert_true_false(s1);
-            available[2][(true_false_arr[true_false_index])->difficulty]++;
             true_false_index++;
 	        type_number[2]++;
-
 	        filled_val[2]++;
             if(true_false_index%10==0)
             {
@@ -379,7 +384,6 @@ void question_bank(int type_number[], int filled_val[])
         else if (post[0] == 's')
         {
             short_answer_arr[short_answer_index] = insert_short_answer(s1);
-            available[3][(short_answer_arr[short_answer_index])->difficulty]++;
             short_answer_index++;
 	        type_number[3]++;
 	        filled_val[3]++;
@@ -388,12 +392,11 @@ void question_bank(int type_number[], int filled_val[])
 	            short_answer_arr=(short_answer **)realloc(short_answer_arr ,10*sizeof(short_answer *));
             }
         }
-	    fscanf(fp, "%c",&x);
+	    x=getc(fp);
     }
     fclose(fp);
     //fprintf("i have entered here2\n");
 	//Debugging start
-
 //     for (int i = 0; i < 4; i++)
 //     {
 //         printf("%s2\n", mcq_arr[i]->text);
@@ -429,5 +432,4 @@ void question_bank(int type_number[], int filled_val[])
 //     }
 //		printf("Location = %p", mcq_arr[0]);
 //    Debugging end
-
 }
