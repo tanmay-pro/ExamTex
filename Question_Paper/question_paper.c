@@ -27,19 +27,33 @@ void printer_mcq(FILE *file, mcq *q)
     }
     int *correct_arr = generate_randoms(q->no_of_correct, 1);
     int *wrong_arr = generate_randoms(q->no_of_wrong, 3);
-    fo(i, q->no_of_correct) if (correct_arr[i])
+    fo(i, q->no_of_correct)
     {
-        strcpy(to_print[0], q->correct[i]);
-        break;
+        if (correct_arr[i])
+        {
+            strcpy(to_print[0], q->correct[i]);
+            break;
+        }
     }
 
     int t = 1;
-    fo(i, q->no_of_wrong) if (correct_arr[i])
+    fo(i, q->no_of_wrong)
     {
-        strcpy(to_print[t++], q->correct[i]);
+        if (correct_arr[i])
+        {
+            strcpy(to_print[t++], q->correct[i]);
+        }
+    }
+    fo(i, 4)
+    {
+        printf("%s\n",to_print[i]);
     }
     to_print = shuffle(to_print, 4);
-
+    printf("Hello\n");
+        fo(i, 4)
+    {
+        printf("%s\n",to_print[i]);
+    }
     /*
     int correct_optionID = (rand()) % 4;
     int n = q->no_of_wrong;
