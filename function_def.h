@@ -46,13 +46,8 @@ void sampler(ptrnode qb, question Q, char file_name[]);
 
 void printer_mcq(FILE *file, mcq *q);
 void printer_fill_up(FILE *file, fill_up *q);
-<<<<<<< HEAD
-void printer_true_false(FILE *file,true_false q);
-void printer_short_answer(FILE *file,short_answer q);
-=======
 void printer_true_false(FILE *file, true_false *q);
 void printer_short_answer(FILE *file, short_answer *q);
->>>>>>> 5731cea3a8a591fbe3333a2899079a9537c36fd3
 int *generate_randoms(int available, int n);
 
 mcq **mcq_arr;
