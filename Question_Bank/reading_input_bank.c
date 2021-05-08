@@ -27,10 +27,10 @@ void fix(char s[])
     }
 }
 
-double input_difficulty(stack s1, char *pre)
+int input_difficulty(stack s1, char *pre)
 {
     char y, z, ch;
-    double post_num;
+    int post_num;
 	fscanf(fp, "%c", &y);
     while (y != '{')
     {
@@ -40,7 +40,7 @@ double input_difficulty(stack s1, char *pre)
     fscanf(fp, "%[^=]s", pre);
     fix(pre);
 	fscanf(fp, "%c", &ch);
-    fscanf(fp, "%lf", &post_num);
+    fscanf(fp, "%d", &post_num);
 	fscanf(fp, "%c", &z);
     if (z == '}')
     {

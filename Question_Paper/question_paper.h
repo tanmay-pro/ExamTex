@@ -5,7 +5,7 @@ typedef struct questions question;
 struct questions
 {
     int type;
-    float difficulty;
+    int difficulty;
     int no_of_questions;
 };
 #endif
