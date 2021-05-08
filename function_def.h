@@ -15,7 +15,6 @@
 
 #define br printf("\n")
 #define fo(i, n) for (int i = 0; i < n; i++)
-#define Fo(i, k, n) for (int i = k; k < n ? i < n : i > n; k < n ? i += 1 : i -= 1)
 
 ptrnode make_node(elementType e);
 ptrnode insert_below(ptrnode tree, elementType e);

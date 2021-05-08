@@ -236,7 +236,7 @@ void sampler(ptrnode qb, question Q)
     }
     int num = Q.no_of_questions;
     //int available = number_of_children(qb);
-    int available = 4;
+    int available = 3;
     int i = 0;
     if (available >= num)
     {
