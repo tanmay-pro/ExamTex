@@ -85,6 +85,7 @@ mcq *insert_mcq(stack s1)
     post_correct=(char**)malloc(sizeof(char*));
     char pre[10], post_line[1000];
     char y, z,x,p, ch;
+    int ct1=0,ct2=0;
     char buffer[1000];
 
     question->difficulty = input_difficulty(s1, pre);
@@ -125,7 +126,8 @@ mcq *insert_mcq(stack s1)
         }
         if(i%4==0)
         {
-	        post_options=(char**)realloc(post_options,4*sizeof(char*));
+            ct1++;
+	        post_options=(char**)realloc(post_options,4*(ct1+1)*sizeof(char*));
         }
     }
     // post_options[3]=(char*)malloc(100*sizeof(char));
@@ -187,7 +189,8 @@ mcq *insert_mcq(stack s1)
         {
 	        break;
         }
-	    post_correct=(char**)realloc(post_correct,sizeof(char*));
+        ct2++;
+	    post_correct=(char**)realloc(post_correct,(ct2+1)*sizeof(char*));
     }
     question->correct=(char**)malloc(i*sizeof(char*));
     for(j=0;j<i;j++)
@@ -302,7 +305,7 @@ short_answer *insert_short_answer(stack s1)
     return question;
 }
 
-void question_bank(int type_number[], int filled_val[])
+void question_bank(int type_number[], int filled_val[], int realloc_ct[])
 {
 	char str[1000];
 	printf("Please Enter the name of the Input file.");
@@ -356,7 +359,8 @@ void question_bank(int type_number[], int filled_val[])
 			filled_val[0]++;
             if(mcq_index%10==0)
             {
-	            mcq_arr=(mcq **)realloc(mcq_arr ,10*sizeof(mcq *));
+                realloc_ct[0]++;
+	            mcq_arr=(mcq **)realloc(mcq_arr ,10*(realloc_ct[0]+1)*sizeof(mcq *));
             }
         }
         else if (post[0] == 'f')
@@ -367,7 +371,8 @@ void question_bank(int type_number[], int filled_val[])
 	        filled_val[1]++;
             if(fill_up_index%10==0)
             {
-	            fill_up_arr=(fill_up **)realloc(fill_up_arr ,10*sizeof(fill_up *));
+                realloc_ct[1]++;
+	            fill_up_arr=(fill_up **)realloc(fill_up_arr ,10*(realloc_ct[1]+1)*sizeof(fill_up *));
             }
         }
         else if (post[0] == 't')
@@ -378,7 +383,8 @@ void question_bank(int type_number[], int filled_val[])
 	        filled_val[2]++;
             if(true_false_index%10==0)
             {
-	            true_false_arr=(true_false **)realloc(true_false_arr ,10*sizeof(true_false *));
+                realloc_ct[2]++;
+	            true_false_arr=(true_false **)realloc(true_false_arr ,10*(realloc_ct[2]+1)*sizeof(true_false *));
             }
         }
         else if (post[0] == 's')
@@ -389,7 +395,8 @@ void question_bank(int type_number[], int filled_val[])
 	        filled_val[3]++;
             if(short_answer_index%10==0)
             {
-	            short_answer_arr=(short_answer **)realloc(short_answer_arr ,10*sizeof(short_answer *));
+                realloc_ct[3]++;
+	            short_answer_arr=(short_answer **)realloc(short_answer_arr ,10*(realloc_ct[3]+1)*sizeof(short_answer *));
             }
         }
 	    x=getc(fp);
@@ -432,4 +439,49 @@ void question_bank(int type_number[], int filled_val[])
 //     }
 //		printf("Location = %p", mcq_arr[0]);
 //    Debugging end
+}
+
+void one_question()
+{
+    char str[1000];
+	printf("Please Enter the name of the Input file.");
+	br;
+	printf("Note: In case You are running the program on terminal, the file should be present inside Project Directory Folder");
+	br;
+	printf("Note: In case You are running the program on Clion, etc IDE, the file should be present inside Debug Folder");
+	br;
+	scanf("%s", str);
+	fp = fopen(str, "r");
+	if (fp == NULL)
+	{
+		perror("Error While opening the file");
+		exit(EXIT_FAILURE);
+	}
+	char x, y, z;
+	fscanf(fp, "%c", &x);
+    char pre[10], post[10], ch;
+    int diff;
+    char text[1000];
+    char post_line[1000];
+    char buffer[1000];
+    struct stack s1;
+    s1.top = -1;
+	    fscanf(fp, "%c", &y);
+        while (y != '{')
+        {
+	        fscanf(fp, "%c", &y);
+        }
+        push(&s1, y);
+        fscanf(fp, "%[^=]s", pre);
+        fix(pre);
+	    fscanf(fp, "%c", &ch);
+	    fscanf(fp, "%c", &post[0]);
+        while (post[0] == ' ')
+        {
+	        fscanf(fp, "%c", &post[0]);
+        }
+        fscanf(fp, "%[^}]s", post + 1);
+        fix(post);
+	    diff=input_difficulty(s1,pre);
+        strcpy(text,input_text(s1,pre,post_line,buffer));
 }
