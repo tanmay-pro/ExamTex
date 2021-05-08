@@ -67,7 +67,7 @@ void print_bank(ptrnode tree)
 		bool checker[4] = {true}; // Number of diff
 		fo(j, 4)
 		{
-			if(temporary_again[j]->firstchild != NULL)
+			if (temporary_again[j]->firstchild != NULL)
 			{
 				temporary_again[j] = temporary_again[j]->firstchild;
 				checker[j] = true;
@@ -76,26 +76,26 @@ void print_bank(ptrnode tree)
 			{
 				checker[j] = false;
 			}
-			if(checker[j] == true)
+			if (checker[j] == true)
 			{
-				while(temporary_again[j] != NULL)
+				while (temporary_again[j] != NULL)
 				{
-					if(i == 0)
+					if (i == 0)
 					{
 						print_a(temporary_again[j]->element, question_number_count);
 						question_number_count++;
 					}
-					else if(i == 1)
+					else if (i == 1)
 					{
 						print_b(temporary_again[j]->element, question_number_count);
 						question_number_count++;
 					}
-					else if(i == 2)
+					else if (i == 2)
 					{
 						print_c(temporary_again[j]->element, question_number_count);
 						question_number_count++;
 					}
-					else if(i == 3)
+					else if (i == 3)
 					{
 						print_d(temporary_again[j]->element, question_number_count);
 						question_number_count++;
