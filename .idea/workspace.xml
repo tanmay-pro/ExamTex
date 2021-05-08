@@ -31,21 +31,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c1c9fd8e-37b9-45e3-98fa-50053d63e515" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Question_Bank/insert_questions.c" beforeDir="false" afterPath="$PROJECT_DIR$/Question_Bank/insert_questions.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Question_Bank/reading_input_bank.c" beforeDir="false" afterPath="$PROJECT_DIR$/Question_Bank/reading_input_bank.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/a.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/create_question_bank.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/create_question_bank.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/delete_questions.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/delete_questions.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/insert_questions.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/insert_questions.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/print_question_bank.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/print_question_bank.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/question_bank_tree.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/question_bank_tree.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/reading_input_bank.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/reading_input_bank.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/Question_Paper/question_paper.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/Question_Paper/question_paper.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/main.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/DSA-Miniproject-team27" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/DSA-Miniproject-team27" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/function_def.h" beforeDir="false" afterPath="$PROJECT_DIR$/function_def.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
