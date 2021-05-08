@@ -8,4 +8,5 @@ struct questions
     int difficulty;
     int no_of_questions;
 };
+//use this struct to store details from sample.txt for every '/sample' tag
 #endif

@@ -42,7 +42,7 @@ true_false *insert_true_false(stack s1);
 short_answer *insert_short_answer(stack s1);
 
 void read_question_paper(ptrnode qb1, int number_of_files);
-void sampler(ptrnode qb, question Q, char file_name[]);
+void sampler(ptrnode qb, question Q, FILE* paper_ptr);
 
 void printer_mcq(FILE *file, mcq *q);
 void printer_fill_up(FILE *file, fill_up *q);
