@@ -37,7 +37,7 @@ char **shuffle(char **a, int N) //returns a pseudo-randomly shuffled list
     return a;
 }*/
 
-void printer_mcq(FILE *file, mcq *q)//to print a formatted mcq into a file
+void printer_mcq(FILE *file, mcq *q) //to print a formatted mcq into a file
 {
     fprintf(file, "_Question %d)_\t", question_counter);
     fprintf(file, "%s\n\n", q->text);
@@ -108,7 +108,7 @@ void printer_mcq(FILE *file, mcq *q)//to print a formatted mcq into a file
     fprintf(file, "\n\n\n");
 }
 
-void printer_fill_up(FILE *file, fill_up *q)//to print a formatted fill up question into a file
+void printer_fill_up(FILE *file, fill_up *q) //to print a formatted fill up question into a file
 {
     fprintf(file, "_Question %d)_\t", question_counter);
     fprintf(file, "%s\n\n", q->text);
@@ -116,7 +116,7 @@ void printer_fill_up(FILE *file, fill_up *q)//to print a formatted fill up quest
     fprintf(file, "\n\n\n");
 }
 
-void printer_true_false(FILE *file, true_false *q)//to print a formatted true - false question into a file
+void printer_true_false(FILE *file, true_false *q) //to print a formatted true - false question into a file
 {
     fprintf(file, "_Question %d)_\t", question_counter);
     fprintf(file, "%s\n\n", q->text);
@@ -124,7 +124,7 @@ void printer_true_false(FILE *file, true_false *q)//to print a formatted true - 
     fprintf(file, "\n\n\n");
 }
 
-void printer_short_answer(FILE *file, short_answer *q)//to print a formatted short answer question into a file
+void printer_short_answer(FILE *file, short_answer *q) //to print a formatted short answer question into a file
 {
     fprintf(file, "_Question %d)_\t", question_counter);
     fprintf(file, "%s\n\n", q->text);
@@ -132,7 +132,7 @@ void printer_short_answer(FILE *file, short_answer *q)//to print a formatted sho
     fprintf(file, "\n\n\n");
 }
 
-int *generate_randoms(int avail, int n)//returns an array of lenth avail, with n indices randomly labelled 1 and rest 0 
+int *generate_randoms(int avail, int n) //returns an array of lenth avail, with n indices randomly labelled 1 and rest 0
 {
     srand(time(0) + rand());
     int *arr = (int *)calloc(avail, sizeof(int));
@@ -148,7 +148,7 @@ int *generate_randoms(int avail, int n)//returns an array of lenth avail, with n
     return arr;
 }
 
-question add_question_type()//parses 1 /sample statement from the input file and returns a question struct of details read
+question add_question_type() //parses 1 /sample statement from the input file and returns a question struct of details read
 {
     char ch, buffer[100];
     question que = (question)malloc(sizeof(struct questions));
@@ -258,10 +258,10 @@ question add_question_type()//parses 1 /sample statement from the input file and
     }
 }
 
-void read_question_paper(ptrnode qb, int number_of_files)//reads the 'sample.txt' input file and invokes add_question_type() for every '/sample' statement
+void read_question_paper(int bank_id, ptrnode qb, int number_of_files) //reads the 'sample.txt' input file and invokes add_question_type() for every '/sample' statement
 {
     char ch;
-    question questions_in_paper[4];//will later parse this array that stores the details read in question structs
+    question questions_in_paper[4]; //will later parse this array that stores the details read in question structs
     int i = 0;
     char str[1000];
     printf("Please Enter the name of the Input file.");
@@ -286,7 +286,7 @@ void read_question_paper(ptrnode qb, int number_of_files)//reads the 'sample.txt
         }
         questions_in_paper[i] = add_question_type();
         i++;
-		ch = getc(fp2);
+        ch = getc(fp2);
     }
     fclose(fp2);
 
@@ -307,13 +307,17 @@ void read_question_paper(ptrnode qb, int number_of_files)//reads the 'sample.txt
         //parsing the array of question structs
         for (int j = 0; j < i; j++)
         {
-            sampler(qb, questions_in_paper[j], paper_ptr);
+            sampler(bank_id, qb, questions_in_paper[j], paper_ptr);
         }
         fclose(paper_ptr);
     }
+    for (int j = 0; j < i; j++)
+    {
+        free(questions_in_paper[j]);
+    }
 }
 
-void sampler(ptrnode qb, question Q, FILE *paper_ptr)//samples out questions based on details in question Q by invoking respective printer functions through a cohesive random algorithm
+void sampler(int bank_id, ptrnode qb, question Q, FILE *paper_ptr) //samples out questions based on details in question Q by invoking respective printer functions through a cohesive random algorithm
 {
     int type = Q->type;
     qb = qb->firstchild;
@@ -328,15 +332,15 @@ void sampler(ptrnode qb, question Q, FILE *paper_ptr)//samples out questions bas
         qb = qb->nextsibling;
     }
     int num = Q->no_of_questions;
-    int avail = available[Q->type][Q->difficulty];//this is the number of questions available for a given type and difficulty
+    int avail = available[bank_id][Q->type][Q->difficulty]; //this is the number of questions available for a given type and difficulty
     int i = 0;
     if (avail >= num)
     {
         qb = qb->firstchild;
-        int *arr = generate_randoms(avail, num);//use this to randomly label questions that are to be printed
+        int *arr = generate_randoms(avail, num); //use this to randomly label questions that are to be printed
         while (avail--)
         {
-            if (arr[i] == true)//if labelled, invoke the respective printer
+            if (arr[i] == true) //if labelled, invoke the respective printer
             {
                 question_counter++;
                 if (Q->type == 0)
@@ -362,7 +366,7 @@ void sampler(ptrnode qb, question Q, FILE *paper_ptr)//samples out questions bas
         }
         free(arr);
     }
-    else//in case of no. of questions available < demanded, print an error alert
+    else //in case of no. of questions available < demanded, print an error alert
     {
         fprintf(stderr, "could not generate %d questions of type %d and difficulty %d, available = %d\n", num, Q->type, Q->difficulty, avail);
     }
