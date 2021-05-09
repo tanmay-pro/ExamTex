@@ -17,8 +17,9 @@
 #define fo(i, n) for (int i = 0; i < n; i++)
 #define TYPES 4
 #define DIFFICULTY_LEVELS 4
+#define MAX 100
 
-int available[TYPES][DIFFICULTY_LEVELS];
+int available[MAX][TYPES][DIFFICULTY_LEVELS];
 
 ptrnode make_node(elementType e);
 ptrnode insert_below(ptrnode tree, elementType e);
@@ -36,15 +37,15 @@ void pop(stack *ps);
 
 int input_difficulty(stack s1,char *pre);
 char* input_text(stack s1,char *pre,char *post_line,char *buffer);
-void question_bank(int type_number[], int filled_val[], int realloc_ct[]);
+void question_bank(int bank_id, int type_number[], int filled_val[], int realloc_ct[]);
 
 mcq* insert_mcq(stack s1);
 fill_up *insert_fill_up(stack s1);
 true_false *insert_true_false(stack s1);
 short_answer *insert_short_answer(stack s1);
 
-void read_question_paper(ptrnode qb1, int number_of_files);
-void sampler(ptrnode qb, question Q, FILE* paper_ptr);
+void read_question_paper(int bank_id, ptrnode qb1, int number_of_files);
+void sampler(int bank_id, ptrnode qb, question Q, FILE* paper_ptr);
 
 void printer_mcq(FILE *file, mcq *q);
 void printer_fill_up(FILE *file, fill_up *q);
