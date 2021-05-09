@@ -107,8 +107,6 @@ void free_bank(ptrnode tree)
 		free(temp2_arr[i]);
 	}
 	free(free_at_end);
-	free(mcq_arr);
-	free(fill_up_arr);
-	free(true_false_arr);
-	free(short_answer_arr);
+	
+	br;
 }

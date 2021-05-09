@@ -31,6 +31,10 @@ int main()
 				if(qb[i] !=NULL)
 				free_bank(qb[i]);
 			}
+			free(mcq_arr);
+	        free(fill_up_arr);
+	        free(true_false_arr);
+	        free(short_answer_arr);
 			break;
 		}
 		else if(n == 1) // Generate New Question bank
