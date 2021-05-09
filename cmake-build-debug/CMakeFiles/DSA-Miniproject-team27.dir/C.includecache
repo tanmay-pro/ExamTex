@@ -6,41 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/Question_Bank/create_question_bank.c
-../function_def.h
-/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/function_def.h
-
 /home/tanmaypro/Desktop/git/DSA-Miniproject-team27/Question_Bank/delete_questions.c
 ../function_def.h
 /home/tanmaypro/Desktop/git/DSA-Miniproject-team27/function_def.h
 
-/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/Question_Bank/insert_questions.c
-tree_node_struct.h
-/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/Question_Bank/tree_node_struct.h
-../function_def.h
-/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/function_def.h
-
-/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/Question_Bank/print_question_bank.c
-../function_def.h
-/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/function_def.h
-
-/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/Question_Bank/question_bank_tree.c
-../function_def.h
-/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/function_def.h
-
 /home/tanmaypro/Desktop/git/DSA-Miniproject-team27/Question_Bank/question_structs.h
 
-/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/Question_Bank/reading_input_bank.c
-question_structs.h
-/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/Question_Bank/question_structs.h
-../function_def.h
-/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/function_def.h
-
 /home/tanmaypro/Desktop/git/DSA-Miniproject-team27/Question_Bank/tree_node_struct.h
-
-/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/Question_Paper/question_paper.c
-../function_def.h
-/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/function_def.h
 
 /home/tanmaypro/Desktop/git/DSA-Miniproject-team27/Question_Paper/question_paper.h
 

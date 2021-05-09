@@ -188,11 +188,6 @@ Capital of akbar Dynasty – bombay }
 {text =When is earth day observed? }
 {ans =22 April}
 
-
-
-
-
-
 \question{type = true_false}{difficulty =0}
 {text =Marrakesh is the capital of Morocco }
 {ans = F}
@@ -308,7 +303,7 @@ Capital of akbar Dynasty – bombay }
 
 \question{type = true_false}{difficulty =2}
 {text = Coffee is made from berries}
-{ans =T}
+{ans =T }
 
 \question{type = true_false}{difficulty =2}
 {text = Drag Race's Michelle Visage is older than RuPaul}

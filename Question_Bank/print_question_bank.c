@@ -46,6 +46,12 @@ void print_d(int index, int count)
 
 void print_bank(ptrnode tree)
 {
+	if(tree == NULL) // Error Handling
+	{
+		printf("Sorry but Bank does not exist");
+		br;
+		return;
+	}
 	tree = tree->firstchild;
 	ptrnode temp_arr[4]; // Number of types of ques = 4
 	temp_arr[0] = tree;
