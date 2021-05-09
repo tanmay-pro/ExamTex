@@ -107,6 +107,4 @@ void free_bank(ptrnode tree)
 		free(temp2_arr[i]);
 	}
 	free(free_at_end);
-	
-	br;
 }

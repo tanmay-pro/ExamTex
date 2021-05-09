@@ -270,8 +270,11 @@ void read_question_paper(int bank_id, ptrnode qb, int number_of_files) //reads t
     br;
     printf("Note: In case You are running the program on Clion, etc IDE, the file should be present inside Debug Folder");
     br;
+    char file_name1[50];
+    strcpy(file_name1, "00PAPER/");
     scanf("%s", str);
-    fp2 = fopen(str, "r");
+    strcat(file_name1, str);
+    fp2 = fopen(file_name1, "r");
     if (fp2 == NULL)
     {
         perror("Error While opening the file");
@@ -295,7 +298,7 @@ void read_question_paper(int bank_id, ptrnode qb, int number_of_files) //reads t
     fo(k, number_of_files)
     {
         //generation of a fresh file pointer
-        strcpy(file_name, "Current/");
+        strcpy(file_name, "00CURRENT/");
         question_counter = 0;
         char index[5];
         tostring(index, k + 1);
@@ -368,6 +371,13 @@ void sampler(int bank_id, ptrnode qb, question Q, FILE *paper_ptr) //samples out
     }
     else //in case of no. of questions available < demanded, print an error alert
     {
-        fprintf(stderr, "could not generate %d questions of type %d and difficulty %d, available = %d\n", num, Q->type, Q->difficulty, avail);
+    	if(Q->type == 0)
+            fprintf(stderr, "Could not generate %d questions of type MCQ and difficulty %d. Available number of questions = %d\n", num, Q->difficulty, avail);
+	    else if(Q->type == 1)
+		    fprintf(stderr, "Could not generate %d questions of type Fill in the Blanks and difficulty %d. Available number of questions = %d\n", num, Q->difficulty, avail);
+	    else if(Q->type == 2)
+		    fprintf(stderr, "Could not generate %d questions of type True-False and difficulty %d. Available number of questions = %d\n", num, Q->difficulty, avail);
+	    else if(Q->type == 3)
+		    fprintf(stderr, "Could not generate %d questions of type Short Answer and difficulty %d. Available number of questions = %d\n", num, Q->difficulty, avail);
     }
 }
