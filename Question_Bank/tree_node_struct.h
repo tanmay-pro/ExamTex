@@ -7,9 +7,9 @@ typedef struct treeNode *ptrnode;
 
 struct treeNode
 {
-    elementType element;
-    ptrnode nextsibling;
-    ptrnode firstchild;
+    elementType element; // Data of Node
+    ptrnode nextsibling; // Immediate Next Sibling of node
+    ptrnode firstchild; // pointer to first child of node
 };
 
 #endif

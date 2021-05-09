@@ -1,6 +1,7 @@
 #include "question_structs.h"
 #include "../function_def.h"
 
+//stack functions for storing {} for error detection
 void push(stack *ps, char x)
 {
     ps->top += 1;
@@ -13,6 +14,7 @@ void pop(stack *ps)
     ps->top -= 1;
 }
 
+// function to remove spaces at the end of a string
 void fix(char s[])
 {
     int x = strlen(s);
@@ -27,6 +29,7 @@ void fix(char s[])
     }
 }
 
+//difficulty input of question
 int input_difficulty(stack s1, char *pre)
 {
     char y, z, ch;
@@ -37,11 +40,15 @@ int input_difficulty(stack s1, char *pre)
         fscanf(fp, "%c", &y);
     }
     push(&s1, y);
-    fscanf(fp, "%[^=]s", pre);
+    fscanf(fp, "%[^=]s", pre);       //pre stores the attribute ie read untill '='
     fix(pre);
-    fscanf(fp, "%c", &ch);
-    fscanf(fp, "%d", &post_num);
-    fscanf(fp, "%c", &z);
+    fscanf(fp, "%c", &ch);           //ch stores '=' symbol
+    fscanf(fp, "%d", &post_num);     //difficulty value
+    fscanf(fp, "%c", &z);           
+	while (z != '}')                //white spaces after the number(if any)
+	{
+		fscanf(fp, "%c", &z);          
+	}
     if (z == '}')
     {
         pop(&s1);
@@ -49,6 +56,7 @@ int input_difficulty(stack s1, char *pre)
     return post_num;
 }
 
+//question text input of question
 char *input_text(stack s1, char *pre, char *post_line, char *buffer)
 {
     char y, z, ch;
@@ -62,11 +70,11 @@ char *input_text(stack s1, char *pre, char *post_line, char *buffer)
     fix(pre);
     fscanf(fp, "%c", &ch);
     fscanf(fp, "%c", &post_line[0]);
-    while (post_line[0] == ' ')
+    while (post_line[0] == ' ')                     //white spaces before actual text(if any)
     {
         fscanf(fp, "%c", &post_line[0]);
     }
-    fscanf(fp, "%[^}]s", post_line + 1);
+    fscanf(fp, "%[^}]s", post_line + 1);           //read untill '}'
     fix(post_line);
     fscanf(fp, "%c", &z);
     if (z == '}')
@@ -76,6 +84,7 @@ char *input_text(stack s1, char *pre, char *post_line, char *buffer)
     return post_line;
 }
 
+//mcq type questions
 mcq *insert_mcq(stack s1)
 {
     mcq *question;
@@ -88,7 +97,7 @@ mcq *insert_mcq(stack s1)
     char pre[20], post_line[1000];
 
     char y, z,x,p, ch;
-    int ct1=0,ct2=0;
+    int ct1=0,ct2=0;          //stores realloc count (used further for free)
     char buffer[1000];
 
     question->difficulty = input_difficulty(s1, pre);
@@ -126,33 +135,35 @@ mcq *insert_mcq(stack s1)
         fix(post_wrong[i]);
 
         i++;
-        if (p == '}')
+        if (p == '}')            //last wrong option is read
         {
             break;
         }
-        if (i % 4 == 0)
+        if (i % 4 == 0)          //when there are more than 4 wrong options----->realloc
         {
             ct1++;
 	        post_wrong=(char**)realloc(post_wrong,4*(ct1+1)*sizeof(char*));
         }
     }
-	for(j=i;j<4*(ct1+1);j++)
+	for(j=i;j<4*(ct1+1);j++)    //unused pointers set NULL otherwise may cause some error
 	{
 		post_wrong[j]=NULL;
 	}
-	question->wrong=(char**)malloc(i*sizeof(char*));
+	question->wrong=(char**)malloc(i*sizeof(char*));   //memory for wrong options in question struct
     for(j=0;j<i;j++)
     {
         question->wrong[j]=(char*)malloc(100*sizeof(char));
         strcpy(question->wrong[j], post_wrong[j]);
     }
     question->no_of_wrong=i;
-	for(j=0;j<(ct1+1)*4;j++)
+	for(j=0;j<(ct1+1)*4;j++)         //free used variable(not used further)
 	{
 		free(post_wrong[j]);
 	}
 	free(post_wrong);
-	fscanf(fp, "%c", &y);
+	
+    //start next attribute(correct ans)
+    fscanf(fp, "%c", &y);
     while (y != '{')
     {
         fscanf(fp, "%c", &y);
@@ -204,11 +215,12 @@ mcq *insert_mcq(stack s1)
     return question;
 }
 
+//fill up type questions
 fill_up *insert_fill_up(stack s1)
 {
     fill_up *question;
     question = (fill_up *)malloc(sizeof(fill_up));
-    char post_correct[20], pre[20], post_line[1000];
+    char post_correct[100], pre[20], post_line[1000];
     char y, z;
     char buffer[1000];
     question->difficulty = input_difficulty(s1, pre);
@@ -239,6 +251,7 @@ fill_up *insert_fill_up(stack s1)
     return question;
 }
 
+//true false type question
 true_false *insert_true_false(stack s1)
 {
     true_false *question;
@@ -276,11 +289,12 @@ true_false *insert_true_false(stack s1)
     return question;
 }
 
+//short answer type question
 short_answer *insert_short_answer(stack s1)
 {
     short_answer *question;
     question = (short_answer *)malloc(sizeof(short_answer));
-    char post_correct[1000], pre[20], post_line[1000];
+    char post_correct[5000], pre[20], post_line[1000];
     char y, z;
     char buffer[1000];
     question->difficulty = input_difficulty(s1, pre);
@@ -311,8 +325,11 @@ short_answer *insert_short_answer(stack s1)
     return question;
 }
 
+//function to read question_bank txt file
+//called in main.c
 void question_bank(int bank_id, int type_number[], int filled_val[], int realloc_ct[])
 {
+    //open the question_bank txt file
     char str[1000];
     printf("Please Enter the name of the Input file.");
     br;
@@ -331,8 +348,11 @@ void question_bank(int bank_id, int type_number[], int filled_val[], int realloc
         exit(EXIT_FAILURE);
     }
     char x, y, z;
+    //x tracks for EOF
+    //y tracks for '{'
+    //z tracks for '}'
     fscanf(fp, "%c", &x);
-    char pre[20], post[10], ch;
+    char pre[20], post[20], ch;
     struct stack s1;
     int mcq_index = filled_val[0], fill_up_index = filled_val[1], true_false_index = filled_val[2], short_answer_index = filled_val[3];
     s1.top = -1;
@@ -414,43 +434,5 @@ void question_bank(int bank_id, int type_number[], int filled_val[], int realloc
         x = getc(fp);
     }
     fclose(fp);
-    //fprintf("i have entered here2\n");
-
-	//Debugging start
-//     for (int i = 0; i < 4; i++)
-//     {
-//         printf("%s2\n", mcq_arr[i]->text);
-//         printf("%lf2\n", mcq_arr[i]->difficulty);
-//         //int p=sizeof(mcq_arr[i]->wrong)/(sizeof(mcq_arr[i]->wrong[0]));
-//         int p=mcq_arr[i]->no_of_wrong;
-//         //fprintf("%d\n",p);
-//         //fprintf("%lu\n",sizeof(mcq_arr[i]->wrong));
-//         // fprintf("%lu\n",sizeof(mcq_arr[i]->wrong[0]));
-//         for(int j=0;j<p;j++)
-//          printf("%s2\n",mcq_arr[i]->wrong[j]);
-//         int q=mcq_arr[i]->no_of_correct;
-//         for(int j=0;j<q;j++)
-//          printf("%s2\n", mcq_arr[i]->correct[j]);
-//     }
-//     for (int i = 0; i < 1; i++)
-//     {
-//         printf("%s2\n", fill_up_arr[i]->text);
-//         printf("%lf2\n", fill_up_arr[i]->difficulty);
-//         printf("%s2\n", fill_up_arr[i]->correct);
-//     }
-//     for (int i = 0; i < 1; i++)
-//     {
-//         printf("%s2\n", true_false_arr[i]->text);
-//         printf("%lf2\n", true_false_arr[i]->difficulty);
-//         printf("%c2\n", true_false_arr[i]->correct);
-//     }
-//     for (int i = 0; i < 1; i++)
-//     {
-//         printf("%s2\n", short_answer_arr[i]->text);
-//         printf("%lf2\n", short_answer_arr[i]->difficulty);
-//         printf("%s2\n", short_answer_arr[i]->correct);
-//     }
-//		printf("Location = %p", mcq_arr[0]);
-//    Debugging end
 
 }
