@@ -26,7 +26,7 @@ int main()
 		{
 			printf("Thank You!!\n");
 			br;
-			fo(i, count)
+			fo(i, count+1)
 			{
 				if(qb[i] !=NULL)
 				free_bank(qb[i]);

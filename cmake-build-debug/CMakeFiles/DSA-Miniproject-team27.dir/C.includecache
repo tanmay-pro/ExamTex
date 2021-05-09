@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/Question_Bank/delete_questions.c
-../function_def.h
-/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/function_def.h
-
 /home/tanmaypro/Desktop/git/DSA-Miniproject-team27/Question_Bank/question_structs.h
 
 /home/tanmaypro/Desktop/git/DSA-Miniproject-team27/Question_Bank/tree_node_struct.h
