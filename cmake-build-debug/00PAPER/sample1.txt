@@ -1,0 +1,7 @@
+\sample{type=mcq}
+{difficulty = 2}
+{number=2}
+
+\sample{type=fill_up}
+{difficulty = 0}
+{number=2}

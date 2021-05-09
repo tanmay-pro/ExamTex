@@ -1,4 +1,0 @@
-\sample{type=mcq}
-{difficulty = 3}
-{number=3}#
-

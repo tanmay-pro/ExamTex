@@ -4,10 +4,10 @@ void print_a(int index, int count)
 {
 	mcq *q = mcq_arr[index];
 	printf("%d) %s\n", count, q->text);
-	printf("Options:\n");
-	fo(i, q->no_of_options)
+	printf("Incorrects:\n");
+	fo(i, q->no_of_wrong)
 	{
-		printf("%c)%s\t", 65 + i, q->options[i]);
+		printf("%c)%s\t", 65 + i, q->wrong[i]);
 	}
 	br;
 	printf("Answers:\n");
@@ -46,6 +46,12 @@ void print_d(int index, int count)
 
 void print_bank(ptrnode tree)
 {
+	if(tree == NULL) // Error Handling
+	{
+		printf("Sorry but Bank does not exist");
+		br;
+		return;
+	}
 	tree = tree->firstchild;
 	ptrnode temp_arr[4]; // Number of types of ques = 4
 	temp_arr[0] = tree;
@@ -67,7 +73,7 @@ void print_bank(ptrnode tree)
 		bool checker[4] = {true}; // Number of diff
 		fo(j, 4)
 		{
-			if(temporary_again[j]->firstchild != NULL)
+			if (temporary_again[j]->firstchild != NULL)
 			{
 				temporary_again[j] = temporary_again[j]->firstchild;
 				checker[j] = true;
@@ -76,26 +82,26 @@ void print_bank(ptrnode tree)
 			{
 				checker[j] = false;
 			}
-			if(checker[j] == true)
+			if (checker[j] == true)
 			{
-				while(temporary_again[j] != NULL)
+				while (temporary_again[j] != NULL)
 				{
-					if(i == 0)
+					if (i == 0)
 					{
 						print_a(temporary_again[j]->element, question_number_count);
 						question_number_count++;
 					}
-					else if(i == 1)
+					else if (i == 1)
 					{
 						print_b(temporary_again[j]->element, question_number_count);
 						question_number_count++;
 					}
-					else if(i == 2)
+					else if (i == 2)
 					{
 						print_c(temporary_again[j]->element, question_number_count);
 						question_number_count++;
 					}
-					else if(i == 3)
+					else if (i == 3)
 					{
 						print_d(temporary_again[j]->element, question_number_count);
 						question_number_count++;

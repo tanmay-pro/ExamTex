@@ -1,0 +1,19 @@
+\question{type =mcq }{difficulty =    3}
+{text   =       C is a ... language}
+{wrong           = Functional ,       Procedural ,Objects      ,        Events,  yo    }
+{ans =             Functional ,hello   }
+
+\question{type =mcq}{difficulty = 3}
+{text =What is name?}
+{wrong =Functional, Procedural, Objects ,Events, hi}
+{ans =Functional}
+
+\question{type =mcq}{difficulty = 3}
+{text =where do you live?}
+{wrong =Functional ,Procedural ,Objects ,Events,hello, yo }
+{ans =hello,yo }
+
+\question{type =mcq}{difficulty =2}
+{text =college name?}
+{wrong =Functional ,Procedural ,Objects ,Events,bye, what}
+{ans =bye,what}

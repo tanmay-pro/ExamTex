@@ -1,6 +1,6 @@
-#include"../function_def.h"
+#include "../function_def.h"
 
-ptrnode functionToCreateQuestionBank(ptrnode qb1)
+ptrnode functionToCreateQuestionBank(ptrnode qb1) // This function creates the default nodes of tree (of difficulty levels and type of question levels)
 {
 	int type_of_question[] = {0, 1, 2, 3};
 	// mcq = 0
@@ -16,20 +16,20 @@ ptrnode functionToCreateQuestionBank(ptrnode qb1)
 	int number_of_diff = 4;
 	qb1 = make_node(-1); // Header Node
 	ptrnode base = qb1;
-	qb1 = insert_below(qb1, 0); // Inserting type of Question
+	qb1 = insert_below(qb1, 0);
 	qb1 = qb1->firstchild;
 	qb1 = insert_below(qb1, 0);
 	fo(i, number_of_types - 1)
 	{
 		qb1 = insert_horizontally(qb1, type_of_question[i + 1]);
-	}
+	}   // Inserting type of Question
 	ptrnode temp = qb1;
 	fo(i, number_of_types - 1)
 	{
 		temp = temp->nextsibling;
 		temp = insert_below(temp, 0);
 	}
-	ptrnode for_inserting_diff[number_of_types - 1];
+	ptrnode for_inserting_diff[number_of_types - 1]; //Creating pointers to handle difficulty level nodes
 	fo(i, number_of_types - 1)
 	{
 		for_inserting_diff[i] = qb1;
@@ -57,9 +57,9 @@ ptrnode functionToCreateQuestionBank(ptrnode qb1)
 void insert_questions(ptrnode tree, int type_number[], const int filled_val[])
 {
 	int i = filled_val[0] - 1;
-	while(true)
+	while (true)
 	{
-		if(type_number[0] == 0)
+		if (type_number[0] == 0)
 		{
 			break;
 		}
@@ -68,9 +68,9 @@ void insert_questions(ptrnode tree, int type_number[], const int filled_val[])
 		type_number[0]--;
 	}
 	i = filled_val[1] - 1;
-	while(true)
+	while (true)
 	{
-		if(type_number[1] == 0)
+		if (type_number[1] == 0)
 		{
 			break;
 		}
@@ -79,9 +79,9 @@ void insert_questions(ptrnode tree, int type_number[], const int filled_val[])
 		type_number[1]--;
 	}
 	i = filled_val[2] - 1;
-	while(true)
+	while (true)
 	{
-		if(type_number[2] == 0)
+		if (type_number[2] == 0)
 		{
 			break;
 		}
@@ -90,9 +90,9 @@ void insert_questions(ptrnode tree, int type_number[], const int filled_val[])
 		type_number[2]--;
 	}
 	i = filled_val[3] - 1;
-	while(true)
+	while (true)
 	{
-		if(type_number[3] == 0)
+		if (type_number[3] == 0)
 		{
 			break;
 		}
@@ -101,4 +101,3 @@ void insert_questions(ptrnode tree, int type_number[], const int filled_val[])
 		type_number[3]--;
 	}
 }
-
