@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/Question_Bank/create_question_bank.c" "/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/create_question_bank.c.o"
   "/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/Question_Bank/delete_questions.c" "/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/delete_questions.c.o"
+  "/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/Question_Bank/free.c" "/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/free.c.o"
   "/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/Question_Bank/insert_questions.c" "/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/insert_questions.c.o"
   "/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/Question_Bank/print_question_bank.c" "/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/print_question_bank.c.o"
   "/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/Question_Bank/question_bank_tree.c" "/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/question_bank_tree.c.o"

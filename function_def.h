@@ -15,6 +15,10 @@
 
 #define br printf("\n")
 #define fo(i, n) for (int i = 0; i < n; i++)
+#define TYPES 4
+#define DIFFICULTY_LEVELS 4
+
+int available[TYPES][DIFFICULTY_LEVELS];
 
 ptrnode make_node(elementType e);
 ptrnode insert_below(ptrnode tree, elementType e);
@@ -24,8 +28,6 @@ ptrnode add_mcq_question_to_bank(ptrnode tree, mcq* question, int index);
 ptrnode add_fill_up_question_to_bank(ptrnode tree, fill_up* question, int index);
 ptrnode add_true_false_question_to_bank(ptrnode tree, true_false* question, int index);
 ptrnode add_short_answer_question_to_bank(ptrnode tree, short_answer* question, int index);
-
-ptrnode delete_mcq_from_question_bank(ptrnode tree, mcq* question, int index);
 
 question add_question_type();
 
@@ -42,7 +44,7 @@ true_false *insert_true_false(stack s1);
 short_answer *insert_short_answer(stack s1);
 
 void read_question_paper(ptrnode qb1, int number_of_files);
-void sampler(ptrnode qb, question Q, char file_name[]);
+void sampler(ptrnode qb, question Q, FILE* paper_ptr);
 
 void printer_mcq(FILE *file, mcq *q);
 void printer_fill_up(FILE *file, fill_up *q);
@@ -55,12 +57,6 @@ fill_up **fill_up_arr;
 true_false **true_false_arr;
 short_answer **short_answer_arr;
 
-//
-#define TYPES 4
-#define DIFFICULTY_LEVELS 4
-int available[TYPES][DIFFICULTY_LEVELS];
-//
-
 void insert_questions(ptrnode tree, int type_number[], const int filled_val[]);
 ptrnode functionToCreateQuestionBank(ptrnode qb1);
 void functionToDeleteQuestionBank(ptrnode qb[]);
@@ -70,6 +66,12 @@ void print_a(int index, int count);
 void print_b(int index, int count);
 void print_c(int index, int count);
 void print_d(int index, int count);
+
+void free_bank(ptrnode tree);
+void free_a(int index, int count);
+void free_b(int index, int count);
+void free_c(int index, int count);
+void free_d(int index, int count);
 
 FILE *fp, *fp2;
 #endif

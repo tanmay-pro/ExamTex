@@ -13,6 +13,12 @@ CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/delete_questions.c.o: ../Que
 CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/delete_questions.c.o: ../Question_Paper/question_paper.h
 CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/delete_questions.c.o: ../function_def.h
 
+CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/free.c.o: ../Question_Bank/free.c
+CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/free.c.o: ../Question_Bank/question_structs.h
+CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/free.c.o: ../Question_Bank/tree_node_struct.h
+CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/free.c.o: ../Question_Paper/question_paper.h
+CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/free.c.o: ../function_def.h
+
 CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/insert_questions.c.o: ../Question_Bank/insert_questions.c
 CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/insert_questions.c.o: ../Question_Bank/question_structs.h
 CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/insert_questions.c.o: ../Question_Bank/tree_node_struct.h

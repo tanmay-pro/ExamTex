@@ -4,10 +4,10 @@ void print_a(int index, int count)
 {
 	mcq *q = mcq_arr[index];
 	printf("%d) %s\n", count, q->text);
-	printf("Options:\n");
-	fo(i, q->no_of_options)
+	printf("Incorrects:\n");
+	fo(i, q->no_of_wrong)
 	{
-		printf("%c)%s\t", 65 + i, q->options[i]);
+		printf("%c)%s\t", 65 + i, q->wrong[i]);
 	}
 	br;
 	printf("Answers:\n");
@@ -46,6 +46,12 @@ void print_d(int index, int count)
 
 void print_bank(ptrnode tree)
 {
+	if(tree == NULL) // Error Handling
+	{
+		printf("Sorry but Bank does not exist");
+		br;
+		return;
+	}
 	tree = tree->firstchild;
 	ptrnode temp_arr[4]; // Number of types of ques = 4
 	temp_arr[0] = tree;
