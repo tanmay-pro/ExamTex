@@ -270,11 +270,11 @@ void read_question_paper(int bank_id, ptrnode qb, int number_of_files) //reads t
     br;
     printf("Note: In case You are running the program on Clion, etc IDE, the file should be present inside Debug Folder");
     br;
-    char file_[50];
-    strcpy(file_, "00PAPER/");
+    char file_name1[50];
+    strcpy(file_name1, "00PAPER/");
     scanf("%s", str);
-    strcat(file_, str);
-    fp2 = fopen(file_, "r");
+    strcat(file_name1, str);
+    fp2 = fopen(file_name1, "r");
     if (fp2 == NULL)
     {
         perror("Error While opening the file");
