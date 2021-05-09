@@ -21,7 +21,7 @@ typedef struct fill_up
 {
     char text[1000];
     int difficulty;
-    char correct[20];
+    char correct[100];
 } fill_up;
 
 typedef struct true_false
@@ -35,7 +35,7 @@ typedef struct short_answer
 {
     char text[1000];
     int difficulty;
-    char correct[1000];
+    char correct[5000];
 } short_answer;
 
 #endif

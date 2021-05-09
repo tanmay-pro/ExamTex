@@ -85,7 +85,7 @@ mcq *insert_mcq(stack s1)
     post_wrong=(char**)malloc(4*sizeof(char*));
     post_correct=(char**)malloc(sizeof(char*));
 
-    char pre[10], post_line[1000];
+    char pre[20], post_line[1000];
 
     char y, z,x,p, ch;
     int ct1=0,ct2=0;
@@ -200,7 +200,7 @@ fill_up *insert_fill_up(stack s1)
 {
     fill_up *question;
     question = (fill_up *)malloc(sizeof(fill_up));
-    char post_correct[20], pre[10], post_line[1000];
+    char post_correct[20], pre[20], post_line[1000];
     char y, z;
     char buffer[1000];
     question->difficulty = input_difficulty(s1, pre);
@@ -235,7 +235,7 @@ true_false *insert_true_false(stack s1)
 {
     true_false *question;
     question = (true_false *)malloc(sizeof(true_false));
-    char post_correct, pre[10], post_line[1000];
+    char post_correct, pre[20], post_line[1000];
     char y, z;
     char buffer[1000];
     question->difficulty = input_difficulty(s1, pre);
@@ -268,7 +268,7 @@ short_answer *insert_short_answer(stack s1)
 {
     short_answer *question;
     question = (short_answer *)malloc(sizeof(short_answer));
-    char post_correct[1000], pre[10], post_line[1000];
+    char post_correct[1000], pre[20], post_line[1000];
     char y, z;
     char buffer[1000];
     question->difficulty = input_difficulty(s1, pre);
@@ -317,7 +317,7 @@ void question_bank(int type_number[], int filled_val[], int realloc_ct[])
     }
     char x, y, z;
     fscanf(fp, "%c", &x);
-    char pre[10], post[10], ch;
+    char pre[20], post[10], ch;
     struct stack s1;
     int mcq_index = filled_val[0], fill_up_index = filled_val[1], true_false_index = filled_val[2], short_answer_index = filled_val[3];
     s1.top = -1;
@@ -458,7 +458,7 @@ void one_question()
 	}
 	char x, y, z;
 	fscanf(fp, "%c", &x);
-    char pre[10], post[10], ch;
+    char pre[20], post[10], ch;
     int diff;
     char text[1000];
     char post_line[1000];
