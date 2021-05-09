@@ -368,6 +368,13 @@ void sampler(int bank_id, ptrnode qb, question Q, FILE *paper_ptr) //samples out
     }
     else //in case of no. of questions available < demanded, print an error alert
     {
-        fprintf(stderr, "could not generate %d questions of type %d and difficulty %d, available = %d\n", num, Q->type, Q->difficulty, avail);
+    	if(Q->type == 0)
+            fprintf(stderr, "Could not generate %d questions of type MCQ and difficulty %d. Available number of questions = %d\n", num, Q->difficulty, avail);
+	    else if(Q->type == 1)
+		    fprintf(stderr, "Could not generate %d questions of type Fill in the Blanks and difficulty %d. Available number of questions = %d\n", num, Q->difficulty, avail);
+	    else if(Q->type == 2)
+		    fprintf(stderr, "Could not generate %d questions of type True-False and difficulty %d. Available number of questions = %d\n", num, Q->difficulty, avail);
+	    else if(Q->type == 3)
+		    fprintf(stderr, "Could not generate %d questions of type Short Answer and difficulty %d. Available number of questions = %d\n", num, Q->difficulty, avail);
     }
 }
