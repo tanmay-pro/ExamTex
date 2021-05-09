@@ -278,7 +278,7 @@ void read_question_paper(ptrnode qb, int number_of_files)//reads the 'sample.txt
         exit(EXIT_FAILURE);
     }
     fscanf(fp2, "%c", &ch);
-    while (ch != '#') //eof here!!!
+    while (ch != EOF) //eof here!!!
     {
         while (ch != 92)
         {
@@ -286,7 +286,7 @@ void read_question_paper(ptrnode qb, int number_of_files)//reads the 'sample.txt
         }
         questions_in_paper[i] = add_question_type();
         i++;
-        fscanf(fp2, "%c", &ch);
+		ch = getc(fp2);
     }
     fclose(fp2);
 
