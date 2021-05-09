@@ -36,17 +36,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c1c9fd8e-37b9-45e3-98fa-50053d63e515" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Current/10.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Current/11.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Current/12.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Current/13.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Current/14.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Current/15.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Current/3.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Current/4.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Current/5.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Current/6.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Current/7.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Current/8.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Current/9.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sample1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sample2.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sample3..txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Current/1.md" beforeDir="false" afterPath="$PROJECT_DIR$/Current/1.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Question_Bank/delete_questions.c" beforeDir="false" afterPath="$PROJECT_DIR$/Question_Bank/delete_questions.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Question_Bank/print_question_bank.c" beforeDir="false" afterPath="$PROJECT_DIR$/Question_Bank/print_question_bank.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Current/2.md" beforeDir="false" afterPath="$PROJECT_DIR$/Current/2.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/a.out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/C.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/delete_questions.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/delete_questions.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/print_question_bank.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/print_question_bank.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/main.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/DSA-Miniproject-team27" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/DSA-Miniproject-team27" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +150,7 @@
       <workItem from="1620400929090" duration="8251000" />
       <workItem from="1620485035599" duration="736000" />
       <workItem from="1620528958203" duration="10000" />
-      <workItem from="1620528988386" duration="9596000" />
+      <workItem from="1620528988386" duration="12720000" />
     </task>
     <servers />
   </component>
