@@ -20,75 +20,25 @@ void tostring(char str[], int num) //converts integer index to string, used for 
     }
     str[len] = '\0';
 }
-/*
-char **shuffle(char **a, int N) //returns a pseudo-randomly shuffled list
-{
-    srand(time(0) + rand());
-    int curr;
-    char *temp = (char *)malloc(sizeof(char) * 100);
-    for (int i = 0; i < N; i++)
-    {
-        curr = (i + rand()) % N;
-        strcpy(temp, a[i]);
-        strcpy(a[i], a[curr]);
-        strcpy(a[curr], temp);
-    }
-        free(temp);
-    return a;
-}*/
+
 
 void printer_mcq(FILE *file, mcq *q) //to print a formatted mcq into a file
 {
     fprintf(file, "_Question %d)_\t", question_counter);
     fprintf(file, "%s\n\n", q->text);
-    /*
-    char **to_print = (char **)calloc(4, sizeof(char *));
-    fo(i, 4)
-    {
-        to_print[i] = (char *)calloc(100, sizeof(char));
-    }
-    int *correct_arr = generate_randoms(q->no_of_correct, 1);
-    int *wrong_arr = generate_randoms(q->no_of_wrong, 3);
-    fo(i, q->no_of_correct)
-    {
-        if (correct_arr[i])
-        {
-            strcpy(to_print[0], q->correct[i]);
-            break;
-        }
-    }
-
-    int t = 1;
-    fo(i, q->no_of_wrong)
-    {
-        if (correct_arr[i])
-        {
-            strcpy(to_print[t++], q->correct[i]);
-        }
-    }
-    fo(i, 4)
-    {
-        printf("%s\n", to_print[i]);
-    }
-    to_print = shuffle(to_print, 4);
-    printf("Hello\n");
-    fo(i, 4)
-    {
-        printf("%s\n", to_print[i]);
-    }
-    */
-    int correct_optionID = (rand()) % 4;
+   
+    int correct_optionID = (rand()) % 4; //Selects option ID for right answer
     int m = q->no_of_correct;
     int n = q->no_of_wrong;
-    int correct_option_to_print = rand() % m;
-    int option_selected[n];
-    fo(i, n)
+    int correct_option_to_print = rand() % m;  // Selects the right option to print
+    int option_selected[n];               // array to check if wrong ans is already added
+    fo(i, n)                            
     {
         option_selected[i] = 0;
     }
     char to_print[4][100];
-    strcpy(to_print[correct_optionID], q->correct[correct_option_to_print]);
-    fo(i, 4)
+    strcpy(to_print[correct_optionID], q->correct[correct_option_to_print]); // Fill right option 
+    fo(i, 4)          /// fills wrong options in the remaining to_print array.
     {
         if (i != correct_optionID)
         {
@@ -101,7 +51,7 @@ void printer_mcq(FILE *file, mcq *q) //to print a formatted mcq into a file
             option_selected[p] = 1;
         }
     }
-    for (int i = 0; i < 4; i++)
+    for (int i = 0; i < 4; i++)       // prints the To_print array. 
     {
         fprintf(file, "1.\t%s\n\n", to_print[i]);
     }
@@ -153,25 +103,25 @@ question add_question_type() //parses 1 /sample statement from the input file an
     char ch, buffer[100];
     question que = (question)malloc(sizeof(struct questions));
     fscanf(fp2, "%c", &ch);
-    while (ch == ' ')
+    while (ch == ' ')  /// For white-space  traversal
     {
         fscanf(fp2, "%c", &ch);
     }
     int j = 0;
-    while ((ch != ' ') && (ch != '{'))
+    while ((ch != ' ') && (ch != '{'))  //// adding the command to char array buffer[]   
     {
         buffer[j] = ch;
         j++;
         fscanf(fp2, "%c", &ch);
     }
     buffer[j] = '\0';
-    while (ch != '{')
+    while (ch != '{')       /// For white-space  traversal
     {
         fscanf(fp2, "%c", &ch);
     }
-    if (!strcmp(buffer, "sample"))
+    if (!strcmp(buffer, "sample"))        /// For checking if command is 'sample' 
     {
-        while (ch != '{')
+        while (ch != '{')                 /// For white-space  traversal
         {
             fscanf(fp2, "%c", &ch);
         }
@@ -186,18 +136,18 @@ question add_question_type() //parses 1 /sample statement from the input file an
             fscanf(fp2, "%c", &ch);
         }
         int i = 0;
-        while ((ch != ' ') && (ch != '}'))
+        while ((ch != ' ') && (ch != '}'))         ////adding type of question to buffer array
         {
             buffer[i] = ch;
             i++;
             fscanf(fp2, "%c", &ch);
         }
         buffer[i] = '\0';
-        while (ch != '}')
+        while (ch != '}')             /// For white-space  traversal
         {
             fscanf(fp2, "%c", &ch);
         }
-        //Reading the type of the questions
+        //Checking  the type of the questions
         if (!strcmp(buffer, "mcq"))
         {
             que->type = 0;
@@ -219,34 +169,36 @@ question add_question_type() //parses 1 /sample statement from the input file an
             fscanf(fp2, "%c", &ch);
         }
         //Reading the difficulty of the questions
-        while (ch != '{')
+        while (ch != '{')               /// For white-space  traversal
         {
             fscanf(fp2, "%c", &ch);
         }
         fscanf(fp2, "%[^=]s", buffer);
-        while (ch != '=')
+        while (ch != '=')               
         {
             fscanf(fp2, "%c", &ch);
         }
         fscanf(fp2, "%d", &que->difficulty);
-        while (ch != '}')
+        while (ch != '}')               /// For white-space  traversal
         {
             fscanf(fp2, "%c", &ch);
         }
-        while (ch != '{')
+
+        //Reading the number of the questions
+        while (ch != '{')       /// For white-space  traversal
         {
             fscanf(fp2, "%c", &ch);
         }
         fscanf(fp2, "%[^=]s", buffer);
-        while (ch != '=')
+        while (ch != '=')           
         {
             fscanf(fp2, "%c", &ch);
         }
         int temp;
-        //Reading the difficulty of the questions
+        
         fscanf(fp2, " %d", &temp);
         que->no_of_questions = temp;
-        while (ch != '}')
+        while (ch != '}')               /// For white-space  traversal
         {
             fscanf(fp2, "%c", &ch);
         }
@@ -254,7 +206,8 @@ question add_question_type() //parses 1 /sample statement from the input file an
     }
     else
     {
-        printf("Input Invalid");
+        printf("Input Invalid\n");
+        exit(0);
     }
 }
 
@@ -270,7 +223,7 @@ void read_question_paper(int bank_id, ptrnode qb, int number_of_files) //reads t
     br;
     printf("Note: In case You are running the program on Clion, etc IDE, the file should be present inside Debug Folder");
     br;
-    char file_name1[50];
+    char file_name1[50];                   /// for opening file using name
     strcpy(file_name1, "00PAPER/");
     scanf("%s", str);
     strcat(file_name1, str);
@@ -281,13 +234,13 @@ void read_question_paper(int bank_id, ptrnode qb, int number_of_files) //reads t
         exit(EXIT_FAILURE);
     }
     fscanf(fp2, "%c", &ch);
-    while (ch != EOF) //eof here!!!
+    while (ch != EOF) 
     {
-        while (ch != 92)
+        while (ch != 92)  ///checks for "\" character
         {
             fscanf(fp2, "%c", &ch);
         }
-        questions_in_paper[i] = add_question_type();
+        questions_in_paper[i] = add_question_type();  ///ads input from add_question_type() in questions_in_paper struct array.
         i++;
         ch = getc(fp2);
     }
