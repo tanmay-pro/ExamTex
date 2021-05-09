@@ -1,7 +1,7 @@
 # ExamTex
 
 ## Introduction:
-This is a project to create multiple random question papers from large question banks using a markup language. <br> <br>
+This is a project to create multiple random question papers from large question banks. <br> <br>
 
 ## About the program:
 This is a menu-driven program. Select the option number for performing that function:-
@@ -61,12 +61,25 @@ gcc main.c Question_Bank/question_bank_tree.c Question_Bank/create_question_bank
 
 <br>
 
+## About the question types:
+### There are 4 Types of questions-
+* MCQ: Here we can give multiple wrong answers in 'wrong' and and multiple right answers in 'ans'. One of the right answer is selected and three of the wrong answers is selected.
+* Fill In the blanks: We can give fill in the blanks or answer in few words.
+* True-False: We can give a statement which is True(T) or False(F).
+* Short Answer: Short answer can have questions with answers with a bit of explaination.
+
+### There are 4 types of difficulty under each type of question-
+* Easy   (with index=0)
+* Medium (with index=1)
+* Hard   (with index=2)
+* Dhasu  (with index=3)
+
 ## Sample Inputs:
 For the Question Bank-
 ```
 \question{type=mcq}{difficulty =0}
 {text= How was your DSA course?}
-{opt =Okay-ish, bad,horrible}
+{wrong =Okay-ish, bad,horrible}
 {ans =very good,excellent}
 
 \question{type =fill_up}{difficulty =3}
@@ -77,9 +90,9 @@ For the Question Bank-
 {text ='A' is the most common letter used in the English language }
 {ans =F}
 
-\question{  type    = short_answer  }   {   difficulty  =   0  }  
-{  text   =   Define   Acceleration  }
-{ ans = The rate of change of velocity of an object with respect to time.}
+\question{type= short_answer}{difficulty = 0}
+{text = Define Acceleration}
+{ans = The rate of change of velocity of an object with respect to time.}
 ```
 For the Question Paper-
 ```
@@ -88,6 +101,9 @@ For the Question Paper-
 {number=2}
 ```
 * The input files can have any number of white-spaces in between the commands.
+* Please make sure that all your input files end at the bracket. No charcater/ whitespace or newline should exist after the last bracket.
+
+<br>
 
 ## Credits:
 This project was made by-
