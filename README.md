@@ -101,6 +101,7 @@ For the Question Paper-
 {number=2}
 ```
 * The input files can have any number of white-spaces in between the commands.
+* Please make sure that all your input files end at the bracket. No charcater/ whitespace or newline should exist after the last bracket.
 
 <br>
 
