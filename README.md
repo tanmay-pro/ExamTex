@@ -26,6 +26,7 @@ gcc main.c Question_Bank/question_bank_tree.c Question_Bank/create_question_bank
 * Then we must input the name of the file(In case you are running the program on terminal, the file should be present inside Project Directory Folder or if you are running the program on Clion, etc IDE, the file should be present inside Debug Folder).
 * A new question bank is added to the tree with unique ID.
 * Sample Input files have been uploaded with names 1.txt, 2.txt and so on.
+* Format of input file: Each question is started by the command \question, followed by its type, ts difficulty, and its content depending on the type of question. Checkout the sample input files for getting a better understanding of how the input file is supposed to be given.
 
 <br>
 
@@ -50,6 +51,7 @@ gcc main.c Question_Bank/question_bank_tree.c Question_Bank/create_question_bank
 * Then Enter the number of files to be Generated.
 * Further we must input the name of the file(In case you are running the program on terminal, the file should be present inside Project Directory Folder or if you are running the program on Clion, etc IDE, the file should be present inside Debug Folder).
 * Sample input files have been uploaded with names sample1.txt, sample2.txt and so on. 
+* Format of input file: Each question bundle is started by the command \sample, followed by the type, the difficulty, and the number of questions in the bundle. Checkout the sample input files for getting a better understanding of how the input file is supposed to be given.
 * The required question papers will be generated in current folder.
 
 <br>
