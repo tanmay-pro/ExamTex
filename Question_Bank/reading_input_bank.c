@@ -311,7 +311,7 @@ short_answer *insert_short_answer(stack s1)
     return question;
 }
 
-void question_bank(int type_number[], int filled_val[], int realloc_ct[])
+void question_bank(int bank_id, int type_number[], int filled_val[], int realloc_ct[])
 {
     char str[1000];
     printf("Please Enter the name of the Input file.");
@@ -359,7 +359,7 @@ void question_bank(int type_number[], int filled_val[], int realloc_ct[])
         if (post[0] == 'm')
         {
             mcq_arr[mcq_index] = insert_mcq(s1);
-            available[0][(mcq_arr[mcq_index])->difficulty]++;
+            available[bank_id][0][(mcq_arr[mcq_index])->difficulty]++;
             mcq_index++;
             type_number[0]++;
             filled_val[0]++;
@@ -372,7 +372,7 @@ void question_bank(int type_number[], int filled_val[], int realloc_ct[])
         else if (post[0] == 'f')
         {
             fill_up_arr[fill_up_index] = insert_fill_up(s1);
-            available[1][(fill_up_arr[fill_up_index])->difficulty]++;
+            available[bank_id][1][(fill_up_arr[fill_up_index])->difficulty]++;
             fill_up_index++;
             type_number[1]++;
             filled_val[1]++;
@@ -385,7 +385,7 @@ void question_bank(int type_number[], int filled_val[], int realloc_ct[])
         else if (post[0] == 't')
         {
             true_false_arr[true_false_index] = insert_true_false(s1);
-            available[2][(true_false_arr[true_false_index])->difficulty]++;
+            available[bank_id][2][(true_false_arr[true_false_index])->difficulty]++;
             true_false_index++;
             type_number[2]++;
             filled_val[2]++;
@@ -398,7 +398,7 @@ void question_bank(int type_number[], int filled_val[], int realloc_ct[])
         else if (post[0] == 's')
         {
             short_answer_arr[short_answer_index] = insert_short_answer(s1);
-            available[3][(short_answer_arr[short_answer_index])->difficulty]++;
+            available[bank_id][3][(short_answer_arr[short_answer_index])->difficulty]++;
             short_answer_index++;
             type_number[3]++;
             filled_val[3]++;
