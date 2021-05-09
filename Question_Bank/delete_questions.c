@@ -7,6 +7,6 @@ void functionToDeleteQuestionBank(ptrnode qb[])
 	br;
 	scanf("%d", &input_id);
 	ptrnode temp = qb[input_id];
-	free(temp);
+	free_bank(temp);
 	qb[input_id] = NULL;
 }

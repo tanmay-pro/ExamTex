@@ -26,11 +26,10 @@ int main()
 		{
 			printf("Thank You!!\n");
 			br;
-			int i=0;
-			while(qb[i]!=NULL) // Freeing the memory since no use after this
+			fo(i, count)
 			{
+				if(qb[i] !=NULL)
 				free_bank(qb[i]);
-				i++;
 			}
 			break;
 		}
@@ -93,17 +92,16 @@ int main()
 			br;
 			scanf("%d", &input_id);
 			int number_of_files;
-			printf("Please Enter the number of files you want to Generate");
-			br;
-			scanf("%d", &number_of_files);
-			if(input_id > count) // Error handling
+			if(input_id > count || qb[input_id] == NULL) // Error handling
 			{
 				printf("Such a question bank does not exist\n");
-				br;
 				continue;
 			}
 			else
 			{
+				printf("Please Enter the number of files you want to Generate");
+				br;
+				scanf("%d", &number_of_files);
 				if(number_of_files > 0) // Error Handling
 				{
 					read_question_paper(qb[input_id], number_of_files); // This line calls the function which reads the question paper input
