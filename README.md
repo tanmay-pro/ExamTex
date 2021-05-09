@@ -1,4 +1,4 @@
-# DSA-Miniproject-(Examtex)
+# ExamTex
 
 ## Introduction
 This is a project to create multiple random question papers from large question banks. <br> <br>
