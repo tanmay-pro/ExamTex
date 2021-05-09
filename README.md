@@ -25,6 +25,7 @@ gcc main.c Question_Bank/question_bank_tree.c Question_Bank/create_question_bank
 * We get an unique ID for the question bank which we need to remember for further use.
 * Then we must input the name of the file(In case you are running the program on terminal, the file should be present inside Project Directory Folder or if you are running the program on Clion, etc IDE, the file should be present inside Debug Folder).
 * A new question bank is added to the tree with unique ID.
+* Sample Input files have been uploaded with names 1.txt, 2.txt and so on.
 
 <br>
 
@@ -48,6 +49,7 @@ gcc main.c Question_Bank/question_bank_tree.c Question_Bank/create_question_bank
 * Enter the ID of the Question Bank to from which question paper is to be generated.
 * Then Enter the number of files to be Generated.
 * Further we must input the name of the file(In case you are running the program on terminal, the file should be present inside Project Directory Folder or if you are running the program on Clion, etc IDE, the file should be present inside Debug Folder).
+* Sample input files have been uploaded with names sample1.txt, sample2.txt and so on. 
 * The required question papers will be generated in current folder.
 
 <br>
