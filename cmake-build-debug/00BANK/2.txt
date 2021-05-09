@@ -1,11 +1,11 @@
 \question{type =mcq }{difficulty =       2}
 {text   = Which of the following is the first calculating device?   }
-{wrong  = Abacus, Calculator , Turing Machine, Pascaline}
+{wrong  = Calculator , Turing Machine, Pascaline}
 {ans = Abacus }
 
 \question{type =mcq}{difficulty =3}
 {text = Who is Father of AI}
-{wrong = Charles Babbage , Lee De Forest , John McCarthy , JP EcKert }
+{wrong = Charles Babbage , Lee De Forest , JP EcKert }
 {ans = John McCarthy }
 
 \question{type = true_false  }{difficulty =1}
