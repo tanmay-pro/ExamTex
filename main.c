@@ -26,7 +26,7 @@ int main()
 		{
 			printf("Thank You!!\n");
 			br;
-			fo(i, count)
+			fo(i, count+1)
 			{
 				if(qb[i] !=NULL)
 				free_bank(qb[i]);
@@ -42,7 +42,7 @@ int main()
 			printf("Please remember this id for future use.");
 			br;
 			int type_number[4] = {0}; // 4 is number of types of Questions
-			question_bank(type_number, filled_val,realloc_ct); // This takes input file from user and converts the input to store questions in form of structs
+			question_bank(count, type_number, filled_val,realloc_ct); // This takes input file from user and converts the input to store questions in form of structs
 			insert_questions(qb[count], type_number, filled_val); // This is for inserting indexes of the "question type" array in the tree
 		}
 		else if(n == 2)
@@ -64,7 +64,7 @@ int main()
 			else
 			{
 				int type_number[4] = {0}; // 4 is number of types of Questions
-				question_bank(type_number, filled_val,realloc_ct); // same as for n==1
+				question_bank(input_id, type_number, filled_val,realloc_ct); // same as for n==1
 				insert_questions(qb[input_id], type_number, filled_val); // same as for n==1
 			}
 		}
@@ -104,7 +104,7 @@ int main()
 				scanf("%d", &number_of_files);
 				if(number_of_files > 0) // Error Handling
 				{
-					read_question_paper(qb[input_id], number_of_files); // This line calls the function which reads the question paper input
+					read_question_paper(input_id, qb[input_id], number_of_files); // This line calls the function which reads the question paper input
 				}
 				else
 				{
