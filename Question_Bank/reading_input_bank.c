@@ -320,8 +320,11 @@ void question_bank(int bank_id, int type_number[], int filled_val[], int realloc
     br;
     printf("Note: In case You are running the program on Clion, etc IDE, the file should be present inside Debug Folder");
     br;
+    char file_name[50];
+    strcpy(file_name, "00BANK/");
     scanf("%s", str);
-    fp = fopen(str, "r");
+    strcat(file_name, str);
+    fp = fopen(file_name, "r");
     if (fp == NULL)
     {
         perror("Error While opening the file");
