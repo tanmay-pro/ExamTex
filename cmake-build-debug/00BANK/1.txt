@@ -1,19 +1,19 @@
 \question{type =mcq }{difficulty =    3}
-{text   =       C is a ... language}
-{wrong           = Functional ,       Procedural ,Objects      ,        Events,  yo    }
-{ans =             Functional ,hello   }
+{text   =       C++ is a ___ language}
+{wrong           = Functional ,       Procedural , not a language,        Events}
+{ans = Object oriented}
 
 \question{type =mcq}{difficulty = 3}
-{text =What is name?}
-{wrong =Functional, Procedural, Objects ,Events, hi}
+{text = C is a ___ language}
+{wrong =Procedural, Objects ,Events}
 {ans =Functional}
 
-\question{type =mcq}{difficulty = 3}
-{text =where do you live?}
-{wrong =Functional ,Procedural ,Objects ,Events,hello, yo }
-{ans =hello,yo }
+\question{type=mcq}{difficulty =2}
+{text=Who was the main male God worshipped by Indus people? }
+{wrong =Water,Brahma,Indra,Trees}
+{ans =Lord Vishnu }
 
-\question{type =mcq}{difficulty =2}
-{text =college name?}
-{wrong =Functional ,Procedural ,Objects ,Events,bye, what}
-{ans =bye,what}
+\question{type=mcq}{difficulty =3}
+{text=Which empire lasted the longest among the following? }
+{wrong = The Palas, The Pratiharas, The Skandagupta, The Senas,Ritusamhara}
+{ans =The Rashtrakutas,Guptas }
