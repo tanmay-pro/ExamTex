@@ -26,6 +26,12 @@ int main()
 		{
 			printf("Thank You!!\n");
 			br;
+			int i=0;
+			while(qb[i]!=NULL) // Freeing the memory since no use after this
+			{
+				free_bank(qb[i]);
+				i++;
+			}
 			break;
 		}
 		else if(n == 1) // Generate New Question bank

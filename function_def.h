@@ -67,5 +67,11 @@ void print_b(int index, int count);
 void print_c(int index, int count);
 void print_d(int index, int count);
 
+void free_bank(ptrnode tree);
+void free_a(int index, int count);
+void free_b(int index, int count);
+void free_c(int index, int count);
+void free_d(int index, int count);
+
 FILE *fp, *fp2;
 #endif

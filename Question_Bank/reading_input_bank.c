@@ -112,7 +112,6 @@ mcq *insert_mcq(stack s1)
         while (post_wrong[i][0] == ' ')
         {
 	        fscanf(fp, "%c", &post_wrong[i][0]);
-
         }
         j = 1;
         fscanf(fp, "%c", &p);
@@ -133,23 +132,27 @@ mcq *insert_mcq(stack s1)
         }
         if (i % 4 == 0)
         {
-
             ct1++;
 	        post_wrong=(char**)realloc(post_wrong,4*(ct1+1)*sizeof(char*));
-
         }
     }
-
-
-    question->wrong=(char**)malloc(i*sizeof(char*));
+	for(j=i;j<4*(ct1+1);j++)
+	{
+		post_wrong[j]=NULL;
+	}
+	question->wrong=(char**)malloc(i*sizeof(char*));
     for(j=0;j<i;j++)
     {
         question->wrong[j]=(char*)malloc(100*sizeof(char));
         strcpy(question->wrong[j], post_wrong[j]);
     }
     question->no_of_wrong=i;
+	for(j=0;j<(ct1+1)*4;j++)
+	{
+		free(post_wrong[j]);
+	}
+	free(post_wrong);
 	fscanf(fp, "%c", &y);
-
     while (y != '{')
     {
         fscanf(fp, "%c", &y);
@@ -193,6 +196,11 @@ mcq *insert_mcq(stack s1)
         strcpy(question->correct[j], post_correct[j]);
     }
     question->no_of_correct = i;
+	for(j=0;j<i;j++)
+	{
+		free(post_correct[j]);
+	}
+	free(post_correct);
     return question;
 }
 
@@ -256,6 +264,10 @@ true_false *insert_true_false(stack s1)
         fscanf(fp, "%c", &post_correct);
     }
     fscanf(fp, "%c", &z);
+	while (z != '}')
+	{
+		fscanf(fp, "%c", &z);
+	}
     if (z == '}')
     {
         pop(&s1);
