@@ -341,7 +341,6 @@ void sampler(ptrnode qb, question Q, FILE *paper_ptr)//samples out questions bas
                 question_counter++;
                 if (Q->type == 0)
                 {
-                    br;
                     printer_mcq(paper_ptr, mcq_arr[qb->element]);
                 }
                 else if (Q->type == 2)

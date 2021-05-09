@@ -15,6 +15,10 @@
 
 #define br printf("\n")
 #define fo(i, n) for (int i = 0; i < n; i++)
+#define TYPES 4
+#define DIFFICULTY_LEVELS 4
+
+int available[TYPES][DIFFICULTY_LEVELS];
 
 ptrnode make_node(elementType e);
 ptrnode insert_below(ptrnode tree, elementType e);
@@ -24,8 +28,6 @@ ptrnode add_mcq_question_to_bank(ptrnode tree, mcq* question, int index);
 ptrnode add_fill_up_question_to_bank(ptrnode tree, fill_up* question, int index);
 ptrnode add_true_false_question_to_bank(ptrnode tree, true_false* question, int index);
 ptrnode add_short_answer_question_to_bank(ptrnode tree, short_answer* question, int index);
-
-ptrnode delete_mcq_from_question_bank(ptrnode tree, mcq* question, int index);
 
 question add_question_type();
 
@@ -54,12 +56,6 @@ mcq **mcq_arr;
 fill_up **fill_up_arr;
 true_false **true_false_arr;
 short_answer **short_answer_arr;
-
-//
-#define TYPES 4
-#define DIFFICULTY_LEVELS 4
-int available[TYPES][DIFFICULTY_LEVELS];
-//
 
 void insert_questions(ptrnode tree, int type_number[], const int filled_val[]);
 ptrnode functionToCreateQuestionBank(ptrnode qb1);
