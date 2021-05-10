@@ -90,7 +90,7 @@ For the Question Bank-
 {text ='A' is the most common letter used in the English language }
 {ans =F}
 
-\question{type= short_answer}{difficulty = 0}
+\question{type= short_answer}{difficulty = 1}
 {text = Define Acceleration}
 {ans = The rate of change of velocity of an object with respect to time.}
 ```
