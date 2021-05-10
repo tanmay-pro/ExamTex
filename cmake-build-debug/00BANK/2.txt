@@ -1,6 +1,6 @@
 \question{type =mcq }{difficulty =       2}
 {text   = Which of the following is the first calculating device?   }
-{wrong  = Calculator , Turing Machine, Pascaline}
+{wrong  =  Calculator , Turing Machine, Pascaline}
 {ans = Abacus }
 
 \question{type =mcq}{difficulty =3}
@@ -22,7 +22,7 @@ that goes into motion when the computer is switched on. It's a programmable, mul
 that incorporates the functions of a CPU (central processing unit) on a single IC
 (integrated circuit).}
 
-\question{type =fill up}{difficulty =3}
+\question{type =fill_up}{difficulty =3}
 {text = President of USA is _______?}
 {ans = Biden}
 

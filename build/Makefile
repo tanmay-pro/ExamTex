@@ -177,6 +177,33 @@ Question_Bank/delete_questions.c.s:
 	$(MAKE) -f CMakeFiles/DSA-Miniproject-team27.dir/build.make CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/delete_questions.c.s
 .PHONY : Question_Bank/delete_questions.c.s
 
+Question_Bank/free.o: Question_Bank/free.c.o
+
+.PHONY : Question_Bank/free.o
+
+# target to build an object file
+Question_Bank/free.c.o:
+	$(MAKE) -f CMakeFiles/DSA-Miniproject-team27.dir/build.make CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/free.c.o
+.PHONY : Question_Bank/free.c.o
+
+Question_Bank/free.i: Question_Bank/free.c.i
+
+.PHONY : Question_Bank/free.i
+
+# target to preprocess a source file
+Question_Bank/free.c.i:
+	$(MAKE) -f CMakeFiles/DSA-Miniproject-team27.dir/build.make CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/free.c.i
+.PHONY : Question_Bank/free.c.i
+
+Question_Bank/free.s: Question_Bank/free.c.s
+
+.PHONY : Question_Bank/free.s
+
+# target to generate assembly for a file
+Question_Bank/free.c.s:
+	$(MAKE) -f CMakeFiles/DSA-Miniproject-team27.dir/build.make CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/free.c.s
+.PHONY : Question_Bank/free.c.s
+
 Question_Bank/insert_questions.o: Question_Bank/insert_questions.c.o
 
 .PHONY : Question_Bank/insert_questions.o
@@ -354,6 +381,9 @@ help:
 	@echo "... Question_Bank/delete_questions.o"
 	@echo "... Question_Bank/delete_questions.i"
 	@echo "... Question_Bank/delete_questions.s"
+	@echo "... Question_Bank/free.o"
+	@echo "... Question_Bank/free.i"
+	@echo "... Question_Bank/free.s"
 	@echo "... Question_Bank/insert_questions.o"
 	@echo "... Question_Bank/insert_questions.i"
 	@echo "... Question_Bank/insert_questions.s"
