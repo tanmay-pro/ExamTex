@@ -333,9 +333,7 @@ void question_bank(int bank_id, int type_number[], int filled_val[], int realloc
     char str[1000];
     printf("Please Enter the name of the Input file.");
     br;
-    printf("Note: In case You are running the program on terminal, the file should be present inside Project Directory Folder");
-    br;
-    printf("Note: In case You are running the program on Clion, etc IDE, the file should be present inside Debug Folder");
+    printf("In case you are running the program on terminal, the file should be present inside 00BANK Folder or if you are running the program on Clion, etc IDE, the file should be present inside the 00BANK folder in the Debug Folder");
     br;
     char file_name[50];
     strcpy(file_name, "00BANK/");
@@ -382,6 +380,12 @@ void question_bank(int bank_id, int type_number[], int filled_val[], int realloc
         if (post[0] == 'm')
         {
             mcq_arr[mcq_index] = insert_mcq(s1);
+            if(mcq_arr[mcq_index]->no_of_wrong < 3)
+            {
+	            printf("Please Check your question Bank. It is incorrect.");
+	            br;
+	            exit(0);
+            }
             available[bank_id][0][(mcq_arr[mcq_index])->difficulty]++;
             mcq_index++;
             type_number[0]++;

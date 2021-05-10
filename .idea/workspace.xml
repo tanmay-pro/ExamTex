@@ -9,21 +9,12 @@
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
       </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
     </expand>
     <select>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:temporary" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:check" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
@@ -39,29 +30,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c1c9fd8e-37b9-45e3-98fa-50053d63e515" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/a.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/00PAPER/sample4.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/.cmake/api/v1/reply/codemodel-v2-86fd1b4c8cdc8558091c.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/.cmake/api/v1/reply/index-2021-05-10T12-37-20-0124.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/.cmake/api/v1/reply/target-DSA-Miniproject-team27-Debug-ea03c5e878ad3fb228b0.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/00BANK/1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/00BANK/1.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/00BANK/2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/00BANK/2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/00BANK/3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/00BANK/3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/00CURRENT/1.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/00CURRENT/2.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/00BANK/1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/00BANK/1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/00BANK/2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/00BANK/2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/00BANK/3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/00BANK/3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/00CURRENT/1.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/00CURRENT/2.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/00PAPER/sample1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/00PAPER/sample1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/00PAPER/sample2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/00PAPER/sample2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/create_question_bank.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/create_question_bank.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/delete_questions.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/delete_questions.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/free.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/free.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/insert_questions.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/insert_questions.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/print_question_bank.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/print_question_bank.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/question_bank_tree.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/question_bank_tree.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Question_Bank/reading_input_bank.c" beforeDir="false" afterPath="$PROJECT_DIR$/Question_Bank/reading_input_bank.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Question_Paper/question_paper.c" beforeDir="false" afterPath="$PROJECT_DIR$/Question_Paper/question_paper.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/a.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/.cmake/api/v1/reply/codemodel-v2-f9243ca4b16d1f10821d.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/.cmake/api/v1/reply/index-2021-05-08T14-59-56-0818.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/.cmake/api/v1/reply/target-DSA-Miniproject-team27-Debug-9a0c75b88fea212c9e28.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/DSA-Miniproject-team27.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/DSA-Miniproject-team27.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/DSA-Miniproject-team27.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/DSA-Miniproject-team27.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/DSA-Miniproject-team27.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/DSA-Miniproject-team27.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/DSA-Miniproject-team27.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/DSA-Miniproject-team27.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/DSA-Miniproject-team27.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/DSA-Miniproject-team27.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/build/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/compile_commands.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/compile_commands.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/00BANK/1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/00BANK/Incorrect.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/00BANK/2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/00BANK/3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/C.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/reading_input_bank.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/reading_input_bank.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/Question_Paper/question_paper.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/Question_Paper/question_paper.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSA-Miniproject-team27.dir/main.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/DSA-Miniproject-team27" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/DSA-Miniproject-team27" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -153,6 +149,8 @@
       <workItem from="1620485035599" duration="736000" />
       <workItem from="1620528958203" duration="10000" />
       <workItem from="1620528988386" duration="12720000" />
+      <workItem from="1620648399110" duration="213000" />
+      <workItem from="1620648645021" duration="6051000" />
     </task>
     <servers />
   </component>
@@ -170,7 +168,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="temporary" />
+                        <option value="check" />
                       </list>
                     </value>
                   </entry>

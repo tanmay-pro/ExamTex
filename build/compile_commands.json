@@ -38,5 +38,10 @@
   "directory": "/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/build",
   "command": "/bin/x86_64-linux-gnu-gcc-10   -g   -std=gnu11 -o CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/print_question_bank.c.o   -c /home/tanmaypro/Desktop/git/DSA-Miniproject-team27/Question_Bank/print_question_bank.c",
   "file": "/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/Question_Bank/print_question_bank.c"
+},
+{
+  "directory": "/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/build",
+  "command": "/bin/x86_64-linux-gnu-gcc-10   -g   -std=gnu11 -o CMakeFiles/DSA-Miniproject-team27.dir/Question_Bank/free.c.o   -c /home/tanmaypro/Desktop/git/DSA-Miniproject-team27/Question_Bank/free.c",
+  "file": "/home/tanmaypro/Desktop/git/DSA-Miniproject-team27/Question_Bank/free.c"
 }
 ]

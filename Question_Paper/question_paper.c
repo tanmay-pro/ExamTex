@@ -21,7 +21,6 @@ void tostring(char str[], int num) //converts integer index to string, used for 
     str[len] = '\0';
 }
 
-
 void printer_mcq(FILE *file, mcq *q) //to print a formatted mcq into a file
 {
     fprintf(file, "_Question %d)_\t", question_counter);
@@ -82,11 +81,14 @@ void printer_short_answer(FILE *file, short_answer *q) //to print a formatted sh
     fprintf(file, "\n\n\n");
 }
 
-int *generate_randoms(int avail, int n) //returns an array of lenth avail, with n indices randomly labelled 1 and rest 0
+int *generate_randoms(int avail, int n) //returns an array of length avail, with n indices randomly labelled 1 and rest 0
 {
     srand(time(0) + rand());
     int *arr = (int *)calloc(avail, sizeof(int));
-    fo(i, n) arr[i] = 1;
+    fo(i, n)
+    {
+	    arr[i] = 1;
+    }
     int curr, temp;
     fo(i, n)
     {
@@ -214,14 +216,12 @@ question add_question_type() //parses 1 /sample statement from the input file an
 void read_question_paper(int bank_id, ptrnode qb, int number_of_files) //reads the 'sample.txt' input file and invokes add_question_type() for every '/sample' statement
 {
     char ch;
-    question questions_in_paper[4]; //will later parse this array that stores the details read in question structs
+    question questions_in_paper[20];
     int i = 0;
     char str[1000];
     printf("Please Enter the name of the Input file.");
     br;
-    printf("Note: In case You are running the program on terminal, the file should be present inside Project Directory Folder");
-    br;
-    printf("Note: In case You are running the program on Clion, etc IDE, the file should be present inside Debug Folder");
+    printf("In case you are running the program on terminal, the file should be present inside 00PAPER Folder or if you are running the program on Clion, etc IDE, the file should be present inside the 00PAPER folder in the Debug Folder");
     br;
     char file_name1[50];                   /// for opening file using name
     strcpy(file_name1, "00PAPER/");
