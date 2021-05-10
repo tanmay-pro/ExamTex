@@ -69,10 +69,10 @@ gcc main.c Question_Bank/question_bank_tree.c Question_Bank/create_question_bank
 * Short Answer: Short answer can have questions with answers with a bit of explaination.
 
 ### There are 4 types of difficulty under each type of question-
-* Easy   (with index=0)
-* Medium (with index=1)
-* Hard   (with index=2)
-* Dhasu  (with index=3)
+* Easy   (with integer value = 0)
+* Medium (with integer value = 1)
+* Hard   (with integer value = 2)
+* Dhasu  (with integer value = 3)
 
 ## Sample Inputs:
 For the Question Bank-
