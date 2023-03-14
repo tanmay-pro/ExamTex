@@ -1,9 +1,11 @@
 # ExamTex
 
-## Introduction:
-This is a project to create multiple random question papers from large question banks. <br> <br>
+## Problem Statement:
+Instructors use some particular platform to make question banks with slightly different structures and values. This is done again by them for updating marks of students. In all of this, they have a real hard time managing and reusing the question banks. It’s not really possible to manually ensure that there is a lot of different questions and each student gets a different set and yet equal difficulty is maintained. <br> <br>
 
-## About the program:
+The Project creates a markup language that will potentially help instructors in wrinting questions for exams.<br> <br>
+
+## About the project:
 This is a menu-driven program. Select the option number for performing that function:-
 
 1. Add a new Question Bank 
@@ -61,7 +63,8 @@ gcc main.c Question_Bank/question_bank_tree.c Question_Bank/create_question_bank
 
 <br>
 
-## About the question types:
+## Types of Questions
+
 ### There are 4 Types of questions-
 * MCQ: Here we can give multiple wrong answers in 'wrong' and and multiple right answers in 'ans'. One of the right answer is selected and three of the wrong answers is selected.
 * Fill In the blanks: We can give fill in the blanks or answer in few words.
