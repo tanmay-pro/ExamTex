@@ -108,12 +108,4 @@ For the Question Paper-
 * The input files can have any number of white-spaces in between the commands.
 * Please make sure that all your input files end at the bracket. No charcater/ whitespace or newline should exist after the last bracket.
 * Please make sure to clear/ delete the output(markdown) files (if already genrated) before each generation to get correct otuput. Otherwise, the new questions will get appended to the old ones.
-
 <br>
-
-## Credits:
-This project was made by-
-* Tanmay Goyal
-* Laksh Balani
-* Siddh  Jain
-* Pratham Gupta
