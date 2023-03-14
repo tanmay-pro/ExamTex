@@ -3,7 +3,7 @@
 ## Problem Statement:
 Instructors use some particular platform to make question banks with slightly different structures and values. This is done again by them for updating marks of students. In all of this, they have a real hard time managing and reusing the question banks. It’s not really possible to manually ensure that there is a lot of different questions and each student gets a different set and yet equal difficulty is maintained. <br> <br>
 
-The Project creates a markup language that will potentially help instructors in wrinting questions for exams.<br> <br>
+The Project creates a markup language that will potentially help instructors in writing questions for exams.<br> <br>
 
 ## About the project:
 This is a menu-driven program. Select the option number for performing that function:-
