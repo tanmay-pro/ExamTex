@@ -334,7 +334,7 @@ void question_bank(int bank_id, int type_number[], int filled_val[], int realloc
     char str[1000];
     printf("Please Enter the name of the Input file.");
     br;
-    printf("In case you are running the program on terminal, the file should be present inside 00BANK Folder or if you are running the program on Clion, etc IDE, the file should be present inside the 00BANK folder in the Debug Folder");
+    printf("The file should be present inside 00BANK Folder.");
     br;
     char file_name[50];
     strcpy(file_name, "00BANK/");

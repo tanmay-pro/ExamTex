@@ -223,7 +223,7 @@ void read_question_paper(int bank_id, ptrnode qb, int number_of_files) //reads t
     char str[1000];
     printf("Please Enter the name of the Input file.");
     br;
-    printf("In case you are running the program on terminal, the file should be present inside 00PAPER Folder or if you are running the program on Clion, etc IDE, the file should be present inside the 00PAPER folder in the Debug Folder");
+    printf("The file should be present inside 00PAPER Folder.");
     br;
     char file_name1[50];                   /// for opening file using name
     strcpy(file_name1, "00PAPER/");
