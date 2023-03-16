@@ -70,7 +70,7 @@ Alternative:
 ### Generate Question Paper
 * Enter the ID of the Question Bank to from which question paper is to be generated.
 * Then Enter the number of files to be Generated.
-* Further we must input the name of the file. The file should be present inside 00CURRENT Folder.
+* Further we must input the name of the file. The file should be present inside 00PAPER Folder.
 * Sample input files have been uploaded with names sample1.txt, sample2.txt and so on. 
 * Format of input file: Each question bundle is started by the command \sample, followed by the type, the difficulty, and the number of questions of that bundle. Checkout the sample inputs given below for getting a better understanding of how the input file is supposed to be given.
 * The required question papers will be generated in 00CURRENT folder.
