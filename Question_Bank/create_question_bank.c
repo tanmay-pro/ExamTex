@@ -1,4 +1,5 @@
 #include "../function_def.h"
+#include "../main.h"
 
 ptrnode functionToCreateQuestionBank(ptrnode qb1) // This function creates the default nodes of tree (of difficulty levels and type of question levels)
 {

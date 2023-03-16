@@ -1,4 +1,5 @@
 #include "../function_def.h"
+#include "../main.h"
 
 void print_a(int index, int count) // Function to print MCQ on terminal
 {

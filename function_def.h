@@ -1,26 +1,14 @@
 #ifndef FUNC_H_
 #define FUNC_H_
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <assert.h>
-#include <stdbool.h>
-#include <string.h>
-#include <stdio_ext.h>
-#include <time.h>
-
 #include"Question_Bank/question_structs.h"
 #include"Question_Bank/tree_node_struct.h"
 #include"Question_Paper/question_paper.h"
 
+#include <stdio.h>
+
 #define br printf("\n")
 #define fo(i, n) for (int i = 0; i < n; i++)
-#define TYPES 4
-#define DIFFICULTY_LEVELS 4
-#define MAX 100
-
-int available[MAX][TYPES][DIFFICULTY_LEVELS];
-
 
 //tree creation utility functions
 ptrnode make_node(elementType e);
@@ -68,10 +56,10 @@ void printer_short_answer(FILE *file, short_answer *q);
 int *generate_randoms(int available, int n);
 
 //pointer arrays(declared dynamically)
-mcq **mcq_arr;
-fill_up **fill_up_arr;
-true_false **true_false_arr;
-short_answer **short_answer_arr;
+extern mcq **mcq_arr;
+extern fill_up **fill_up_arr;
+extern true_false **true_false_arr;
+extern short_answer **short_answer_arr;
 
 //building the tree
 void insert_questions(ptrnode tree, int type_number[], const int filled_val[]);
@@ -94,6 +82,5 @@ void free_b(int index, int count);
 void free_c(int index, int count);
 void free_d(int index, int count);
 
-//file pointers for qustion_bank.txt and question_paper.txt
-FILE *fp, *fp2;
+
 #endif

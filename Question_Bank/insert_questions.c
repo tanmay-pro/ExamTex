@@ -1,5 +1,6 @@
 #include "tree_node_struct.h"
 #include "../function_def.h"
+#include "../main.h"
 
 ptrnode add_mcq_question_to_bank(ptrnode tree, mcq *question, int index) // This function adds mcq question to tree
 {

@@ -1,4 +1,5 @@
 #include "question_structs.h"
+#include "../main.h"
 #include "../function_def.h"
 
 //stack functions for storing {} for error detection
@@ -411,7 +412,9 @@ void question_bank(int bank_id, int type_number[], int filled_val[], int realloc
         }
         else if (post[0] == 't')
         {
-            true_false_arr[true_false_index] = insert_true_false(s1);
+            true_false *temp;
+            temp = insert_true_false(s1);
+            true_false_arr[true_false_index] = temp;
             available[bank_id][2][(true_false_arr[true_false_index])->difficulty]++;
             true_false_index++;
             type_number[2]++;

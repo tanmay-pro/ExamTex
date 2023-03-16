@@ -1,4 +1,5 @@
 #include "../function_def.h"
+#include "../main.h"
 
 ptrnode make_node(elementType e) // Function to create node of tree
 {

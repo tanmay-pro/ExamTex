@@ -1,4 +1,5 @@
 #include "../function_def.h"
+#include "../main.h"
 
 void functionToDeleteQuestionBank(ptrnode qb[])
 {

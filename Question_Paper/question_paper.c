@@ -1,4 +1,6 @@
 #include "../function_def.h"
+#include "../main.h"
+
 typedef int diff_type;
 int question_counter;
 
