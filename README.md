@@ -17,7 +17,7 @@ This is a menu-driven program. Select the option number for performing that func
 <br><br>
 
 ## How to run the program:
-Run this for compiling the program-
+Run this for executing the program:-
 
 *   ```
     cmake .
@@ -31,9 +31,13 @@ Run this for compiling the program-
 
 Alternative:
 
-```
-gcc main.c Question_Bank/question_bank_tree.c Question_Bank/create_question_bank.c Question_Bank/reading_input_bank.c Question_Paper/question_paper.c Question_Bank/insert_questions.c Question_Bank/delete_questions.c Question_Bank/print_question_bank.c Question_Bank/free.c
-```
+*   ```
+    gcc main.c Question_Bank/question_bank_tree.c Question_Bank/create_question_bank.c Question_Bank/reading_input_bank.c Question_Paper/question_paper.c Question_Bank/insert_questions.c Question_Bank/delete_questions.c Question_Bank/print_question_bank.c Question_Bank/free.c
+    ```
+*   
+    ```
+    ./a.out
+    ```
 
 
 <br>
